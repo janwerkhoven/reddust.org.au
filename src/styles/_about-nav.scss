@@ -1,0 +1,40 @@
+#about-nav {
+  display: block;
+  background-color: $reddust-gold;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $reddust-cream;
+
+    h1 {
+      font-size: 45px;
+      margin: 20px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+
+      li {
+        margin: 0 20px 20px;
+        text-transform: capitalize;
+
+        a {
+          font-family: $montserrat-regular;
+          text-transform: uppercase;
+
+          &:link,
+          &:visited {
+            color: $reddust-cream;
+
+            &:hover {
+              color: $reddust-rust;
+            }
+          }
+        }
+      }
+    }
+  }
+}

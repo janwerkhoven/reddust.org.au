@@ -1,5 +1,122 @@
 #about-mission {
-  #mission {}
-  #mantra {}
-  #vision {}
+  text-align: center;
+
+  #mission {
+    div {
+      display: flex;
+      max-width: 1400px;
+      padding: 0;
+
+      .image {
+        border: 0;
+        background-image: url('/assets/img/about/missionvalues/about-missionvalues-img1.jpg');
+        background-size: cover;
+        background-position-y: 70%;
+
+        img {
+          opacity: 0;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 525px;
+        box-sizing: border-box;
+        background-color: $reddust-cream;
+
+        h2 {
+          font-family: $montserrat-bold;
+          text-transform: uppercase;
+          color: $reddust-rust;
+          margin: 20px;
+        }
+
+        p {
+          line-height: 200%;
+          max-width: 360px;
+        }
+      }
+    }
+  }
+
+  #mantra {
+    div {
+      display: flex;
+      max-width: 1400px;
+      padding: 0;
+
+      .image {
+        border: 0;
+        background-image: url('/assets/img/about/missionvalues/about-missionvalues-img2.jpg');
+        background-size: cover;
+        background-position: 90%;
+
+        img {
+          opacity: 0;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      div {
+        display: block;
+        box-sizing: border-box;
+        background-color: $reddust-sunset;
+        width: 50%;
+
+        ul {
+          color: $reddust-cream;
+          margin: 80px 0;
+
+          li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            padding: 70px 0;
+
+            h2 {
+              font-size: 45px;
+              z-index: 1;
+            }
+
+            img {
+              position: absolute;
+              max-width: 140px;
+              top: 35px;
+            }
+
+            p {
+              font-size: 22px;
+              color: $reddust-bone;
+              line-height: 140%;
+              max-width: 324px;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #vision {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+    background-image: url('/assets/img/about/missionvalues/about-banner-mission@2x.jpg');
+    background-size: cover;
+
+    h2 {
+      color: $reddust-bone;
+      max-width: 560px;
+    }
+  }
 }

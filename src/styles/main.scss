@@ -2,7 +2,6 @@
 @import 'variables';
 @import 'mixins';
 @import 'animations';
-
 // Commons
 @import '../../bower_components/normalize-css/normalize.css';
 @import 'normalize';
@@ -10,7 +9,6 @@
 @import 'common';
 @import 'header';
 @import 'footer';
-
 // Page specific
 @import 'landing';
 @import 'about-mission';
@@ -18,6 +16,6 @@
 @import 'about-role-models';
 @import 'about-partners';
 @import 'about-reports';
-
+@import 'about-nav';
 // Outdate browsers
 @import '../../bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.scss';

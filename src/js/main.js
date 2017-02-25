@@ -153,8 +153,7 @@ $(document).ready(function() {
 
   //Filter dropdown toggle
   // TODO: add clickoff when you click on anything but the desired toggle area
-  // TODO: add clickon and clickoff for the selected-filter 'status' button itself
-  $('#filter>div>div').on('click', function(e) {
+  $('#filter>div>div,#selected-filter').on('click', function(e) {
     if (e.target !== this)
       return;
     $('#filter ul').toggleClass('active');

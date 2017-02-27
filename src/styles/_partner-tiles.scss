@@ -32,9 +32,11 @@ section.tiles.partners {
     @media (max-width: 1440px) {
       width: 33.3333vw;
       height: 33.3333vw;
+      min-width: 340px;
+      min-height: 340px;
     }
     // 2 columns
-    @media (max-width: 1080px) {
+    @media (max-width: 1021px) {
       width: 50vw;
       height: 50vw;
     }

@@ -27,6 +27,9 @@ section.tiles.people {
         // max-height: 364px;
         width: 16.6667vw;
         height: 16.6667vw;
+        &.hidden {
+          display: none;
+        }
         @media (max-width: 1560px) {
           width: 20vw;
           height: 20vw;

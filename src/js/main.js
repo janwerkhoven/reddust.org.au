@@ -145,18 +145,47 @@ $(document).ready(function() {
 
   //Filter dropdown toggle
   $('#filter>div>div').on('click', function() {
+    event.stopPropagation();
     $('#filter ul').toggleClass('active');
+  });
+
+  // Add click - off functionality to the dropdown
+  $('body').on('click', function() {
+    if ($('#filter ul').hasClass('active')) {
+      $('#filter ul').toggleClass('active');
+    };
   });
 
   //Display the active filter
   $('#filter ul button').on('click', function(event) {
-    event.stopPropagation();
+
     var filterName = $(this).attr('class');
-    $('#people ul>li').hide();
-    $('#people ul .' + filterName).show();
+    var $people = $('#people li');
+    var $visibles = $('#people ul .' + filterName);
+    var easing = 'easeOutExpo';
+    var speed = 1000; // milliseconds
+
+    // Set the button states text
     $('#selected-filter').text(filterName);
-    $('#filter ul button').removeClass('selected')
-    $('#filter ul .' + filterName).addClass('selected')
+    $('#filter ul button').removeClass('selected');
+    $('#filter ul .' + filterName).addClass('selected');
+
+    // Hide all people
+    $people.addClass('hidden');
+
+    // Animate in the visible people
+    $visibles.removeClass('hidden').css({
+      opacity: 0
+    }).each(function(i) {
+      var delay = i * 80; // milliseconds
+      $(this).delay(delay).velocity({
+        scale: [1, .8],
+        opacity: [1, 0],
+      }, easing, speed);
+    });
+
+    // Prevent the parent dropdown from closing
+    event.stopPropagation();
   });
 
   // Make any hashtag link scroll with animation to element with matching ID

@@ -36,7 +36,7 @@
       <div>
         <ul>
           {{#people}}
-            <li class="{{#if image}}image{{else}}no-image{{/if}}" data="{{category}}">
+            <li class="{{category}} {{#if image}}image{{else}}no-image{{/if}}">
               <div>
                 {{#if image}}
                   <div class="img">

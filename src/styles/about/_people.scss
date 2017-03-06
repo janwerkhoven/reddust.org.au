@@ -83,7 +83,7 @@
           height: 0;
           transition: all ease-out 400ms;
           &.active {
-            height: 200px;
+            height: 240px;
           }
           @media (min-width: 600px) {
             button:hover {

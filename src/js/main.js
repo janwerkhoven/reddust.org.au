@@ -133,15 +133,13 @@ $(document).ready(function() {
 
   // Things to fire ONLY on the landing page (avoid unexpected future collisions)
   if ($('body').attr('id') === 'landing') {
-
     // On load
     checkWhetherToAnimateCounters();
     // On scroll
     $(window).scroll(function() {
       checkWhetherToAnimateCounters();
     });
-
-  }
+  };
 
   //Filter dropdown toggle
   $('#filter>div>div').on('click', function() {
@@ -158,10 +156,27 @@ $(document).ready(function() {
 
   //Display the active filter
   $('#filter ul button').on('click', function(event) {
+    $element = $(this);
+    if ($element.hasClass('selected')) {
+      console.log('Jan surprise!');
+    } else {
+      applyFilters(event, $element);
+    };
+    event.stopPropagation();
 
-    var filterName = $(this).attr('class');
+  });
+
+  function applyFilters(event, element) {
+
+    if (sessionStorage.getItem('storedFilter')) { //check if there is a stored filter from a page nagivation
+      var filterName = sessionStorage.getItem('storedFilter');
+      sessionStorage.removeItem('storedFilter');
+    } else {
+      var filterName = element.attr('class');
+    };
+
     var $people = $('#people li');
-    var $visibles = $('#people ul .' + filterName);
+    var $visibles = $('#people ul li.' + filterName);
     var easing = 'easeOutExpo';
     var speed = 1000; // milliseconds
 
@@ -171,12 +186,11 @@ $(document).ready(function() {
     $('#filter ul .' + filterName).addClass('selected');
 
     // Hide all people
-    $people.addClass('hidden');
+    $people.hide().stop().velocity('stop');
 
-    // Animate in the visible people
-    $visibles.removeClass('hidden').css({
+    $visibles.css({
       opacity: 0
-    }).each(function(i) {
+    }).show().each(function(i) {
       var delay = i * 80; // milliseconds
       $(this).delay(delay).velocity({
         scale: [1, .8],
@@ -186,7 +200,19 @@ $(document).ready(function() {
 
     // Prevent the parent dropdown from closing
     event.stopPropagation();
+  }
+
+  // Pre-apply filters when user navigates to People using the footer links
+  $('footer a.filter').on('click', function() {
+    var $filter = $(this).attr('class').replace('filter ', '');
+    sessionStorage.setItem('storedFilter', $filter);
   });
+
+  if (sessionStorage.getItem('storedFilter')) { //check if there is a stored filter from a page nagivation
+    applyFilters();
+  } else {
+    console.log('No stored filters');
+  };
 
   // Make any hashtag link scroll with animation to element with matching ID
   // Example: <a href="#features"> will scroll to element with ID #features

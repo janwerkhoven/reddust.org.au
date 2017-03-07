@@ -12,8 +12,8 @@ The [website](http://www.reddust.org.au/) of a health development organisation i
 
 #### Setup
 1. Make sure you have [Grunt](http://gruntjs.com/getting-started), [NPM](https://nodejs.org/en/download/) and [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed globally
-2. `git clone https://github.com/janwerkhoven/grunt-finsec-ptx.git ~/janwerkhoven/grunt-finsec-ptx`
-3. `cd ~/janwerkhoven/grunt-finsec-ptx`
+2. `git clone https://github.com/janwerkhoven/reddust.org.au ~/janwerkhoven/reddust.org.au`
+3. `cd ~/janwerkhoven/reddust.org.au`
 4. `npm install; bower install`
 5. `grunt`
 5. Go to [http://localhost:9000/](http://localhost:9000/)

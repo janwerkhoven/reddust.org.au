@@ -221,7 +221,7 @@ module.exports = function(grunt) {
     xml_sitemap: {
       custom_options: {
         options: {
-          siteRoot: 'http://www.finsecptx.com.au/',
+          siteRoot: 'http://www.reddust.org.au/',
           changefreq: 'monthly',
           priority: '0.5',
           dest: 'dist/'

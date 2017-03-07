@@ -166,9 +166,11 @@ $(document).ready(function() {
 
   });
 
+  //Applies filters which are either chosen by the user in the dropdown, or stored in sessionStorage
   function applyFilters(event, element) {
 
-    if (sessionStorage.getItem('storedFilter')) { //check if there is a stored filter from a page nagivation
+    //If the function is running with a stored filter, apply it then delete it from session storage
+    if (sessionStorage.getItem('storedFilter')) {
       var filterName = sessionStorage.getItem('storedFilter');
       sessionStorage.removeItem('storedFilter');
     } else {
@@ -208,7 +210,8 @@ $(document).ready(function() {
     sessionStorage.setItem('storedFilter', $filter);
   });
 
-  if (sessionStorage.getItem('storedFilter')) { //check if there is a stored filter from a page nagivation
+  //on page load, check if there is a stored filter from a page nagivation
+  if (sessionStorage.getItem('storedFilter')) {
     applyFilters();
   } else {
     console.log('No stored filters');

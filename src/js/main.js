@@ -87,7 +87,6 @@ function checkWhetherToAnimateCounters() {
   // Only bind this this on logic on the landing page, avoid collisions on other pages
   var triggerTop = $('#landing .counter-wrapper').first().offset().top;
   var windowBottom = $(window).scrollTop() + $(window).height();
-  // console.log(triggerTop, windowBottom);
   if (!animatingCounters) {
     if (windowBottom > triggerTop) {
       animatingCounters = true;
@@ -157,9 +156,7 @@ $(document).ready(function() {
   //Display the active filter
   $('#filter ul button').on('click', function(event) {
     $element = $(this);
-    if ($element.hasClass('selected')) {
-      console.log('Jan surprise!');
-    } else {
+    if ($element.hasClass('selected')) {} else {
       applyFilters(event, $element);
     };
     event.stopPropagation();
@@ -213,9 +210,7 @@ $(document).ready(function() {
   //on page load, check if there is a stored filter from a page nagivation
   if (sessionStorage.getItem('storedFilter')) {
     applyFilters();
-  } else {
-    console.log('No stored filters');
-  };
+  } else {};
 
   // Make any hashtag link scroll with animation to element with matching ID
   // Example: <a href="#features"> will scroll to element with ID #features
@@ -291,7 +286,6 @@ $(document).ready(function() {
 
   // Clicking a partner opens the modal, only if screen width is below 720px
   $('.tiles.partners li').on('click', function() {
-    console.log($(window).width());
     if ($(window).width() <= 720) {
       var $img = $(this).find('.front img').clone();
       var $h2 = $(this).find('.back h2').clone();

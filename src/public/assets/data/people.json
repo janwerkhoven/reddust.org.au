@@ -54,6 +54,12 @@
     "image": "will-minson@2x.jpg",
     "bio": "A longtime Red Dust Role Model, Will was warmly welcomed to the board at the end of 2014. A former player in the Western Bulldogs, Will was selected 20th overall in the AFL Draft and began his professional career when he debuted in 2004. Most recently, Will completed his Sciences Degree from the University of Melbourne."
   }, {
+    "name": "Scott Stirling",
+    "role": "CEO",
+    "category": "everyone board",
+    "image": "",
+    "bio": "Scott is an experienced public health executive who joined Red Dust in 2017 following five years as a senior manager at the Stroke Foundation. Born and raised in North East Arnhem Land Scott is a passionate advocate for working in partnership with remote communities to improve health and wellbeing outcomes."
+  }, {
     "name": "Darren Smith",
     "role": "Role Model",
     "category": "everyone staff arts",
@@ -263,5 +269,17 @@
     "category": "everyone ambassadors staff sport",
     "image": "luke-darcy@2x.jpg",
     "bio": "Luke is a former Australian Rules footballer who played for the Western Bulldogs, a team he captained for two years. Debuting in 1994, Luke is regarded as one of the Bulldogs' most successful ruckmen/forwards. In 2001 he took out the Charles Sutton Medal, and continued to stamp his name on the game in the following seasons."
+  }, {
+    "name": "Yvette Hollard",
+    "role": "Healthy Living Program Coordinator",
+    "category": "everyone ambassadors staff sport",
+    "image": "",
+    "bio": "Yvette joined Red Dust as a role model in 2007, later becoming a program Team Leader.  She is now the Healthy Living Program Coordinator, with over 20 years of experience in business management; events and marketing.  Yvette has recently obtained her Cert III & IV in personal training and as a former chef, has a passion for nutrition and helping others.  Yvette enjoys living life to the fullest!"
+  }, {
+    "name": "Karyn Bryant",
+    "role": "Strong Young Women’s Program and Central Office Manager",
+    "category": "everyone ambassadors staff sport",
+    "image": "karyn-bryant.jpg",
+    "bio": "Karyn is a teacher with extensive experience working with vulnerable students both in Victoria and the Northern Territory; including experience working in remote schools such as Beswick and Ntaria. Karyn has strong skills relating to curriculum development and delivery as well as program reporting and evaluation and partnership management."
   }]
 }

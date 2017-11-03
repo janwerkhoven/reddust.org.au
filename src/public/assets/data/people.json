@@ -42,6 +42,12 @@
     "image": "paul-guerra@2x.jpg",
     "bio": "Paul has enjoyed a 20-year career in the telecommunications sector working at senior levels for renowned companies Motorola and Vodafone. Paul has a strong record in sales and marketing and has been instrumental in solidifying the presence of both organisations in Australia. Paul also dedicates some of his time to serve as a Director on several charity-based organisations."
   }, {
+    "name": "Roslyn Johnson",
+    "role": "Director",
+    "category": "everyone board",
+    "image": "",
+    "bio": "Roslyn is passionate and committed to improving the health and wellbeing of all Australians. She holds a Masters degree in Public Health and has an extensive professional career in the health sector. Roslyn has developed national prevention programs for leading Australian organisations including the National Stroke Foundation and Australian Drug and Alcohol Foundation. She is currently responsible for managing strategic relationships as the Head of Clinical Engagement at Medibank Private."
+  }, {
     "name": "Jonathan Hermawan Tjapaltjarri",
     "role": "Manager Central Australia",
     "category": "everyone staff",
@@ -54,9 +60,15 @@
     "image": "will-minson@2x.jpg",
     "bio": "A longtime Red Dust Role Model, Will was warmly welcomed to the board at the end of 2014. A former player in the Western Bulldogs, Will was selected 20th overall in the AFL Draft and began his professional career when he debuted in 2004. Most recently, Will completed his Sciences Degree from the University of Melbourne."
   }, {
+    "name": "Tania Carlos",
+    "role": "Director",
+    "category": "everyone board staff",
+    "image": "tania-carlos@2x.jpg",
+    "bio": "An accomplished and motivated Indigenous professional with over 18 years’ experience in Indigenous affairs and community engagement. Experienced in consultation, facilitation and community engagement, Tania has completed a Bachelor of Business from Queensland University of Technology and also holds an Advanced Diploma of Business Management."
+  }, {
     "name": "Scott Stirling",
     "role": "CEO",
-    "category": "everyone board",
+    "category": "everyone staff",
     "image": "",
     "bio": "Scott is an experienced public health executive who joined Red Dust in 2017 following five years as a senior manager at the Stroke Foundation. Born and raised in North East Arnhem Land Scott is a passionate advocate for working in partnership with remote communities to improve health and wellbeing outcomes."
   }, {
@@ -65,12 +77,6 @@
     "category": "everyone staff arts",
     "image": "darren-smith@2x.jpg",
     "bio": "Darren has been involved with Red Dust for over twelve years and brings to his role a ten-year career as a professional basketball player and management experience. As the Chief Executive Officer, he coordinates the effective delivery of programs throughout Australia and leads teams on the ground while out bush, as well as looking after all other aspects of the organisation."
-  }, {
-    "name": "Emilie Goegan",
-    "role": "Business & Communications Manager",
-    "category": "everyone staff",
-    "image": "emilie-goegan@2x.jpg",
-    "bio": "Emilie joined Red Dust mid 2016 as a volunteer and not too long became a valuable member of the team as Business and Communications Manager. With a background in education and a Bachelor's Degree in Creative Arts majoring in Professional Writing, Emilie has travelled extensively throughout Asia as an educator prior to settling back home in Melbourne."
   }, {
     "name": "Nina Braid",
     "role": "Staff Member",
@@ -198,12 +204,6 @@
     "image": "",
     "bio": "Glenn began his professional career as an Australian Rules Football player when he was selected as part of Essendon's U19 side. In 1992 he made his AFL debut for the Bombers and went on to play 21 games for them over three seasons. In 1995 he moved to Carlton's AFL side where he became one of their most respected and key defenders. Glenn played 157 games with the Blues before retiring from the sport after a highly achieving career."
   }, {
-    "name": "Gavin Wanganeen",
-    "role": "Role Model",
-    "category": "everyone staff sport",
-    "image": "",
-    "bio": "Gavin is a retired AFL Player, who played in two premierships with Essendon and Port Adelaide. Gavin is a Brownlow Medallist and is considered one of the finest Indigenous players to date."
-  }, {
     "name": "Hannah Macdougall",
     "role": "Role Model",
     "category": "everyone staff sport",
@@ -211,8 +211,8 @@
     "bio": "Hannah represented Australia twice at the Paralympic Games. At the 2004 Athens Paralympics, she received a bronze medal in the 4 x 100m Medley Relay team. Hannah was the captain of the Australian Paralympic Swim Team for both the 2006 World Swimming Championships and 2008 Beijing Paralympic Games. Hannah is now attempting her third Paralympics, in a different sport – cycling."
   }, {
     "name": "Hugh Minson",
-    "role": "Role Model",
-    "category": "everyone staff sport",
+    "role": "Director",
+    "category": "everyone board",
     "image": "",
     "bio": "Hugh is an Australian Rules Football player. Drafted in 2006 by the NAB Draft as a 17-year-old by Port Adelaide, it was only two and a half years before a knee injury forced him into retirement. Hugh's career was one full of highlights; his coaches and teammates described him as an \"outstanding young man\"."
   }, {
@@ -266,19 +266,25 @@
   }, {
     "name": "Luke Darcy",
     "role": "Role Model",
-    "category": "everyone ambassadors staff sport",
+    "category": "everyone ambassadors staff",
     "image": "luke-darcy@2x.jpg",
     "bio": "Luke is a former Australian Rules footballer who played for the Western Bulldogs, a team he captained for two years. Debuting in 1994, Luke is regarded as one of the Bulldogs' most successful ruckmen/forwards. In 2001 he took out the Charles Sutton Medal, and continued to stamp his name on the game in the following seasons."
   }, {
+    "name": "Matt Hollard",
+    "role": "Role Model",
+    "category": "everyone ambassadors staff",
+    "image": "luke-darcy@2x.jpg",
+    "bio": "Matt began with Red Dust as an inaugural board member 18 years ago. He combines an enthusiasm for basketball and education and has team led over 80 trips to date.  Matt is also a passionate entrepreneur, award winning stairmaker and the founder and General Manager of Champions League Basketball.  Matt remains a committed Red Dust member and is one of the most experienced Red Dust Team Leaders."
+  }, {
     "name": "Yvette Hollard",
     "role": "Healthy Living Program Coordinator",
-    "category": "everyone ambassadors staff sport",
+    "category": "everyone ambassadors staff",
     "image": "",
     "bio": "Yvette joined Red Dust as a role model in 2007, later becoming a program Team Leader.  She is now the Healthy Living Program Coordinator, with over 20 years of experience in business management; events and marketing.  Yvette has recently obtained her Cert III & IV in personal training and as a former chef, has a passion for nutrition and helping others.  Yvette enjoys living life to the fullest!"
   }, {
     "name": "Karyn Bryant",
     "role": "Strong Young Women’s Program and Central Office Manager",
-    "category": "everyone ambassadors staff sport",
+    "category": "everyone ambassadors staff",
     "image": "karyn-bryant.jpg",
     "bio": "Karyn is a teacher with extensive experience working with vulnerable students both in Victoria and the Northern Territory; including experience working in remote schools such as Beswick and Ntaria. Karyn has strong skills relating to curriculum development and delivery as well as program reporting and evaluation and partnership management."
   }]

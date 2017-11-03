@@ -40,11 +40,6 @@
     "intro": "In 2015 Kmart launched a partnership with Red Dust Role Models as part of our ongoing commitment to support Indigenous communities and increase awareness about Indigenous culture within the business. Red Dust Role Models works in collaboration with remote Indigenous communities in the Northern Territory to deliver innovative health promotion programs that encourage Indigenous youth to live a healthy lifestyle.",
     "url": "http://www.kmart.com.au/"
   }, {
-    "name": "Hilton",
-    "logo": "hilton@2x.jpg",
-    "intro": "Hilton has been partnered with Red Dust since 2014, assisting with travel needs.",
-    "url": "http://www3.hilton.com/en/index.html"
-  }, {
     "name": "DrinkWise Australia",
     "logo": "drinkwise@2x.jpg",
     "intro": "DrinkWise Australia is an independent, not-for-profit organisation focused on promoting cultural change to reduce the harm arising from the irresponsible consumption of alcohol.Their vision is to improve the Australian drinking culture so that consuming alcohol too young and to excess is considered undesirable.DrinkWise Australia provides generous support for our Strong Young Women' s and Strong Young Men' s programs.",
@@ -59,11 +54,6 @@
     "logo": "holiday-inn@2x.jpg",
     "intro": "Since 2015, Holiday Inn has partnered with Red Dust, supporting with travel requirements and needs.",
     "url": "https://www.ihg.com/hotels/us/en/reservation"
-  }, {
-    "name": "Coles Online",
-    "logo": "colesonline@2x.jpg",
-    "intro": "More than 1,000 Coles Express team members donate to Red Dust through regular payroll deductions, to help fund programs at Daly River, located 224 km south west of Darwin.More than 15 team members have visited Daly River as role models, generously giving their time, sharing culture and life experiences and offering practical assistance.",
-    "url": "https://shop.coles.com.au//online/national"
   }, {
     "name": "Edgewise",
     "logo": "edgewise@2x.jpg",
@@ -80,14 +70,9 @@
     "intro": "As the presiding Government over most of the remote communities where Red Dust Role Models conducts its programs, the Northern Territory Government is a strong advocate of the Red Dust organisation providing much appreciated funding to support our health and education initiatives.",
     "url": "https://nt.gov.au/"
   }, {
-    "name": "NICA",
-    "logo": "nica@2x.jpg",
-    "intro": "In July 2015 NICA partnered with Red Dust Role Models for the first time. NICA took part in their Remote Healthy Living Program in Walangkura Primary, Kintore, Walangura NT working with children from pre-prep to junior secondary school.",
-    "url": "www.nica.com.au/"
-  }, {
-    "name": "Chifley Resort",
+    "name": "Mecure",
     "logo": "chifleyresort.jpg",
-    "intro": "Chifley Alice Springs Resort is a longtime friend of Red Dust.We are thankful for Chifley providing us with comfortable accommodation, delicious meals and great service before and after each Red Dust program delivery in the central desert.",
+    "intro": "Mecure Alice Springs Resort is a longtime friend of Red Dust.We are thankful for Mecure providing us with comfortable accommodation, delicious meals and great service before and after each Red Dust program delivery in the central desert.",
     "url": "http://www.silverneedlehotels.com/chifley/alice-springs"
   }, {
     "name": "DoubleTree By Hilton",
@@ -109,5 +94,10 @@
     "logo": "christ-church-grammar-school.png",
     "intro": "Red Dust Role Models has partnered with Christ Church Grammar School for several years to facilitate better understanding of Indigenous culture and heritage for students, staff and the wider school community. Each year they assist the school in taking Year 6 students to the Areyonga community in the Northern Territory for a week in the Term 3 holidays.",
     "url": "https://www.ccgs.vic.edu.au/"
+  }, {
+    "name": "The Australian Super Food Company",
+    "logo": "the-australian-super-food-co.jpg",
+    "intro": "",
+    "url": "https://austsuperfoods.com.au/story/"
   }]
 }

@@ -72,23 +72,11 @@
     "image": "",
     "bio": "Scott is an experienced public health executive who joined Red Dust in 2017 following five years as a senior manager at the Stroke Foundation. Born and raised in North East Arnhem Land Scott is a passionate advocate for working in partnership with remote communities to improve health and wellbeing outcomes."
   }, {
-    "name": "Darren Smith",
-    "role": "Role Model",
-    "category": "everyone staff arts",
-    "image": "darren-smith@2x.jpg",
-    "bio": "Darren has been involved with Red Dust for over twelve years and brings to his role a ten-year career as a professional basketball player and management experience. As the Chief Executive Officer, he coordinates the effective delivery of programs throughout Australia and leads teams on the ground while out bush, as well as looking after all other aspects of the organisation."
-  }, {
     "name": "Nina Braid",
     "role": "Staff Member",
     "category": "everyone staff",
     "image": "",
     "bio": "Nina began working at Red Dust in January 2017 as the Engagement and Funding Manager. For the past ten years Nina has worked for the Australian Government, including the Indigenous Land Corporation and the Department of Health. Nina obtained a Bachelor of Arts (Aboriginal Policy and Management) in 2005 and most recently a Masters of Management at the University of South Australia."
-  }, {
-    "name": "Lara Davenport",
-    "role": "Role Model",
-    "category": "everyone staff arts",
-    "image": "lara-davenport@2x.jpg",
-    "bio": "After winning gold in the 4x200m Freestyle Relay at the 2008 Olympic Games, Lara became a Red Dust Role Model in 2008. In 2015 she came on board as the Healthy Living Program Coordinator. With her tertiary training in Psychology, sporting accomplishments and Red Dust program experience in hand, Lara is truly a great addition to the ever-evolving Red Dust team."
   }, {
     "name": "Melanie Jones",
     "role": "Ambassador",
@@ -101,6 +89,30 @@
     "category": "everyone ambassadors staff arts",
     "image": "raymond-walters-japanangka@2x.jpg",
     "bio": "Raymond's grandfather's country is Ngarleyekwerleng in the Western Desert near Yuendumu, and his grandmother's country is Alhalkerre Atnangkerre. Raymond brings his expertise in Sport & Recreation, Remote/Urban Aboriginal Community Development, Family & Child Welfare, Alcohol & Other Drugs Awareness and Consultancy on Aboriginal Community Engagement policies and procedures."
+  }, {
+    "name": "Yvette Hollard",
+    "role": "Healthy Living Program Coordinator",
+    "category": "everyone ambassadors staff",
+    "image": "",
+    "bio": "Yvette joined Red Dust as a role model in 2007, later becoming a program Team Leader.  She is now the Healthy Living Program Coordinator, with over 20 years of experience in business management; events and marketing.  Yvette has recently obtained her Cert III & IV in personal training and as a former chef, has a passion for nutrition and helping others.  Yvette enjoys living life to the fullest!"
+  }, {
+    "name": "Karyn Bryant",
+    "role": "Strong Young Women’s Program and Central Office Manager",
+    "category": "everyone ambassadors staff",
+    "image": "karyn-bryant.jpg",
+    "bio": "Karyn is a teacher with extensive experience working with vulnerable students both in Victoria and the Northern Territory; including experience working in remote schools such as Beswick and Ntaria. Karyn has strong skills relating to curriculum development and delivery as well as program reporting and evaluation and partnership management."
+  }, {
+    "name": "Lara Davenport",
+    "role": "Role Model",
+    "category": "everyone staff arts",
+    "image": "lara-davenport@2x.jpg",
+    "bio": "After winning gold in the 4x200m Freestyle Relay at the 2008 Olympic Games, Lara became a Red Dust Role Model in 2008. In 2015 she came on board as the Healthy Living Program Coordinator. With her tertiary training in Psychology, sporting accomplishments and Red Dust program experience in hand, Lara is truly a great addition to the ever-evolving Red Dust team."
+  }, {
+    "name": "Darren Smith",
+    "role": "Role Model",
+    "category": "everyone staff arts",
+    "image": "darren-smith@2x.jpg",
+    "bio": "Darren has been involved with Red Dust for over twelve years and brings to his role a ten-year career as a professional basketball player and management experience. As the Chief Executive Officer, he coordinates the effective delivery of programs throughout Australia and leads teams on the ground while out bush, as well as looking after all other aspects of the organisation."
   }, {
     "name": "Mitch Tambo",
     "role": "Role Model",
@@ -211,8 +223,8 @@
     "bio": "Hannah represented Australia twice at the Paralympic Games. At the 2004 Athens Paralympics, she received a bronze medal in the 4 x 100m Medley Relay team. Hannah was the captain of the Australian Paralympic Swim Team for both the 2006 World Swimming Championships and 2008 Beijing Paralympic Games. Hannah is now attempting her third Paralympics, in a different sport – cycling."
   }, {
     "name": "Hugh Minson",
-    "role": "Director",
-    "category": "everyone board",
+    "role": "Role Model",
+    "category": "everyone staff sport",
     "image": "",
     "bio": "Hugh is an Australian Rules Football player. Drafted in 2006 by the NAB Draft as a 17-year-old by Port Adelaide, it was only two and a half years before a knee injury forced him into retirement. Hugh's career was one full of highlights; his coaches and teammates described him as an \"outstanding young man\"."
   }, {
@@ -275,17 +287,5 @@
     "category": "everyone ambassadors staff",
     "image": "mathew-hollard@2x.jpg",
     "bio": "Matt began with Red Dust as an inaugural board member 18 years ago. He combines an enthusiasm for basketball and education and has team led over 80 trips to date.  Matt is also a passionate entrepreneur, award winning stairmaker and the founder and General Manager of Champions League Basketball.  Matt remains a committed Red Dust member and is one of the most experienced Red Dust Team Leaders."
-  }, {
-    "name": "Yvette Hollard",
-    "role": "Healthy Living Program Coordinator",
-    "category": "everyone ambassadors staff",
-    "image": "",
-    "bio": "Yvette joined Red Dust as a role model in 2007, later becoming a program Team Leader.  She is now the Healthy Living Program Coordinator, with over 20 years of experience in business management; events and marketing.  Yvette has recently obtained her Cert III & IV in personal training and as a former chef, has a passion for nutrition and helping others.  Yvette enjoys living life to the fullest!"
-  }, {
-    "name": "Karyn Bryant",
-    "role": "Strong Young Women’s Program and Central Office Manager",
-    "category": "everyone ambassadors staff",
-    "image": "karyn-bryant.jpg",
-    "bio": "Karyn is a teacher with extensive experience working with vulnerable students both in Victoria and the Northern Territory; including experience working in remote schools such as Beswick and Ntaria. Karyn has strong skills relating to curriculum development and delivery as well as program reporting and evaluation and partnership management."
   }]
 }

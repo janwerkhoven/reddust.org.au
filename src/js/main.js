@@ -115,6 +115,8 @@ function animateCounters() {
 
 $(document).ready(function() {
 
+  var bodyId = $('body').attr('id');
+
   // Open & close the mobile navigation
   var mobileNavActive = false;
   $('header nav button').on('click', function() {
@@ -131,7 +133,7 @@ $(document).ready(function() {
   });
 
   // Things to fire ONLY on the landing page (avoid unexpected future collisions)
-  if ($('body').attr('id') === 'landing') {
+  if (bodyId === 'landing') {
     // On load
     checkWhetherToAnimateCounters();
     // On scroll
@@ -140,75 +142,48 @@ $(document).ready(function() {
     });
   };
 
-  //Filter dropdown toggle
-  $('#filter>div>div').on('click', function() {
+  if (bodyId === 'about-people') {
+
+  }
+
+  // Bind click to dropdown on people page
+  // Filters the people list on click of dropdown item
+  $('#about-people #filter ul button').on('click', function() {
+    $('#selected-filter').text($(this).text());
+    $(this).addClass('selected').siblings().removeClass('selected');
+    var category = $(this).data('category');
+    filterPeople(category);
+  });
+
+  // Close the dropdown if clicked outside
+  $('#about-people').on('click', function() {
+    $('#filter ul').removeClass('active');
+  });
+
+  // Prevent bubbling when clicking within the dropdown
+  $('#filter>div>div').on('click', function(event) {
     event.stopPropagation();
     $('#filter ul').toggleClass('active');
   });
 
-  // Add click - off functionality to the dropdown
-  $('body').on('click', function() {
-    if ($('#filter ul').hasClass('active')) {
-      $('#filter ul').toggleClass('active');
-    };
-  });
+  // Filter the list of people
+  function filterPeople(category) {
 
-  //Display the active filter
-  $('#filter ul button').on('click', function(event) {
-    $element = $(this);
-    if ($element.hasClass('selected')) {} else {
-      applyFilters(event, $element);
-    };
-    event.stopPropagation();
+    // Hide all people and stop all animations
+    $('#people li').hide().stop().velocity('stop');
 
-  });
-
-  //Applies filters which are either chosen by the user in the dropdown, or stored in sessionStorage
-  function applyFilters(event, element) {
-
-    //If the function is running with a stored filter, apply it then delete it from session storage
-    if (sessionStorage.getItem('storedFilter')) {
-      var filterName = sessionStorage.getItem('storedFilter');
-      sessionStorage.removeItem('storedFilter');
-    } else {
-      var filterName = element.attr('class');
-    };
-
-    var $people = $('#people li');
-    var $visibles = $('#people ul li.' + filterName);
-    var easing = 'easeOutExpo';
-    var speed = 1000; // milliseconds
-
-    // Set the button states text
-    $('#selected-filter').text(filterName);
-    $('#filter ul button').removeClass('selected');
-    $('#filter ul .' + filterName).addClass('selected');
-
-    // Hide all people
-    $people.hide().stop().velocity('stop');
-
-    $visibles.css({
+    // Animate in the selected group of people
+    var $peopleToShow = category ? $('#people li.' + category) : $('#people li');
+    $peopleToShow.css({
       opacity: 0
     }).show().each(function(i) {
-      var delay = i * 80; // milliseconds
+      var delay = i * 80; // We apply a progressive delay for sequence effect
       $(this).delay(delay).velocity({
         scale: [1, .8],
         opacity: [1, 0],
-      }, easing, speed);
+      }, 'easeOutExpo', 1000);
     });
-
   }
-
-  // Pre-apply filters when user navigates to People using the footer links
-  $('footer a.filter').on('click', function() {
-    var $filter = $(this).attr('class').replace('filter ', '');
-    sessionStorage.setItem('storedFilter', $filter);
-  });
-
-  //on page load, check if there is a stored filter from a page nagivation
-  if (sessionStorage.getItem('storedFilter')) {
-    applyFilters();
-  } else {};
 
   // Make any hashtag link scroll with animation to element with matching ID
   // Example: <a href="#features"> will scroll to element with ID #features

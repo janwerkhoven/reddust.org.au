@@ -12,8 +12,7 @@
     display: flex;
     align-items: center;
     height: 80px;
-
-    > div {
+    >div {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -29,7 +28,7 @@
         padding-right: 20px;
         user-select: none;
       }
-      div {
+      >div {
         display: flex;
         justify-content: flex-start;
         background: white;
@@ -39,11 +38,11 @@
         width: 220px;
         cursor: pointer;
         &:after {
-          content: ('');
+          content: ("");
           position: absolute;
           left: 180px;
           top: 0;
-          background: $reddust-cream url('/assets/img/icons/downer.svg');
+          background: $reddust-cream url("/assets/img/icons/downer.svg");
           background-size: 70%;
           background-repeat: no-repeat;
           background-position: center;
@@ -68,7 +67,6 @@
           &.selected {
             background-color: darken($reddust-cream, 10);
           }
-
         }
         #selected-filter {
           border-top: 1px $reddust-yinnar solid;
@@ -85,7 +83,7 @@
           height: 0;
           transition: all ease-out 400ms;
           &.active {
-            height: 240px;
+            height: 280px;
           }
           @media (min-width: 600px) {
             button:hover {

@@ -11,7 +11,6 @@ section.tiles.people {
       @media (min-width: 780px) {
         justify-content: center;
       }
-
       li {
         padding: 1px;
         box-sizing: border-box;
@@ -27,9 +26,6 @@ section.tiles.people {
         // max-height: 364px;
         width: 16.6667vw;
         height: 16.6667vw;
-        // &.hidden {
-        //   display: none;
-        // }
         @media (max-width: 1560px) {
           width: 20vw;
           height: 20vw;

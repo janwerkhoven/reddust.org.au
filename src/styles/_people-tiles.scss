@@ -1,6 +1,6 @@
 // Both partner and people tiles share the same tile layout styles
 section.tiles.people {
-  > div {
+  >div {
     padding: 0;
     max-width: 2600px;
 
@@ -11,7 +11,6 @@ section.tiles.people {
       @media (min-width: 780px) {
         justify-content: center;
       }
-
       li {
         padding: 1px;
         box-sizing: border-box;
@@ -27,9 +26,6 @@ section.tiles.people {
         // max-height: 364px;
         width: 16.6667vw;
         height: 16.6667vw;
-        &.hidden {
-          display: none;
-        }
         @media (max-width: 1560px) {
           width: 20vw;
           height: 20vw;
@@ -93,12 +89,12 @@ section.tiles.people {
             font-size: 18px;
             line-height: 130%;
             text-transform: uppercase;
-            letter-spacing: 0.4px;
+            letter-spacing: .4px;
             color: white;
             position: absolute;
             bottom: 3.5%;
             right: 6%;
-            text-shadow: 0 0 10px RGBA(0,0,0,0.2);
+            text-shadow: 0 0 10px RGBA(0,0,0,.2);
             text-align: right;
           }
           h3 {
@@ -107,11 +103,11 @@ section.tiles.people {
         }
         &.no-image {
           &:hover {
-            > div {
+            >div {
               transform: scale(1.06);
             }
           }
-          > div {
+          >div {
             position: absolute;
             top: 0;
             left: 0;
@@ -139,7 +135,7 @@ section.tiles.people {
             font-family: $montserrat-regular;
             font-size: 19px;
             color: $reddust-cream;
-            letter-spacing: 0.5px;
+            letter-spacing: .5px;
           }
         }
         p {
@@ -148,5 +144,4 @@ section.tiles.people {
       }
     }
   }
-
 }

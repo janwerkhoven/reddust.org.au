@@ -142,8 +142,59 @@ $(document).ready(function() {
     });
   };
 
+  // 1. Create an array populated with people filtered first by category then by name
   if (bodyId === 'about-people') {
+    var people = [];
+    var categories = [
+      'founder',
+      'patron',
+      'board',
+      'ambassador',
+      'role-model',
+      'staff'
+    ];
 
+    // Do this for each category
+    for (var i = 0; i < categories.length; i++) {
+      var category = categories[i];
+      var peopleInCategory = [];
+      var $peopleInCategory = $('#people li.' + category);
+
+      // 1. Find all people of this category, then populate a temporary array
+      $peopleInCategory.each(function() {
+        peopleInCategory.push({
+          name: $(this).find('h2').text(),
+          role: $(this).find('h3').text(),
+          category: category
+        });
+      });
+
+      // 2. Sort each individual alphabetically by their name
+      var sortedPeopleInCategory = peopleInCategory.sort(function(a, b) {
+        if (a.name < b.name)
+          return -1;
+        if (a.name > b.name)
+          return 1;
+        return 0;
+      });
+
+      // 3. Add the property `order` to each person, which will be used for flexbox ordering
+      for (var ii = 0; ii < sortedPeopleInCategory.length; ii++) {
+        var person = sortedPeopleInCategory[ii];
+        person.order = people.length;
+        people.push(person);
+      }
+    };
+
+    // Iterate over all people in the array an apply the flexbox order to each person in the DOM
+    for (var i = 0; i < people.length; i++) {
+      var person = people[i];
+      $('#people li[data-name="' + person.name + '"]').css({
+        order: person.order
+      });
+    }
+
+    filterPeople();
   }
 
   // Bind click to dropdown on people page
@@ -172,9 +223,26 @@ $(document).ready(function() {
     // Hide all people and stop all animations
     $('#people li').hide().stop().velocity('stop');
 
+    // Select the people that need to be shown
+    var selection = category ? $('#people li.' + category) : $('#people li');
+
+    // Sort that selection by their flexbox order
+    var count = 0;
+    var sorted = selection.sort(function(a, b) {
+      a = parseInt($(a).css('order'), 10);
+      b = parseInt($(b).css('order'), 10);
+      count += 2;
+      if (a > b) {
+        return 1;
+      } else if (a < b) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
+
     // Animate in the selected group of people
-    var $peopleToShow = category ? $('#people li.' + category) : $('#people li');
-    $peopleToShow.css({
+    sorted.css({
       opacity: 0
     }).show().each(function(i) {
       var delay = i * 80; // We apply a progressive delay for sequence effect

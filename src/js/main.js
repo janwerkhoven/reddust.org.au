@@ -232,13 +232,7 @@ $(document).ready(function() {
       a = parseInt($(a).css('order'), 10);
       b = parseInt($(b).css('order'), 10);
       count += 2;
-      if (a > b) {
-        return 1;
-      } else if (a < b) {
-        return -1;
-      } else {
-        return 0;
-      }
+      return (a > b) ? 1 : ((a < b) ? -1 : 0);
     });
 
     // Animate in the selected group of people

@@ -148,10 +148,12 @@ $(document).ready(function() {
     var categories = [
       'founder',
       'patron',
-      'board',
+      'board-chairman',
+      'board-member',
       'ambassador',
-      'role-model',
-      'staff'
+      'staff-ceo',
+      'staff-member',
+      'role-model'
     ];
 
     // Do this for each category
@@ -220,11 +222,18 @@ $(document).ready(function() {
   // Filter the list of people
   function filterPeople(category) {
 
-    // Hide all people and stop all animations
-    $('#people li').hide().stop().velocity('stop');
+    var selection = $('#people li'); // If no category is given select all people to be shown
 
-    // Select the people that need to be shown
-    var selection = category ? $('#people li.' + category) : $('#people li');
+    // If a category is given, use it to select that group of people
+    // Filters can contain multiple categories divided by spaces
+    if (category) {
+      var categories = category.split(' ');
+      var selectors = [];
+      for (var i = 0; i < categories.length; i++) {
+        selectors.push('#people li.' + categories[i]);
+      }
+      selection = $(selectors.join(', '));
+    }
 
     // Sort that selection by their flexbox order
     var count = 0;
@@ -234,6 +243,9 @@ $(document).ready(function() {
       count += 2;
       return (a > b) ? 1 : ((a < b) ? -1 : 0);
     });
+
+    // Hide all people and stop all animations
+    $('#people li').hide().stop().velocity('stop');
 
     // Animate in the selected group of people
     sorted.css({

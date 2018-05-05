@@ -1,5 +1,4 @@
 #about-mission {
-
   #about-nav {
     a[href="/about/mission-and-values"] {
       color: $reddust-rust;
@@ -30,7 +29,7 @@
           min-height: 100%;
           min-width: 100%;
           max-width: 843px;
-          transform: translate(-50%,-50%);
+          transform: translate(-50%, -50%);
         }
       }
 
@@ -115,30 +114,41 @@
           width: 100vw;
           max-width: 750px;
         }
-
+        h2 {
+          font-family: $montserrat-bold;
+          text-transform: uppercase;
+          color: $reddust-bone;
+          margin: 80px auto 20px;
+          text-align: center;
+          @media (max-width: 450px) {
+            font-size: 18px;
+            margin: 40px auto 10px;
+          }
+        }
         ul {
           color: $reddust-cream;
-          margin: 80px 0;
-
+          padding-bottom: 60px;
           li {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             position: relative;
-            padding: 70px 0;
+            padding: 50px 0;
+            &:first-child {
+              padding: 0;
+            }
             @media (max-width: 450px) {
               padding: 30px 0;
             }
-
-            h2 {
+            h3 {
               font-size: 45px;
               z-index: 1;
               @media (max-width: 450px) {
                 font-size: 32px;
               }
               &:after {
-                content: ' ';
+                content: " ";
                 position: absolute;
                 width: 140px;
                 height: 140px;
@@ -146,7 +156,8 @@
                 left: 50%;
                 margin-left: -70px;
                 margin-top: -70px;
-                background: url('/assets/img/about/mission-and-values/red-dot.png') no-repeat 0 0 / 140px 140px;
+                background: url("/assets/img/about/mission-and-values/red-dot.png")
+                  no-repeat 0 0 / 140px 140px;
                 z-index: -1;
                 @media (max-width: 450px) {
                   width: 70px;
@@ -185,7 +196,7 @@
   height: 50vw;
   max-height: 843px;
   min-height: 400px;
-  background-image: url('/assets/img/about/mission-and-values/kids-jumping-for-rugby@2x.jpg');
+  background-image: url("/assets/img/about/mission-and-values/kids-jumping-for-rugby@2x.jpg");
   background-size: cover;
   background-position: 25% 0;
   text-align: center;

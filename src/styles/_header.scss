@@ -1,5 +1,5 @@
 header {
-  background: url('/assets/img/header/red-header-background.jpg');
+  background: url("/assets/img/header/red-header-background.jpg");
   background-size: cover;
 
   > div {
@@ -57,7 +57,6 @@ header {
             }
           }
         }
-
       }
       @media (max-width: 800px) {
         > div {
@@ -68,17 +67,14 @@ header {
             }
           }
         }
-
         ul {
           position: absolute;
-
           li {
             display: flex;
             flex-direction: column;
           }
         }
       }
-
       ul {
         display: flex;
         margin-bottom: 5px;
@@ -131,7 +127,6 @@ header {
                 text-decoration: none;
               }
             }
-
             img {
               width: 26px;
               padding: 8px 0;

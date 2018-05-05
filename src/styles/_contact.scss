@@ -1,5 +1,4 @@
 #contact {
-
   #title {
     background-color: $reddust-sunset;
 
@@ -106,21 +105,18 @@
   #actions {
     display: block;
     background-color: $reddust-yinnar;
-
     > div {
       display: flex;
       padding: 0;
       margin: auto;
       width: 100vw;
       max-width: 1686px;
-
       ul {
         display: flex;
         width: 100%;
         @media (max-width: 1040px) {
           flex-direction: column;
         }
-
         li {
           display: flex;
           flex-direction: column;
@@ -136,7 +132,7 @@
             height: auto;
             max-width: 100vw;
           }
-          &:nth-last-child(1) {
+          &#role-model {
             background-color: $reddust-rust;
             div {
               a {
@@ -148,15 +144,19 @@
                 }
               }
             }
-
           }
-          &:nth-last-child(2) {
+          &#partnerships {
             background-color: $reddust-gold;
             a {
               color: $reddust-rust;
+              border-color: $reddust-rust;
+              &:hover {
+                color: $reddust-sunset;
+                border-color: $reddust-sunset;
+              }
             }
           }
-          &:nth-last-child(3) {
+          &#fundraise {
             div {
               a {
                 color: $reddust-gold;
@@ -168,7 +168,6 @@
               }
             }
           }
-
           div {
             display: flex;
             flex-direction: column;
@@ -177,16 +176,20 @@
             padding: 10%;
             margin: auto 0;
             color: $reddust-bone;
+            > * {
+              margin: 0 0 20px;
+              &:last-child {
+                margin: 0;
+              }
+            }
             @media (max-width: 1040px) {
               padding: 5vw;
             }
-
             h3 {
               font-family: $montserrat-bold;
               text-transform: uppercase;
               font-size: 22px;
             }
-
             p {
               font-size: 16px;
               @media (max-width: 1080px) {
@@ -199,12 +202,7 @@
                 font-size: 15px;
               }
             }
-
-            a {
-              margin: 5px;
-            }
           }
-
         }
       }
     }

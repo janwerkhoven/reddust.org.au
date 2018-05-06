@@ -1,0 +1,4 @@
+{
+  "presets": ["es2015"],
+  "plugins": ["array-includes", "@59naga/babel-plugin-transform-array-from"]
+}

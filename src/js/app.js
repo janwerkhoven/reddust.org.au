@@ -1,5 +1,5 @@
-isProduction = location.host === "www.reddust.org.au" ? true : false;
-environment = isProduction ? "production" : "staging";
+const isProduction = location.host === "www.reddust.org.au" ? true : false;
+const environment = isProduction ? "production" : "staging";
 
 // Google Analytics
 

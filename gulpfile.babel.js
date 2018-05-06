@@ -135,7 +135,12 @@ gulp.task("compileCss", () => {
       })
     )
     .pipe(minifyCSS({ keepSpecialComments: "none" }))
-    .pipe(rename({ extname: ".min.css" }))
+    .pipe(
+      rename({
+        basename: PKG.name,
+        extname: ".min.css"
+      })
+    )
     .pipe(gulp.dest("dist/static/assets/css"))
     .pipe(connect.reload());
 });
@@ -177,7 +182,12 @@ gulp.task("compileProjectJs", () => {
     .pipe(babel())
     .pipe(isProduction ? uglify({ preserveComments: "license" }) : noop())
     .pipe(header(legalBanner))
-    .pipe(rename({ extname: ".min.js" }))
+    .pipe(
+      rename({
+        basename: PKG.name,
+        extname: ".min.js"
+      })
+    )
     .pipe(gulp.dest("dist/static/assets/js"));
 });
 

@@ -10,7 +10,7 @@ import eslint from "gulp-eslint";
 import gitrev from "git-rev-sync";
 import gulp from "gulp";
 import header from "gulp-header";
-import inlineCss from "gulp-inline-css";
+// import inlineCss from "gulp-inline-css";
 import minifyCSS from "gulp-clean-css";
 import noop from "gulp-noop";
 import nunjucksRender from "gulp-nunjucks-render";
@@ -26,44 +26,24 @@ import util from "gulp-util";
 
 const PKG = require("./package.json");
 
-const project = {
-  name: "Red Dust",
-  url: "https://reddust.org.au/"
-};
-
-// Where the CDN assets live per environment
-const cdnHosts = {
-  development: "http://localhost:9000",
-  production: "https://cdn.hotdoc.com.au"
-};
-
-// Where the Bookings app lives per environment
-// Note: the CDN pages are for QA only and should never hit production
-const bookingsHosts = {
-  development: "http://localhost:4200",
-  production: "https://staging-internal.hotdoc.com.au"
-};
+// const project = {
+//   name: "Red Dust",
+//   url: "https://reddust.org.au/"
+// };
 
 // Build specifics
 const environment = util.env.env || "development";
 const isProduction = environment === "production";
 const buildVersion = PKG.version;
-const cdnHost = cdnHosts[environment] || "";
-const bookingHost = bookingsHosts[environment] || "";
-const assetsURL = `${cdnHost}/static/assets`;
-const clinicPageUrl = `${bookingHost}/medical-centres/carlton-VIC-3053/bookings-demo-medical/doctors`;
-const doctorPageUrl1 = `${bookingHost}/medical-centres/carlton-VIC-3053/bookings-demo-medical/doctors/dr-all-reasons`;
-const doctorPageUrl2 = `${bookingHost}/medical-centres/carlton-VIC-3053/bookings-demo-medical/doctors/dr-standard-consults-only`;
 
 // The build aware config passed down all HTML and JS files
 const config = {
+  humanName: "Red Dust",
+  name: PKG.name,
+  homepage: PKG.homepage,
   isProduction,
   environment,
-  buildVersion,
-  assetsURL,
-  clinicPageUrl,
-  doctorPageUrl1,
-  doctorPageUrl2
+  buildVersion
 };
 
 // Delete the dist folder
@@ -80,7 +60,7 @@ gulp.task("deleteTemp", () => {
 gulp.task("copyPublic", () => {
   return gulp
     .src("src/public/**/*")
-    .pipe(gulp.dest("dist/static/"))
+    .pipe(gulp.dest("dist/"))
     .pipe(connect.reload());
 });
 
@@ -90,7 +70,7 @@ gulp.task("copyOutdatedBrowserJs", () => {
     .src(
       "bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.js"
     )
-    .pipe(gulp.dest("dist/static/assets/js/"));
+    .pipe(gulp.dest("dist/assets/js/"));
 });
 
 // Copy the outdatedbrowser CSS
@@ -99,7 +79,7 @@ gulp.task("copyOutdatedBrowserCss", () => {
     .src(
       "bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.css"
     )
-    .pipe(gulp.dest("dist/static/assets/css/"));
+    .pipe(gulp.dest("dist/assets/css/"));
 });
 
 // Compile all HTML
@@ -111,19 +91,14 @@ gulp.task("compileHtml", function() {
       .pipe(
         nunjucksRender({
           path: ["src/templates"],
-          data: {
-            project: project,
-            app_name: "Peta Sitcheff",
-            app_url: "http://www.petasitcheff.com/",
-            linkedin: "https://www.linkedin.com/in/peta-sitcheff-20b8b483/"
-          }
+          data: { config }
         })
       )
       .pipe(prettify({ config: "./jsbeautifyrc.json" }))
       .pipe(gulp.dest("dist"))
       .pipe(
         sitemap({
-          siteUrl: project.url,
+          siteUrl: config.homepage,
           changefreq: "monthly",
           priority: 0.5
         })
@@ -132,21 +107,6 @@ gulp.task("compileHtml", function() {
       .pipe(connect.reload())
   );
 });
-
-// Compile all HTML
-// gulp.task("compileHtml", () => {
-//   return gulp
-//     .src("src/templates/pages/**/*.+(njk|html)")
-//     .pipe(
-//       nunjucksRender({
-//         path: ["src/templates"],
-//         data: { config }
-//       })
-//     )
-//     .pipe(prettify({ config: "./jsbeautifyrc.json" }))
-//     .pipe(gulp.dest("dist/"))
-//     .pipe(connect.reload());
-// });
 
 // Compile all CSS
 gulp.task("compileCss", () => {
@@ -174,21 +134,21 @@ gulp.task("compileCss", () => {
     .pipe(minifyCSS({ keepSpecialComments: "none" }))
     .pipe(
       rename({
-        basename: PKG.name,
+        basename: config.name,
         extname: ".min.css"
       })
     )
-    .pipe(gulp.dest("dist/static/assets/css"))
+    .pipe(gulp.dest("dist/assets/css"))
     .pipe(connect.reload());
 });
 
 // Inline the CSS into the HTML, needed for emails, error pages and signatures
-gulp.task("inlineCss", () => {
-  return gulp
-    .src(["dist/static/errors/*.html"])
-    .pipe(inlineCss())
-    .pipe(gulp.dest("dist/static/errors/"));
-});
+// gulp.task("inlineCss", () => {
+//   return gulp
+//     .src(["dist/errors/*.html"])
+//     .pipe(inlineCss())
+//     .pipe(gulp.dest("dist/errors/"));
+// });
 
 // Lint app JS, warn about bad JS, break on errors
 gulp.task("lintJs", () => {
@@ -221,11 +181,11 @@ gulp.task("compileProjectJs", () => {
     .pipe(header(legalBanner))
     .pipe(
       rename({
-        basename: PKG.name,
+        basename: config.name,
         extname: ".min.js"
       })
     )
-    .pipe(gulp.dest("dist/static/assets/js"));
+    .pipe(gulp.dest("dist/assets/js"));
 });
 
 // Add vendor files to hotdoc-lightbox.min.js
@@ -233,11 +193,11 @@ gulp.task("includeVendors1", () => {
   return gulp
     .src([
       "bower_components/jquery/dist/jquery.min.js",
-      "dist/static/assets/js/hotdoc-widget.min.js"
+      "dist/assets/js/hotdoc-widget.min.js"
     ])
     .pipe(concat("hotdoc-widget.min.js"), { newLine: "\n\n\n\n" })
     .pipe(replace(/^\s*\r?\n/gm, ""))
-    .pipe(gulp.dest("dist/static/assets/js"));
+    .pipe(gulp.dest("dist/assets/js"));
 });
 
 // Add vendor files to hotdoc-lightbox.min.js
@@ -246,16 +206,16 @@ gulp.task("includeVendors2", () => {
     .src([
       "bower_components/jquery/dist/jquery.min.js",
       "bower_components/velocity/velocity.min.js",
-      "dist/static/assets/js/hotdoc-lightbox.min.js"
+      "dist/assets/js/hotdoc-lightbox.min.js"
     ])
     .pipe(concat("hotdoc-lightbox.min.js"), { newLine: "\n\n\n\n" })
     .pipe(replace(/^\s*\r?\n/gm, ""))
-    .pipe(gulp.dest("dist/static/assets/js"));
+    .pipe(gulp.dest("dist/assets/js"));
 });
 
 // Live reload JS files in browser
 gulp.task("reloadJs", () => {
-  return gulp.src(["dist/static/assets/js/**/*.js"]).pipe(connect.reload());
+  return gulp.src(["dist/assets/js/**/*.js"]).pipe(connect.reload());
 });
 
 // Build all JS files
@@ -272,7 +232,7 @@ gulp.task(
 gulp.task("watch", () => {
   gulp.watch(["src/public/**/*"], gulp.parallel("copyPublic"));
   gulp.watch(
-    ["src/templates/**/*.+(html|nunjucks|json)"],
+    ["src/templates/**/*.+(html|njk|json)"],
     gulp.parallel("compileHtml")
   );
   gulp.watch(["src/styles/**/*.scss"], gulp.parallel("compileCss"));
@@ -300,9 +260,9 @@ gulp.task("report", () => {
   return gulp
     .src([
       "dist/**/*",
-      "!dist/static/assets/favicons/**",
-      "!dist/static/assets/fonts/**",
-      "!dist/static/assets/img/**"
+      "!dist/assets/favicons/**",
+      "!dist/assets/fonts/**",
+      "!dist/assets/img/**"
     ])
     .pipe(
       size({
@@ -320,7 +280,7 @@ gulp.task(
     gulp.parallel(
       "compileHtml",
       "compileCss",
-      "compileJs",
+      // "compileJs",
       "copyPublic",
       "copyOutdatedBrowserJs",
       "copyOutdatedBrowserCss"

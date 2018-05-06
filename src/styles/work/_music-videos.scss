@@ -1,5 +1,4 @@
 #music-videos {
-
   #work-nav {
     a[href="/work/music-videos"] {
       color: $reddust-gold;
@@ -41,7 +40,7 @@
             z-index: -1;
           }
           &::before {
-            content: ('');
+            content: ("");
             position: absolute;
             top: 0;
             left: 0;
@@ -50,7 +49,6 @@
             background-color: $reddust-yinnar;
             opacity: 0;
             transition: ease-in-out all 200ms;
-
           }
           div {
             display: flex;
@@ -91,9 +89,7 @@
               @media (max-width: 1000px) {
                 font-size: 14px;
                 line-height: 120%;
-
               }
-
             }
             h5 {
               font-family: $montserrat-regular;
@@ -103,7 +99,6 @@
               @media (max-width: 1000px) {
                 font-size: 13px;
               }
-
             }
             a {
               width: 100px;
@@ -114,8 +109,7 @@
               &:hover {
                 color: $reddust-sunset;
                 border-color: $reddust-sunset;
-                background-color: rgba($reddust-rust,0.3);
-
+                background-color: rgba($reddust-rust, 0.3);
               }
             }
           }
@@ -125,7 +119,6 @@
             }
             > div {
               opacity: 1;
-
             }
           }
         }

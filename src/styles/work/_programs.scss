@@ -190,7 +190,6 @@
             @media (max-width: 400px) {
               font-size: 11px;
             }
-
           }
         }
         &.slide-map {
@@ -204,7 +203,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             height: 100%;
             h1 {
               font-size: 38px;
@@ -259,24 +258,20 @@
               font-size: 22px;
               margin: 20px 0;
               max-width: 76vw;
-
             }
             h3 {
               font-family: $montserrat-bold;
               text-transform: uppercase;
               max-width: 76vw;
-
             }
             > h3 {
               text-align: center;
               max-width: 76vw;
-
             }
             p {
               line-height: 160%;
               font-size: 15px;
               max-width: 76vw;
-
             }
             .dates {
               display: flex;
@@ -308,7 +303,6 @@
                     min-width: 130px;
                     margin-bottom: 2px;
                   }
-
                 }
                 p {
                   margin: 0 auto;
@@ -319,7 +313,6 @@
                     min-width: 130px;
                     margin-left: 5px;
                   }
-
                 }
               }
             }
@@ -329,50 +322,50 @@
     }
     &#healthy-living {
       .slide-1 {
-        background-image: url('/assets/img/work/programs/healthy-living-1.jpg');
+        background-image: url("/assets/img/work/programs/healthy-living-1.jpg");
       }
       .slide-2 {
-        background-image: url('/assets/img/work/programs/healthy-living-2.jpg');
+        background-image: url("/assets/img/work/programs/healthy-living-2.jpg");
       }
       .slide-map {
-        background-image: url('/assets/img/work/programs/healthy-living-map.jpg');
+        background-image: url("/assets/img/work/programs/healthy-living-map.jpg");
       }
       .slide-4 {
-        background-image: url('/assets/img/work/programs/healthy-living-4.jpg');
+        background-image: url("/assets/img/work/programs/healthy-living-4.jpg");
       }
     }
     &#strong-young-men {
       .slide-1 {
-        background-image: url('/assets/img/work/programs/strong-young-men-1.jpg');
+        background-image: url("/assets/img/work/programs/strong-young-men-1.jpg");
       }
       .slide-2 {
-        background-image: url('/assets/img/work/programs/strong-young-men-2.jpg');
+        background-image: url("/assets/img/work/programs/strong-young-men-2.jpg");
       }
       .slide-3 {
-        background-image: url('/assets/img/work/programs/strong-young-men-3.jpg');
+        background-image: url("/assets/img/work/programs/strong-young-men-3.jpg");
         h2 {
           color: $reddust-rust;
         }
       }
       .slide-4 {
-        background-image: url('/assets/img/work/programs/strong-young-men-4.jpg');
+        background-image: url("/assets/img/work/programs/strong-young-men-4.jpg");
       }
       .slide-5 {
-        background-image: url('/assets/img/work/programs/strong-young-men-5.jpg');
+        background-image: url("/assets/img/work/programs/strong-young-men-5.jpg");
       }
       .slide-map {
-        background-image: url('/assets/img/work/programs/strong-young-men-map.jpg');
+        background-image: url("/assets/img/work/programs/strong-young-men-map.jpg");
       }
     }
     &#strong-young-women {
       .slide-1 {
-        background-image: url('/assets/img/work/programs/strong-young-women-1.jpg');
+        background-image: url("/assets/img/work/programs/strong-young-women-1.jpg");
       }
       .slide-2 {
-        background-image: url('/assets/img/work/programs/strong-young-women-2.jpg');
+        background-image: url("/assets/img/work/programs/strong-young-women-2.jpg");
       }
       .slide-map {
-        background-image: url('/assets/img/work/programs/strong-young-women-map.jpg');
+        background-image: url("/assets/img/work/programs/strong-young-women-map.jpg");
       }
     }
   }

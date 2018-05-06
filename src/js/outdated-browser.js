@@ -6,28 +6,35 @@ website:    http://www.burocratik.com
 * @preserve
 -----------------------------------------------------------------------*/
 var outdatedBrowser = function(options) {
-
   //Variable definition (before ajax)
   var outdated = document.getElementById("outdated");
 
   // Default settings
   this.defaultOpts = {
-    bgColor: '#f25648',
-    color: '#ffffff',
-    lowerThan: 'transform',
-    languagePath: '../outdatedbrowser/lang/en.html'
-  }
+    bgColor: "#f25648",
+    color: "#ffffff",
+    lowerThan: "transform",
+    languagePath: "../outdatedbrowser/lang/en.html"
+  };
 
   if (options) {
     //assign css3 property to IE browser version
-    if (options.lowerThan == 'IE8' || options.lowerThan == 'borderSpacing') {
-      options.lowerThan = 'borderSpacing';
-    } else if (options.lowerThan == 'IE9' || options.lowerThan == 'boxShadow') {
-      options.lowerThan = 'boxShadow';
-    } else if (options.lowerThan == 'IE10' || options.lowerThan == 'transform' || options.lowerThan == '' || typeof options.lowerThan === "undefined") {
-      options.lowerThan = 'transform';
-    } else if (options.lowerThan == 'IE11' || options.lowerThan == 'borderImage') {
-      options.lowerThan = 'borderImage';
+    if (options.lowerThan == "IE8" || options.lowerThan == "borderSpacing") {
+      options.lowerThan = "borderSpacing";
+    } else if (options.lowerThan == "IE9" || options.lowerThan == "boxShadow") {
+      options.lowerThan = "boxShadow";
+    } else if (
+      options.lowerThan == "IE10" ||
+      options.lowerThan == "transform" ||
+      options.lowerThan == "" ||
+      typeof options.lowerThan === "undefined"
+    ) {
+      options.lowerThan = "transform";
+    } else if (
+      options.lowerThan == "IE11" ||
+      options.lowerThan == "borderImage"
+    ) {
+      options.lowerThan = "borderImage";
     }
     //all properties
     this.defaultOpts.bgColor = options.bgColor;
@@ -51,7 +58,7 @@ var outdatedBrowser = function(options) {
 
   function function_opacity(opacity_value) {
     outdated.style.opacity = opacity_value / 100;
-    outdated.style.filter = 'alpha(opacity=' + opacity_value + ')';
+    outdated.style.filter = "alpha(opacity=" + opacity_value + ")";
   }
 
   // function function_fade_out(opacity_value) {
@@ -65,7 +72,7 @@ var outdatedBrowser = function(options) {
   function function_fade_in(opacity_value) {
     function_opacity(opacity_value);
     if (opacity_value == 1) {
-      outdated.style.display = 'block';
+      outdated.style.display = "block";
     }
     if (opacity_value == 100) {
       done = true;
@@ -78,8 +85,8 @@ var outdatedBrowser = function(options) {
   // }
 
   var supports = (function() {
-    var div = document.createElement('div');
-    var vendors = 'Khtml Ms O Moz Webkit'.split(' ');
+    var div = document.createElement("div");
+    var vendors = "Khtml Ms O Moz Webkit".split(" ");
     var len = vendors.length;
 
     return function(prop) {
@@ -99,15 +106,18 @@ var outdatedBrowser = function(options) {
   })();
 
   //if browser does not supports css3 property (transform=default), if does > exit all this
-  if (!supports('' + cssProp + '')) {
-    if (done && outdated.style.opacity !== '1') {
+  if (!supports("" + cssProp + "")) {
+    if (done && outdated.style.opacity !== "1") {
       done = false;
       for (var i = 1; i <= 100; i++) {
-        setTimeout((function(x) {
-          return function() {
-            function_fade_in(x);
-          };
-        })(i), i * 8);
+        setTimeout(
+          (function(x) {
+            return function() {
+              function_fade_in(x);
+            };
+          })(i),
+          i * 8
+        );
       }
     }
   } else {
@@ -115,7 +125,7 @@ var outdatedBrowser = function(options) {
   } //end if
 
   //Check AJAX Options: if languagePath == '' > use no Ajax way, html is needed inside <div id="outdated">
-  if (languagePath === ' ' || languagePath.length == 0) {
+  if (languagePath === " " || languagePath.length == 0) {
     startStylesAndEvents();
   } else {
     grabFile(languagePath);
@@ -143,7 +153,7 @@ var outdatedBrowser = function(options) {
 
     //close button
     btnClose.onmousedown = function() {
-      outdated.style.display = 'none';
+      outdated.style.display = "none";
       return false;
     };
 
@@ -159,7 +169,8 @@ var outdatedBrowser = function(options) {
   } //end styles and events
 
   // IF AJAX with request ERROR > insert english default
-  var ajaxEnglishDefault = '<h6>Your browser is out-of-date!</h6>' +
+  var ajaxEnglishDefault =
+    "<h6>Your browser is out-of-date!</h6>" +
     '<p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>' +
     '<p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>';
 
@@ -213,7 +224,7 @@ var outdatedBrowser = function(options) {
 //event listener: DOM ready
 function addLoadEvent(func) {
   var oldonload = window.onload;
-  if (typeof window.onload != 'function') {
+  if (typeof window.onload != "function") {
     window.onload = func;
   } else {
     window.onload = function() {
@@ -221,15 +232,15 @@ function addLoadEvent(func) {
         oldonload();
       }
       func();
-    }
+    };
   }
 }
 //call plugin function after DOM ready
 addLoadEvent(function() {
   outdatedBrowser({
-    bgColor: '#f25648',
-    color: '#ffffff',
-    lowerThan: 'transform',
-    languagePath: 'your_path/outdatedbrowser/lang/en.html'
-  })
+    bgColor: "#f25648",
+    color: "#ffffff",
+    lowerThan: "transform",
+    languagePath: "your_path/outdatedbrowser/lang/en.html"
+  });
 });

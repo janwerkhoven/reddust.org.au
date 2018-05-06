@@ -1,0 +1,70 @@
+{% extends "layouts/page.njk" %}
+
+{% block meta %}
+  <title>People</title>
+  <meta name="description" content="">
+{% endblock %}
+
+{% block id %}about-people{% endblock %}
+
+{% block main %}
+
+  <section id="hero">
+    <img src="" alt=""/>
+  </section>
+
+  {% include "partials/about-nav.njk" %}
+
+  <section id="filter">
+    <div>
+      <p>Show</p>
+      <div>
+        <button id="selected-filter">Everyone</button>
+        <ul>
+          <button class="selected">Everyone</button>
+          <button data-category="founder">Founder</button>
+          <button data-category="patron">Patron</button>
+          <button data-category="board-chairman board-member">Board</button>
+          <button data-category="ambassador">Ambassadors</button>
+          <button data-category="staff-ceo staff-member">Staff</button>
+          <button data-category="role-model">Role Models</button>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="people" class="tiles people">
+    <div>
+      <ul>
+        {% for person in people %}
+          <li data-name="{{person.name}}" class="{{person.category}} {% if image %}image{% else %}no-image{% endif %}">
+            <div>
+              {% if image %}
+                <div class="img">
+                  <img src="/assets/img/people/{{person.image}}" alt="{{person.name}} - {{person.position}} at Red Dust"/>
+                </div>
+              {% endif %}
+              <div class="bio">
+                <h2>{{person.name}}</h2>
+                <h3>{{person.role}}</h3>
+                <p>{{person.bio}}</p>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section id="modals">
+    <div>
+      <div class="overlay">
+        <div class="modal">
+          {% include 'partials/close-icon-svg.njk' %}
+          <div class="content"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

@@ -19,11 +19,17 @@ import prettify from "gulp-jsbeautifier";
 import rename from "gulp-rename";
 import replace from "gulp-replace";
 import sass from "gulp-sass";
+import sitemap from "gulp-sitemap";
 import size from "gulp-size";
 import uglify from "gulp-uglify";
 import util from "gulp-util";
 
 const PKG = require("./package.json");
+
+const project = {
+  name: "Red Dust",
+  url: "https://reddust.org.au/"
+};
 
 // Where the CDN assets live per environment
 const cdnHosts = {
@@ -97,19 +103,50 @@ gulp.task("copyOutdatedBrowserCss", () => {
 });
 
 // Compile all HTML
-gulp.task("compileHtml", () => {
-  return gulp
-    .src("src/templates/pages/**/*.+(html|nunjucks)")
-    .pipe(
-      nunjucksRender({
-        path: ["src/templates"],
-        data: { config }
-      })
-    )
-    .pipe(prettify({ config: "./jsbeautifyrc.json" }))
-    .pipe(gulp.dest("dist/static/"))
-    .pipe(connect.reload());
+gulp.task("compileHtml", function() {
+  return (
+    gulp
+      .src("src/templates/pages/**/*.+(html|njk)")
+      // .pipe(data(function() { return require('./src/templates/data/people.json') }))
+      .pipe(
+        nunjucksRender({
+          path: ["src/templates"],
+          data: {
+            project: project,
+            app_name: "Peta Sitcheff",
+            app_url: "http://www.petasitcheff.com/",
+            linkedin: "https://www.linkedin.com/in/peta-sitcheff-20b8b483/"
+          }
+        })
+      )
+      .pipe(prettify({ config: "./jsbeautifyrc.json" }))
+      .pipe(gulp.dest("dist"))
+      .pipe(
+        sitemap({
+          siteUrl: project.url,
+          changefreq: "monthly",
+          priority: 0.5
+        })
+      )
+      .pipe(gulp.dest("dist"))
+      .pipe(connect.reload())
+  );
 });
+
+// Compile all HTML
+// gulp.task("compileHtml", () => {
+//   return gulp
+//     .src("src/templates/pages/**/*.+(njk|html)")
+//     .pipe(
+//       nunjucksRender({
+//         path: ["src/templates"],
+//         data: { config }
+//       })
+//     )
+//     .pipe(prettify({ config: "./jsbeautifyrc.json" }))
+//     .pipe(gulp.dest("dist/"))
+//     .pipe(connect.reload());
+// });
 
 // Compile all CSS
 gulp.task("compileCss", () => {

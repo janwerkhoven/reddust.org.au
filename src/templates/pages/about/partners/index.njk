@@ -1,0 +1,62 @@
+{% extends "layouts/page.njk" %}
+
+{% block meta %}
+  <title>Partners</title>
+  <meta name="description" content="">
+{% endblock %}
+
+{% block id %}about-partners{% endblock %}
+
+{% block main %}
+
+  <section id="hero" class="center">
+    <img src="/assets/img/about/partners/hero.jpg"/>
+  </section>
+
+  {% include "partials/about-nav.njk" %}
+
+  <section id="intro">
+    <div id="thanks">
+      <h3>We wish to thank our partners for their support.</h3>
+      <p>Red Dust Role Models would not exist without the invaluable support of our funding partners, whose continuous support allows us to plan, deliver and expand our programs and projects.</p>
+    </div>
+    <div id="partner-up">
+      <h4>Partner With Us</h4>
+      <p>A partnership with Red Dust will enable your company or organisation to give back to the community by supporting our mission to improve the health and wellbeing of Indigenous youth and families in remote communities. By working with Red Dust, your
+        business is taking a positive step towards "Closing the Gap" for Indigenous communities and creating meaningful two-way exchanges that intersect with your business activity in working towards reconciliation. If you are interested in partnering with
+        us please contact our partnerships manager at email below:</p>
+      <a href="mailto:partnership@reddust.org.au" target="_blank" class="button">partnership@reddust.org.au</a>
+    </div>
+  </section>
+
+  <section id="partners" class="tiles partners">
+    <div>
+      <ul>
+        {% for partner in partners %}
+          <li>
+            <div class="flip-container">
+              <div class="flipper">
+                <div class="front">
+                  <img src="/assets/img/partners/{{partner.logo}}"/>
+                </div>
+                <div class="back">
+                  <h2>{{partner.name}}</h2>
+                  <p>{{partner.intro}}</p>
+                  <a href="{{partner.url}}" title="{{partner.name}}" target="_blank" class="button">Website</a>
+                </div>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section id="become">
+    <div>
+      <h4>Become a Partner</h4>
+      <a class="button" href="mailto:partnership@reddust.org.au" target="_blank">Contact us</a>
+    </div>
+  </section>
+
+{% endblock %}

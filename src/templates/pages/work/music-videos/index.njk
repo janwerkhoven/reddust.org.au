@@ -1,0 +1,191 @@
+{% extends "layouts/page.njk" %}
+
+{% block meta %}
+  <title>Music Videos</title>
+  <meta name="description" content="">
+{% endblock %}
+
+{% block id %}music-videos{% endblock %}
+
+{% block main %}
+
+  <section id="hero" class="right">
+    <img src="/assets/img/work/hero.jpg"/>
+  </section>
+
+  {% include "partials/work-nav.njk" %}
+
+  <section id="video-archive">
+    <div>
+      <ul>
+        {% for video in music-videos-top %}
+          <li>
+            <img src="{{video.image}}"/>
+            <div>
+              <h3>{{video.title}}</h3>
+              <h4>{{video.location}}</h4>
+              <h5>{{video.date}}</h5>
+              <a href="{{video.link}}" class="button" target="_blank">Watch</a>
+            </div>
+          </li>
+        {% endfor %}
+        <li>
+          <img src="/assets/img/work/music-videos/hold-the-community@2x.jpg"/>
+          <div>
+            <h3>Hold the Community</h3>
+            <h4>Peppimenarti Top End</h4>
+            <h5>June 25 2016</h5>
+            <a href="https://vimeo.com/173114295" class="button" target="_blank">Watch</a>
+          </div>
+        </li>
+        <li>
+          <img src="/assets/img/work/music-videos/two-worlds@2x.jpg"/>
+          <div>
+            <h3>Two Worlds – Nauiyu Community</h3>
+            <h4>Daly River Top End, NT</h4>
+            <h5>June 3, 2016</h5>
+            <a href="https://vimeo.com/170756388" class="button" target="_blank">Watch</a>
+          </div>
+        </li>
+        <li>
+          <img src="/assets/img/work/music-videos/respect@2x.jpg"/>
+          <div>
+            <h3>The Kintore Kids – RESPECT</h3>
+            <h4>Central Desert, NT Kintore</h4>
+            <h5>June 11, 2016</h5>
+            <a href="https://vimeo.com/170338194" class="button" target="_blank">Watch</a>
+          </div>
+        </li>
+        <li>
+          <img src=" /assets/img/work/music-videos/super-bee@2x.jpg "/>
+          <div>
+            <h3>Super Bee – Yuendumu</h3>
+            <h4>Central Desert, NT Yuendumu</h4>
+            <h5>October 20, 2015</h5>
+            <a href="https://vimeo.com/140553391" class="button" target="_blank">Watch</a>
+          </div>
+        </li>
+        <li>
+          <img src=" /assets/img/work/music-videos/harry-hygiene@2x.jpg "/>
+          <div>
+            <h3>Harry Hygiene</h3>
+            <h4>Areyonga Central Desert, NT</h4>
+            <h5>November 13, 2015</h5>
+            <a href="https://vimeo.com/145740190" class="button" target="_blank">Watch</a>
+          </div>
+        </li>
+        <li>
+          <img src=" /assets/img/work/music-videos/ngirramini@2x.jpg "/>
+          <div>
+            <h3>Ngirramini – Tiwi College</h3>
+            <h4>Tiwi College Top End, NT</h4>
+            <h5>October 30, 2015</h5>
+            <a href="https://vimeo.com/144452455" class="button" target="_blank">Watch</a>
+          </div>
+        </li>
+        <li>
+          <img src=" /assets/img/work/music-videos/daly-river-mural@2x.jpg "/>
+          <div>
+            <h3>Daly River Mural Time Lapse</h3>
+            <h4>Daly River Top End, NT</h4>
+            <h5>October 30, 2015</h5>
+            <a href="https://vimeo.com/142563098" class="button" target="_blank">Watch</a>
+          </div>
+        </li>
+        <li>
+          <img src=" /assets/img/work/music-videos/sweet-enough@2x.jpg "/>
+          <div>
+            <h3>Sweet Enough</h3>
+            <h4>Peppimenarti Top End, NT</h4>
+            <h5>September 3, 2015</h5>
+            <a href="https://vimeo.com/138430261" class="button" target="_blank">Watch</a>
+          </div>
+        </li>
+        <li>
+          <img src=" /assets/img/work/music-videos/peppis-so-sweet@2x.jpg "/>
+          <div>
+            <h3>Peppi's So Sweet</h3>
+            <h4>Peppimenarti Top End, NT</h4>
+            <h5>September 3, 2015</h5>
+            <a href="https://vimeo.com/138431253" class="button" target="_blank">Watch</a>
+          </div>
+        </li>
+        <li>
+          <img src=" /assets/img/work/music-videos/sport-deadly-choice@2x.jpg "/>
+          <div>
+            <h3>Sport is a Deadly Choice</h3>
+            <h4>Daly River Top End, NT</h4>
+            <h5>June 19, 2015</h5>
+            <a href="https://vimeo.com/131207742" class="button" target="_blank">Watch</a>
+          </div>
+        </li>
+        <li>
+          <img src=" /assets/img/work/music-videos/the-hunter-the-dancer@2x.jpg "/>
+          <div>
+            <h3>The Hunter &amp; The Dancer</h3>
+            <h4>Daly River Top End, NT</h4>
+            <h5>June 19, 2015</h5>
+            <a href="https://vimeo.com/131490221" class="button" target="_blank">Watch</a>
+          </div>
+        </li>
+        <li>
+          <img src=" /assets/img/work/music-videos/germinators@2x.jpg "/>
+          <div>
+            <h3>The Germinators</h3>
+            <h4>Kintore</h4>
+            <h5>June 8, 2015</h5>
+            <a href="https://vimeo.com/130950617" class="button" target="_blank">Watch</a>
+          </div>
+        </li>
+        <li>
+          <img src=" /assets/img/work/music-videos/mi-gunja-yu@2x.jpg "/>
+          <div>
+            <h3>Mi Gunja Yu</h3>
+            <h4>Wadeye</h4>
+            <h5>November 21, 2014</h5>
+            <a href="https://vimeo.com/107561358" class="button" target="_blank">Watch</a>
+          </div>
+        </li>
+        <li>
+          <img src=" /assets/img/work/music-videos/knowledge-is-strength@2x.jpg "/>
+          <div>
+            <h3>Knowledge is Strength</h3>
+            <h4>Daly River</h4>
+            <h5>December 1, 2014</h5>
+            <a href="https://vimeo.com/114182284" class="button" target="_blank">Watch</a>
+          </div>
+        </li>
+        <li>
+          <img src=" /assets/img/work/music-videos/strong-proud-smoke-free@2x.jpg "/>
+          <div>
+            <h3>Strong, Proud &amp; Smoke Free</h3>
+            <h4>Daly River</h4>
+            <h5>December 1, 2014</h5>
+            <a href="https://vimeo.com/113865621" class="button" target="_blank">Watch</a>
+          </div>
+        </li>
+        <li>
+          <img src=" /assets/img/work/music-videos/makulkul-mob@2x.jpg"/>
+          <div>
+            <h3>The Makulkul Mob</h3>
+            <h4>Wadeye</h4>
+            <h5>November 17, 2014</h5>
+            <a href="https://vimeo.com/112795975" class="button" target="_blank">Watch</a>
+          </div>
+        </li>
+        {% for video in music-videos-bottom %}
+          <li>
+            <img src="{{video.image}}"/>
+            <div>
+              <h3>{{video.title}}</h3>
+              <h4>{{video.location}}</h4>
+              <h5>{{video.date}}</h5>
+              <a href="{{video.link}}" class="button" target="_blank">Watch</a>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+{% endblock %}

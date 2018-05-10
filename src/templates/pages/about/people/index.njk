@@ -37,9 +37,9 @@
     <div>
       <ul>
         {% for person in people %}
-          <li data-name="{{person.name}}" class="{{person.category}} {% if image %}image{% else %}no-image{% endif %}">
+          <li data-name="{{person.name}}" class="{{person.category}} {% if person.image %}image{% else %}no-image{% endif %}">
             <div>
-              {% if image %}
+              {% if person.image %}
                 <div class="img">
                   <img src="/assets/img/people/{{person.image}}" alt="{{person.name}} - {{person.position}} at Red Dust"/>
                 </div>

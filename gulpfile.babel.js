@@ -26,15 +26,14 @@ import util from "gulp-util";
 
 const PKG = require("./package.json");
 
-// const project = {
-//   name: "Red Dust",
-//   url: "https://reddust.org.au/"
-// };
-
-// Build specifics
 const environment = util.env.env || "development";
 const isProduction = environment === "production";
 const buildVersion = PKG.version;
+
+const people = require("./src/templates/data/people.json");
+const partners = require("./src/templates/data/partners.json");
+const musicVideosTop = require("./src/templates/data/music-videos-top.json");
+const musicVideosBottom = require("./src/templates/data/music-videos-bottom.json");
 
 // The build aware config passed down all HTML and JS files
 const config = {
@@ -83,33 +82,30 @@ gulp.task("copyOutdatedBrowserCss", () => {
 });
 
 // Compile all HTML
-gulp.task("compileHtml", function() {
-  return (
-    gulp
-      .src("src/templates/pages/**/*.+(html|njk)")
-      // .pipe(data(function() { return require('./src/templates/data/people.json') }))
-      .pipe(
-        nunjucksRender({
-          path: ["src/templates"],
-          data: { config }
-        })
-      )
-      .pipe(prettify({ config: "./jsbeautifyrc.json" }))
-      .pipe(gulp.dest("dist"))
-      .pipe(
-        sitemap({
-          siteUrl: config.homepage,
-          changefreq: "monthly",
-          priority: 0.5
-        })
-      )
-      .pipe(gulp.dest("dist"))
-      .pipe(connect.reload())
-  );
+gulp.task("html", function() {
+  return gulp
+    .src("src/templates/pages/**/*.+(html|njk)")
+    .pipe(
+      nunjucksRender({
+        path: ["src/templates"],
+        data: { config, people, partners, musicVideosTop, musicVideosBottom }
+      })
+    )
+    .pipe(prettify({ config: "./jsbeautifyrc.json" }))
+    .pipe(gulp.dest("dist"))
+    .pipe(
+      sitemap({
+        siteUrl: config.homepage,
+        changefreq: "monthly",
+        priority: 0.5
+      })
+    )
+    .pipe(gulp.dest("dist"))
+    .pipe(connect.reload());
 });
 
 // Compile all CSS
-gulp.task("compileCss", () => {
+gulp.task("css", () => {
   return gulp
     .src("src/styles/**/*.scss")
     .pipe(
@@ -142,24 +138,16 @@ gulp.task("compileCss", () => {
     .pipe(connect.reload());
 });
 
-// Inline the CSS into the HTML, needed for emails, error pages and signatures
-// gulp.task("inlineCss", () => {
+// Lint all JS files, warn about bad JS, break on errors
+// gulp.task("lintJs", () => {
 //   return gulp
-//     .src(["dist/errors/*.html"])
-//     .pipe(inlineCss())
-//     .pipe(gulp.dest("dist/errors/"));
+//     .src(["src/app.js"])
+//     .pipe(eslint())
+//     .pipe(eslint.format());
 // });
 
-// Lint app JS, warn about bad JS, break on errors
-gulp.task("lintJs", () => {
-  return gulp
-    .src(["src/js/**/*.js"])
-    .pipe(eslint())
-    .pipe(eslint.format());
-});
-
 // Compile all JS
-gulp.task("compileProjectJs", () => {
+gulp.task("appJs", () => {
   const buildDate = new Date().toUTCString();
   const buildHash = gitrev.long();
   const legalBanner = [
@@ -174,41 +162,28 @@ gulp.task("compileProjectJs", () => {
   ].join("\n");
   const context = config;
   return gulp
-    .src(["src/js/*.js"])
+    .src([`src/js/app.js`])
     .pipe(preprocess({ context }))
     .pipe(babel())
     .pipe(isProduction ? uglify({ preserveComments: "license" }) : noop())
     .pipe(header(legalBanner))
     .pipe(
       rename({
-        basename: config.name,
         extname: ".min.js"
       })
     )
-    .pipe(gulp.dest("dist/assets/js"));
+    .pipe(gulp.dest("temp/js/"));
 });
 
-// Add vendor files to hotdoc-lightbox.min.js
-gulp.task("includeVendors1", () => {
-  return gulp
-    .src([
-      "bower_components/jquery/dist/jquery.min.js",
-      "dist/assets/js/hotdoc-widget.min.js"
-    ])
-    .pipe(concat("hotdoc-widget.min.js"), { newLine: "\n\n\n\n" })
-    .pipe(replace(/^\s*\r?\n/gm, ""))
-    .pipe(gulp.dest("dist/assets/js"));
-});
-
-// Add vendor files to hotdoc-lightbox.min.js
-gulp.task("includeVendors2", () => {
+gulp.task("vendorJs", () => {
   return gulp
     .src([
       "bower_components/jquery/dist/jquery.min.js",
       "bower_components/velocity/velocity.min.js",
-      "dist/assets/js/hotdoc-lightbox.min.js"
+      "bower_components/countUp.js/dist/countUp.min.js",
+      "temp/js/app.min.js"
     ])
-    .pipe(concat("hotdoc-lightbox.min.js"), { newLine: "\n\n\n\n" })
+    .pipe(concat(`${config.name}.min.js`), { newLine: "\n\n\n\n" })
     .pipe(replace(/^\s*\r?\n/gm, ""))
     .pipe(gulp.dest("dist/assets/js"));
 });
@@ -219,27 +194,14 @@ gulp.task("reloadJs", () => {
 });
 
 // Build all JS files
-gulp.task(
-  "compileJs",
-  gulp.series(
-    "compileProjectJs",
-    gulp.parallel("includeVendors1", "includeVendors2"),
-    "reloadJs"
-  )
-);
+gulp.task("js", gulp.series("appJs", "vendorJs", "reloadJs"));
 
 // Watch all files and run tasks when files change
 gulp.task("watch", () => {
   gulp.watch(["src/public/**/*"], gulp.parallel("copyPublic"));
-  gulp.watch(
-    ["src/templates/**/*.+(html|njk|json)"],
-    gulp.parallel("compileHtml")
-  );
-  gulp.watch(["src/styles/**/*.scss"], gulp.parallel("compileCss"));
-  gulp.watch(
-    ["src/js/**/*.js", ".babelrc", ".eslintrc"],
-    gulp.parallel("compileJs")
-  );
+  gulp.watch(["src/templates/**/*.+(html|njk|json)"], gulp.parallel("html"));
+  gulp.watch(["src/styles/**/*.scss"], gulp.parallel("css"));
+  gulp.watch(["src/js/**/*.js", ".babelrc", ".eslintrc"], gulp.parallel("js"));
   gulp.watch(
     ["gulpfile.babel.js", "package.json", "bower.json"],
     gulp.series(["build"])
@@ -278,18 +240,14 @@ gulp.task(
   gulp.series(
     "deleteDist",
     gulp.parallel(
-      "compileHtml",
-      "compileCss",
-      // "compileJs",
+      "html",
+      "css",
+      "js",
       "copyPublic",
       "copyOutdatedBrowserJs",
       "copyOutdatedBrowserCss"
     ),
-    gulp.parallel(
-      // 'inlineCss', // keeps failing if no internet to pick up web fonts
-      "deleteTemp",
-      "report"
-    )
+    gulp.parallel("deleteTemp", "report")
   )
 );
 

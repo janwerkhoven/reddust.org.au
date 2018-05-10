@@ -1,39 +1,44 @@
-{
-  "music-videos-top": [{
+[
+  {
     "title": "Mission for Nutrition",
     "location": "Areyonga",
     "date": "November, 2016",
     "image": "/assets/img/work/new-music-videos/missionfornutrition@2x.png",
     "link": "https://vimeo.com/191779650"
-  }, {
+  },
+  {
     "title": "Ngawa Taykwapi",
     "location": "Tiwi College",
     "date": "November 2016",
     "image": "/assets/img/work/new-music-videos/ngawataykwapi@2x.png",
     "link": "https://vimeo.com/190799493"
-  }, {
+  },
+  {
     "title": "On Two Wheels",
     "location": "Peppimentari",
     "date": "October 2016",
     "image": "/assets/img/work/new-music-videos/ontwowheels@2x.png",
     "link": "https://vimeo.com/184457522"
-  }, {
+  },
+  {
     "title": "Wash Your Hands",
     "location": "Yuendumu",
     "date": "September, 2016",
     "image": "/assets/img/work/new-music-videos/washyourhands@2x.png",
     "link": "https://vimeo.com/181861732"
-  }, {
+  },
+  {
     "title": "Set Them Free",
     "location": "Yuendumu",
     "date": "September, 2016",
     "image": "/assets/img/work/new-music-videos/setthemfree@2x.png",
     "link": "https://vimeo.com/181860515"
-  }, {
+  },
+  {
     "title": "Strong Woman",
     "location": "Daly River",
     "date": "September, 2016",
     "image": "/assets/img/work/new-music-videos/strongwoman@2x.png",
     "link": "https://vimeo.com/176298138"
-  }]
-}
+  }
+]

@@ -13,6 +13,8 @@
     "url": "https://github.com/janwerkhoven/reddust.org.au"
   },
   "scripts": {
+    "build-production": "gulp build --env production",
+    "build-staging": "gulp build --env staging",
     "prettify-repo": "prettier --write \"*/**/*.{css,scss,js,json,md}\"",
     "precommit": "lint-staged"
   },

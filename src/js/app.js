@@ -25,8 +25,6 @@ const environment = isProduction ? "production" : "staging";
   "ga"
 );
 
-/* jshint ignore:end */
-
 if (!!ga) {
   ga("create", "UA-34474019-10", "auto");
   ga("set", {

@@ -1,6 +1,6 @@
 // Both partner and people tiles share the same tile layout styles
 section.tiles.people {
-  >div {
+  > div {
     padding: 0;
     max-width: 2600px;
 
@@ -49,28 +49,28 @@ section.tiles.people {
           height: 100vw;
         }
         // To randomise the background colours of people tiles we apply these odd nth-child sequences
-        &:nth-child(4n+1) {
+        &:nth-child(4n + 1) {
           background: $reddust-yinnar;
         }
-        &:nth-child(4n+2) {
+        &:nth-child(4n + 2) {
           background: $reddust-rust;
         }
-        &:nth-child(4n+3) {
+        &:nth-child(4n + 3) {
           background: $reddust-sunset;
         }
-        &:nth-child(4n+4) {
+        &:nth-child(4n + 4) {
           background: $reddust-gold;
         }
-        &:nth-child(7n+1) {
+        &:nth-child(7n + 1) {
           background: $reddust-yinnar;
         }
         &:nth-child(7n-2) {
           background: $reddust-rust;
         }
-        &:nth-child(7n+2) {
+        &:nth-child(7n + 2) {
           background: $reddust-sunset;
         }
-        &:nth-child(7n+5) {
+        &:nth-child(7n + 5) {
           background: $reddust-gold;
         }
         &.image {
@@ -89,12 +89,12 @@ section.tiles.people {
             font-size: 18px;
             line-height: 130%;
             text-transform: uppercase;
-            letter-spacing: .4px;
+            letter-spacing: 0.4px;
             color: white;
             position: absolute;
             bottom: 3.5%;
             right: 6%;
-            text-shadow: 0 0 10px RGBA(0,0,0,.2);
+            text-shadow: 0 0 10px RGBA(0, 0, 0, 0.2);
             text-align: right;
           }
           h3 {
@@ -103,11 +103,11 @@ section.tiles.people {
         }
         &.no-image {
           &:hover {
-            >div {
+            > div {
               transform: scale(1.06);
             }
           }
-          >div {
+          > div {
             position: absolute;
             top: 0;
             left: 0;
@@ -135,7 +135,7 @@ section.tiles.people {
             font-family: $montserrat-regular;
             font-size: 19px;
             color: $reddust-cream;
-            letter-spacing: .5px;
+            letter-spacing: 0.5px;
           }
         }
         p {

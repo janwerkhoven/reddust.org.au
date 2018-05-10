@@ -1,34 +1,34 @@
 // SASS
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
 
 // Normalise browsers
-@import 'normalize';
+@import "normalize";
 
 // Commons
-@import 'fonts';
-@import 'animations';
-@import 'common';
-@import 'header';
-@import 'footer';
-@import 'partner-tiles';
-@import 'people-tiles';
+@import "fonts";
+@import "animations";
+@import "common";
+@import "header";
+@import "footer";
+@import "partner-tiles";
+@import "people-tiles";
 
 // Page specific
-@import 'landing';
-@import 'about/nav';
-@import 'about/mission';
-@import 'about/people';
-@import 'about/role-models';
-@import 'about/partners';
-@import 'about/reports';
-@import 'work/nav';
-@import 'work/what-we-do';
-@import 'work/programs';
-@import 'work/music-videos';
-@import 'work/curriculum';
-@import 'contact';
-@import 'support';
+@import "landing";
+@import "about/nav";
+@import "about/mission";
+@import "about/people";
+@import "about/role-models";
+@import "about/partners";
+@import "about/reports";
+@import "work/nav";
+@import "work/what-we-do";
+@import "work/programs";
+@import "work/music-videos";
+@import "work/curriculum";
+@import "contact";
+@import "support";
 
 // Outdate browsers
-@import '../../bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.scss';
+@import "../../bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.scss";

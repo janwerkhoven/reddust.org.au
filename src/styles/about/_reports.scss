@@ -1,5 +1,4 @@
 #about-reports {
-
   #about-nav {
     a[href="/about/reports"] {
       color: $reddust-rust;
@@ -64,7 +63,7 @@
 
       ul {
         margin-bottom: 70px;
-        @media (max-width:600px) {
+        @media (max-width: 600px) {
           margin-bottom: 20px;
         }
         li {

@@ -1,5 +1,4 @@
 #support {
-
   #title {
     background-color: $reddust-sunset;
 
@@ -40,7 +39,7 @@
   }
 
   #your-donation {
-    background: url('/assets/img/support/what-your-donation-does.jpg');
+    background: url("/assets/img/support/what-your-donation-does.jpg");
     background-size: cover;
     height: 66vw;
     max-height: 800px;
@@ -151,9 +150,8 @@
           min-height: 100%;
           min-width: 100%;
           max-width: 843px;
-          transform: translate(-50%,0%);
+          transform: translate(-50%, 0%);
         }
-
       }
 
       div {

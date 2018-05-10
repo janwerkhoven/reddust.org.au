@@ -7,7 +7,7 @@ import concat from "gulp-concat";
 import connect from "gulp-connect";
 import del from "del";
 import eslint from "gulp-eslint";
-import gitrev from "git-rev-sync";
+// import gitrev from "git-rev-sync";
 import gulp from "gulp";
 import header from "gulp-header";
 // import inlineCss from "gulp-inline-css";
@@ -149,14 +149,14 @@ gulp.task("css", () => {
 // Compile all JS
 gulp.task("appJs", () => {
   const buildDate = new Date().toUTCString();
-  const buildHash = gitrev.long();
+  // const buildHash = gitrev.long();
   const legalBanner = [
     "/**",
     `* Red Dust v${buildVersion}`,
     "* https://www.hotdoc.com.au/",
     "* Copyright Red Dust Role Models Limited, Australia",
     `* Build date: ${buildDate}`,
-    `* Build hash: ${buildHash}`,
+    // `* Build hash: ${buildHash}`,
     " */",
     ""
   ].join("\n");

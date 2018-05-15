@@ -28,11 +28,19 @@
         <li>
           <a href="https://donate.everydayhero.com/d/8T-lHn0FXzWNEqdwCLYUMw/amount" target="_blank" class="button">Donate</a>
         </li>
-        <li>
-          <a class="icon" href="https://www.facebook.com/reddustrolemodels/?ref=br_rs"><img src="/assets/img/icons/facebook.svg"/><img src="/assets/img/icons/facebook-hover.svg"/></a>
-          <a class="icon" href="https://twitter.com/reddustoz?lang=en"><img src="/assets/img/icons/twitter.svg"/><img src="/assets/img/icons/twitter-hover.svg"/></a>
-          <a class="icon" href="https://www.youtube.com/channel/UCIdkSMHBaMggThxUSVxfVMQ"><img src="/assets/img/icons/youtube.svg"/><img src="/assets/img/icons/youtube-hover.svg"/></a>
-          {# <a class="icon" href="https://www.instagram.com/reddustoz" />Insta</a> #}
+        <li id="social">
+          <a href="https://www.facebook.com/reddustrolemodels/?ref=br_rs">
+            {% include "partials/social/facebook.njk" %}
+          </a>
+          <a href="https://twitter.com/reddustoz?lang=en">
+            {% include "partials/social/twitter.njk" %}
+          </a>
+          <a href="https://www.youtube.com/channel/UCIdkSMHBaMggThxUSVxfVMQ">
+            {% include "partials/social/youtube.njk" %}
+          </a>
+          <a href="https://www.instagram.com/reddustoz">
+            {% include "partials/social/instagram.njk" %}
+          </a>
         </li>
       </ul>
     </nav>

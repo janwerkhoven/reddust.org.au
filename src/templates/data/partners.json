@@ -7,6 +7,13 @@
     "url": "https://www.dss.gov.au/"
   },
   {
+    "name": "Northern Territory Government",
+    "logo": "northern-territory-government.jpg",
+    "intro":
+      "As the presiding Government over most of the remote communities where Red Dust Role Models conducts its programs, the Northern Territory Government is a strong advocate of the Red Dust organisation providing much appreciated funding to support our health and education initiatives.",
+    "url": "https://nt.gov.au/"
+  },
+  {
     "name": "Nike",
     "logo": "nike@2x.jpg",
     "intro":
@@ -29,7 +36,7 @@
   },
   {
     "name": "Danone",
-    "logo": "danone-nutricia@2x.jpg",
+    "logo": "danone@2x.jpg",
     "intro":
       "Commencing the partnership with Red Dust in 2016 in support of the Community of Peppimenarti, Danone and Red Dust are very excited by what we can achieve together in the area of health. For over 100 years Danone Nutricia has been at the forefront of research in infant nutrition and our pioneering efforts continue today.",
     "url": "http://www.danonenutricia.com.au/"
@@ -91,25 +98,19 @@
     "url": "http://www.mcgrathnicol.com/"
   },
   {
-    "name": "Northern Territory Government",
-    "logo": "northern-territory-government.jpg",
-    "intro":
-      "As the presiding Government over most of the remote communities where Red Dust Role Models conducts its programs, the Northern Territory Government is a strong advocate of the Red Dust organisation providing much appreciated funding to support our health and education initiatives.",
-    "url": "https://nt.gov.au/"
-  },
-  {
     "name": "Mecure",
-    "logo": "chifleyresort.jpg",
+    "logo": "mercure-hotels@2x.jpg",
     "intro":
       "Mecure Alice Springs Resort is a longtime friend of Red Dust.We are thankful for Mecure providing us with comfortable accommodation, delicious meals and great service before and after each Red Dust program delivery in the central desert.",
-    "url": "http://www.silverneedlehotels.com/chifley/alice-springs"
+    "url":
+      "https://www.accorhotels.com/gb/hotel-B0K7-mercure-alice-springs-resort/index.shtml"
   },
   {
-    "name": "DoubleTree By Hilton",
-    "logo": "double-tree.jpg",
+    "name": "Vibe Hotels",
+    "logo": "vibe-hotels.png",
     "intro":
-      "As a Red Dust partner, Hilton has been a strong supporter of our programs and is a major accommodation partner, providing rooms and facilities for our staff whilst in Darwin.",
-    "url": "http://doubletree3.hilton.com/"
+      "As a Red Dust partner, Vibe Hotels has been a strong supporter of our programs and is a major accommodation partner, providing rooms and facilities for our staff whilst in Darwin.",
+    "url": "https://vibehotels.com/"
   },
   {
     "name": "Working Dog",
@@ -137,5 +138,26 @@
     "logo": "the-australian-super-food-co.jpg",
     "intro": "",
     "url": "https://austsuperfoods.com.au/story/"
+  },
+  {
+    "name": "A & A Property Developers",
+    "logo": "aa-property-developers.png",
+    "intro":
+      "A & A Property Developers specialise in boutique residential developments in Melbourne. A & A Property Developers our proud to partner with Red Dust to deliver programs to remote communities that will strengthen the future of Indigenous youth and families.",
+    "url": "http://www.aandapropertydevelopers.com.au/"
+  },
+  {
+    "name": "Newline",
+    "logo": "newline-group.png",
+    "intro":
+      "Since its inception, Newline Group & the Odyssey Group Foundation has proudly supported a wide range of programs focused on health, education, human services, arts and culture, the environment and the elderly. We are pleased to be working with Red Dust to enrich lives, improve health and strengthen the future of Indigenous youth and families.",
+    "url": "https://newlinegroup.com.au/"
+  },
+  {
+    "name": "Wood",
+    "logo": "wood.png",
+    "intro":
+      "Wood is a global leader in the delivery of project, engineering and technical services to energy and industrial markets. Wood partners with Red Dust each year for a charity bike ride to raise funds for Red Dust programs in remote communities.",
+    "url": "https://www.woodplc.com/"
   }
 ]

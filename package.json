@@ -52,13 +52,14 @@
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
     "gulp-s3-deploy": "^1.0.1",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^4.0.2",
     "gulp-sitemap": "^5.1.0",
     "gulp-size": "^2.1.0",
     "gulp-uglify": "^2.0.1",
     "husky": "^0.14.3",
     "lint-staged": "^6.0.0",
     "node-normalize-scss": "^1.4.0",
+    "node-sass": "^4.11.0",
     "prettier": "^1.9.2"
   },
   "optionalDependencies": {}

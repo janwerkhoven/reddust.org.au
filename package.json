@@ -2,12 +2,10 @@
   "name": "reddust",
   "version": "0.0.0",
   "homepage": "https://reddust.org.au",
-  "description":
-    "The website of an none-profit organisation that promotes better health for indigenous aboriginal communities in the Northern Territories of Australia.",
+  "description": "The website of an none-profit organisation that promotes better health for indigenous aboriginal communities in the Northern Territories of Australia.",
   "author": "Jan Werkhoven and Richard Verheyen",
   "license": "UNLICENSED",
-  "copyright":
-    "https://github.com/janwerkhoven/reddust.org.au/blob/production/COPYRIGHT.md",
+  "copyright": "https://github.com/janwerkhoven/reddust.org.au/blob/production/COPYRIGHT.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/janwerkhoven/reddust.org.au"
@@ -19,7 +17,10 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.{css,scss,js,json,md}": ["prettier --write", "git add"]
+    "*.{css,scss,js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "bugs": {
     "url": "https://github.com/janwerkhoven/reddust.org.au/issues"
@@ -60,7 +61,7 @@
     "lint-staged": "^6.0.0",
     "node-normalize-scss": "^1.4.0",
     "node-sass": "^4.11.0",
-    "prettier": "^1.9.2"
+    "prettier": "^1.16.4"
   },
   "optionalDependencies": {}
 }

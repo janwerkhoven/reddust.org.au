@@ -56,8 +56,8 @@
     "bio": ""
   },
   {
-    "name": "Jonathan Hermawan Tjapaltjarri",
-    "role": "Manager Central Australia",
+    "name": "Jonathan Lindsay-Tjapaltjarri Hermawan",
+    "role": "Strategic Advisor and Strong Men and Boys Program Manager",
     "category": "staff-member",
     "image": "jonathan-hermawan@2x.jpg",
     "bio": "Jonathan is a fluent Pintupi-Luritja speaking man from the NT community of Walungurru (Kintore). He is a qualified teacher/educator and proud advocate for Aboriginal community leadership, youth empowerment and reconciliation. Based in Alice Springs, Jonathan works for Red Dust as an Alcohol and Men's Health Educator and Coordinator, journeying with Aboriginal males (youth and adults) and their families."
@@ -114,16 +114,23 @@
   {
     "name": "Alice Nelson",
     "role": "Senior Cultural Liaison",
-    "category": "staff",
+    "category": "staff-member",
     "image": "",
     "bio": ""
   },
   {
     "name": "Daniel Ormiston",
     "role": "Business Operations Manager",
-    "category": "staff",
+    "category": "staff-member",
     "image": "",
     "bio": ""
+  },
+  {
+    "name": "Brett Wheeler",
+    "role": "Community Engagement",
+    "category": "role-model",
+    "image": "",
+    "bio": "Brett's NBL career spanned 12 years - winning two championships and representing Australia sixteen times.  Brett is on staff at Red Dust in a Community Engagement role that sees him work closely with communities supporting the development of local role models to support Red Dust program delivery."
   },
   {
     "name": "Darren Smith",
@@ -285,13 +292,6 @@
     "category": "role-model",
     "image": "elyse-penaluna@2x.jpg",
     "bio": "Possessing great athleticism and touch around the basket for her size Elyse is working hard to make the transition into a senior player. With unlimited potential Elyse is has stepped up in the WNBL and become a dominate force within the league."
-  },
-  {
-    "name": "Brett Wheeler",
-    "role": "Role Model",
-    "category": "role-model",
-    "image": "",
-    "bio": "Brett's NBL basketball career has spanned twelve years - winning two championships and representing Australia sixteen times. Brett is an active contributor to Red Dust, both as a Role Model and in the graphic and visual arts field."
   },
   {
     "name": "Glen Singleton",

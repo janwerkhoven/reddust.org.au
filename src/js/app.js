@@ -224,7 +224,7 @@ $(document).ready(function() {
 
       // 3. Add the property `order` to each person, which will be used for flexbox ordering
       for (var ii = 0; ii < peopleInCategory.length; ii++) {
-        var person = sortedPeopleInCategory[ii];
+        var person = peopleInCategory[ii];
         person.order = people.length;
         people.push(person);
       }

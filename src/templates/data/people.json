@@ -49,20 +49,6 @@
     "bio": "Roslyn is passionate and committed to improving the health and wellbeing of all Australians. She holds a Masters degree in Public Health and has an extensive professional career in the health sector. Roslyn has developed national prevention programs for leading Australian organisations including the National Stroke Foundation and Australian Drug and Alcohol Foundation. She is currently responsible for managing strategic relationships as the Head of Clinical Engagement at Medibank Private."
   },
   {
-    "name": "Terry Thomas",
-    "role": "Director of Philanthropy and Partnerships",
-    "category": "board-member",
-    "image": "",
-    "bio": ""
-  },
-  {
-    "name": "Jonathan Lindsay-Tjapaltjarri Hermawan",
-    "role": "Strategic Advisor and Strong Men and Boys Program Manager",
-    "category": "staff-member",
-    "image": "jonathan-hermawan@2x.jpg",
-    "bio": "Jonathan is a fluent Pintupi-Luritja speaking man from the NT community of Walungurru (Kintore). He is a qualified teacher/educator and proud advocate for Aboriginal community leadership, youth empowerment and reconciliation. Based in Alice Springs, Jonathan works for Red Dust as an Alcohol and Men's Health Educator and Coordinator, journeying with Aboriginal males (youth and adults) and their families."
-  },
-  {
     "name": "Will Minson",
     "role": "Director",
     "category": "board-member",
@@ -75,13 +61,6 @@
     "category": "board-member",
     "image": "tania-carlos@2x.jpg",
     "bio": "An accomplished and motivated Indigenous professional with over 18 years’ experience in Indigenous affairs and community engagement. Experienced in consultation, facilitation and community engagement, Tania has completed a Bachelor of Business from Queensland University of Technology and also holds an Advanced Diploma of Business Management."
-  },
-  {
-    "name": "Scott Stirling",
-    "role": "CEO",
-    "category": "staff-ceo",
-    "image": "",
-    "bio": "Scott is an experienced public health executive who joined Red Dust in 2017 following five years as a senior manager at the Stroke Foundation. Born and raised in North East Arnhem Land Scott is a passionate advocate for working in partnership with remote communities to improve health and wellbeing outcomes."
   },
   {
     "name": "Melanie Jones",
@@ -98,18 +77,18 @@
     "bio": "Raymond's grandfather's country is Ngarleyekwerleng in the Western Desert near Yuendumu, and his grandmother's country is Alhalkerre Atnangkerre. Raymond brings his expertise in Sport & Recreation, Remote/Urban Aboriginal Community Development, Family & Child Welfare, Alcohol & Other Drugs Awareness and Consultancy on Aboriginal Community Engagement policies and procedures."
   },
   {
-    "name": "Yvette Hollard",
-    "role": "Healthy Living Program Coordinator",
-    "category": "staff-member",
+    "name": "Scott Stirling",
+    "role": "CEO",
+    "category": "staff-ceo",
     "image": "",
-    "bio": "Yvette joined Red Dust as a role model in 2007, later becoming a program Team Leader.  She is now the Healthy Living Program Coordinator, with over 20 years of experience in business management; events and marketing.  Yvette has recently obtained her Cert III & IV in personal training and as a former chef, has a passion for nutrition and helping others.  Yvette enjoys living life to the fullest!"
+    "bio": "Scott is an experienced public health executive who joined Red Dust in 2017 following five years as a senior manager at the Stroke Foundation. Born and raised in North East Arnhem Land Scott is a passionate advocate for working in partnership with remote communities to improve health and wellbeing outcomes."
   },
   {
-    "name": "Jessie Nungarrayi Bartlett",
-    "role": "Strong Young Women's Coordinator",
+    "name": "Jonathan Lindsay-Tjapaltjarri Hermawan",
+    "role": "Strategic Advisor and Strong Men and Boys Program Manager",
     "category": "staff-member",
-    "image": "",
-    "bio": ""
+    "image": "jonathan-hermawan@2x.jpg",
+    "bio": "Jonathan is a fluent Pintupi-Luritja speaking man from the NT community of Walungurru (Kintore). He is a qualified teacher/educator and proud advocate for Aboriginal community leadership, youth empowerment and reconciliation. Based in Alice Springs, Jonathan works for Red Dust as an Alcohol and Men's Health Educator and Coordinator, journeying with Aboriginal males (youth and adults) and their families."
   },
   {
     "name": "Alice Nelson",
@@ -119,8 +98,15 @@
     "bio": ""
   },
   {
-    "name": "Daniel Ormiston",
-    "role": "Business Operations Manager",
+    "name": "Jessie Nungarrayi Bartlett",
+    "role": "Strong Young Women's Coordinator",
+    "category": "staff-member",
+    "image": "",
+    "bio": ""
+  },
+  {
+    "name": "Alan Palmer",
+    "role": "Strong Young Men and Boys Facilitator",
     "category": "staff-member",
     "image": "",
     "bio": ""
@@ -133,11 +119,39 @@
     "bio": "Brett's NBL career spanned 12 years - winning two championships and representing Australia sixteen times.  Brett is on staff at Red Dust in a Community Engagement role that sees him work closely with communities supporting the development of local role models to support Red Dust program delivery."
   },
   {
+    "name": "Yvette Hollard",
+    "role": "Healthy Living Program Coordinator",
+    "category": "staff-member",
+    "image": "",
+    "bio": "Yvette joined Red Dust as a role model in 2007, later becoming a program Team Leader.  She is now the Healthy Living Program Coordinator, with over 20 years of experience in business management; events and marketing.  Yvette has recently obtained her Cert III & IV in personal training and as a former chef, has a passion for nutrition and helping others.  Yvette enjoys living life to the fullest!"
+  },
+  {
+    "name": "Terry Thomas",
+    "role": "Director of Philanthropy and Partnerships",
+    "category": "staff-member",
+    "image": "",
+    "bio": ""
+  },
+  {
+    "name": "Elise Cabret",
+    "role": "Grants Coordinator",
+    "category": "staff-member",
+    "image": "",
+    "bio": ""
+  },
+  {
+    "name": "Daniel Ormiston",
+    "role": "Business Operations Manager",
+    "category": "staff-member",
+    "image": "",
+    "bio": ""
+  },
+  {
     "name": "Darren Smith",
     "role": "Role Model",
     "category": "role-model",
     "image": "darren-smith@2x.jpg",
-    "bio": "Darren has been involved with Red Dust for over twelve years and brings to his role a ten-year career as a professional basketball player and management experience. As the Chief Executive Officer, he coordinates the effective delivery of programs throughout Australia and leads teams on the ground while out bush, as well as looking after all other aspects of the organisation."
+    "bio": "Darren's professional basketball career spanned ten years and has been involved with Red Dust for over twelve years. Darren continues to lead teams delivering Red Dust programs in remote communities."
   },
   {
     "name": "Mitch Tambo",

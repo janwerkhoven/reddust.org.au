@@ -216,14 +216,14 @@ $(document).ready(function() {
       });
 
       // 2. Sort each individual alphabetically by their name
-      var sortedPeopleInCategory = peopleInCategory.sort(function(a, b) {
-        if (a.name < b.name) return -1;
-        if (a.name > b.name) return 1;
-        return 0;
-      });
+      // var sortedPeopleInCategory = peopleInCategory.sort(function(a, b) {
+      //   if (a.name < b.name) return -1;
+      //   if (a.name > b.name) return 1;
+      //   return 0;
+      // });
 
       // 3. Add the property `order` to each person, which will be used for flexbox ordering
-      for (var ii = 0; ii < sortedPeopleInCategory.length; ii++) {
+      for (var ii = 0; ii < peopleInCategory.length; ii++) {
         var person = sortedPeopleInCategory[ii];
         person.order = people.length;
         people.push(person);

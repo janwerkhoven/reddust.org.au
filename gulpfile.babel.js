@@ -19,7 +19,7 @@ import prettify from "gulp-jsbeautifier";
 import rename from "gulp-rename";
 import replace from "gulp-replace";
 import sass from "gulp-sass";
-import sitemap from "gulp-sitemap";
+// import sitemap from "gulp-sitemap";
 import size from "gulp-size";
 import uglify from "gulp-uglify";
 import util from "gulp-util";
@@ -83,25 +83,27 @@ gulp.task("copyOutdatedBrowserCss", () => {
 
 // Compile all HTML
 gulp.task("html", function() {
-  return gulp
-    .src("src/templates/pages/**/*.+(html|njk)")
-    .pipe(
-      nunjucksRender({
-        path: ["src/templates"],
-        data: { config, people, partners, musicVideosTop, musicVideosBottom }
-      })
-    )
-    .pipe(prettify({ config: "./jsbeautifyrc.json" }))
-    .pipe(gulp.dest("dist"))
-    .pipe(
-      sitemap({
-        siteUrl: config.homepage,
-        changefreq: "monthly",
-        priority: 0.5
-      })
-    )
-    .pipe(gulp.dest("dist"))
-    .pipe(connect.reload());
+  return (
+    gulp
+      .src("src/templates/pages/**/*.+(html|njk)")
+      .pipe(
+        nunjucksRender({
+          path: ["src/templates"],
+          data: { config, people, partners, musicVideosTop, musicVideosBottom }
+        })
+      )
+      .pipe(prettify({ config: "./jsbeautifyrc.json" }))
+      .pipe(gulp.dest("dist"))
+      // .pipe(
+      //   sitemap({
+      //     siteUrl: config.homepage,
+      //     changefreq: "monthly",
+      //     priority: 0.5
+      //   })
+      // )
+      .pipe(gulp.dest("dist"))
+      .pipe(connect.reload())
+  );
 });
 
 // Compile all CSS
@@ -183,7 +185,10 @@ gulp.task("vendorJs", () => {
       "bower_components/countUp.js/dist/countUp.min.js",
       "temp/js/app.min.js"
     ])
-    .pipe(concat(`${config.name}.min.js`), { newLine: "\n\n\n\n" })
+    .pipe(
+      concat(`${config.name}.min.js`),
+      { newLine: "\n\n\n\n" }
+    )
     .pipe(replace(/^\s*\r?\n/gm, ""))
     .pipe(gulp.dest("dist/assets/js"));
 });

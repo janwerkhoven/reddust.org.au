@@ -118,8 +118,7 @@ function concatVendorJs() {
   return src([
     "bower_components/jquery/dist/jquery.min.js",
     "bower_components/velocity/velocity.min.js",
-    "bower_components/countUp.js/dist/countUp.min.js",
-    "src/js/vendor/google-analytics.js"
+    "bower_components/countUp.js/dist/countUp.min.js"
   ])
     .pipe(concat("vendor.min.js"))
     .pipe(dest("dist/assets/js"));

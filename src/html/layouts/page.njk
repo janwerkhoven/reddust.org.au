@@ -1,16 +1,21 @@
 <!DOCTYPE HTML>
-<html lang="en">
-
+<html lang="{{language}}">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="copyright" content="Copyright 2016 all rights reserved">
-    <meta name="authors" content="Jan Werkhoven, Richard Verheyen and Hannah Sutton">
+    <meta name="copyright" content="{{copyRight}}"/>
+    {% for person in contributors %}
+      <meta name="contributor-{{loop.index}}" content="{{person}}"/>
+    {% else %}
+      <meta name="author" content="Jan Werkhoven <jw@nabu.io> (https://github.com/janwerkhoven)"/>
+    {% endfor %}
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="{{themeColour}}">
     {% block meta %}{% endblock %}
-    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <script src="/assets/js/vendor.min.js"></script>
     <script src="/assets/js/app.min.js"></script>
+    <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css">
     {% include "partials/favicons.njk" %}
   </head>
 
@@ -22,5 +27,4 @@
     {% include "partials/footer.njk" %}
     {% include "partials/outdated-browsers.njk" %}
   </body>
-
 </html>

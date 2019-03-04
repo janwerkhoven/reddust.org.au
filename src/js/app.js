@@ -1,9 +1,7 @@
 const isProduction = location.host === "reddust.org.au" ? true : false;
-const environment = isProduction ? "production" : "staging";
+const environment = isProduction ? "production" : "development";
 
 // Google Analytics
-
-/* jshint ignore:start */
 
 (function(i, s, o, g, r, a, m) {
   i["GoogleAnalyticsObject"] = r;
@@ -25,7 +23,7 @@ const environment = isProduction ? "production" : "staging";
   "ga"
 );
 
-if (!!ga) {
+if (ga) {
   ga("create", "UA-34474019-10", "auto");
   ga("set", {
     dimension1: environment
@@ -35,10 +33,10 @@ if (!!ga) {
 
 // Animates open the modal
 function openModal() {
-  var speed = 700;
-  var easing = "easeOutExpo";
-  var $overlay = $("#modals .overlay");
-  var $modal = $("#modals .modal");
+  const speed = 700;
+  const easing = "easeOutExpo";
+  const $overlay = $("#modals .overlay");
+  const $modal = $("#modals .modal");
   if (!$modal.hasClass("velocity-animating")) {
     $("body").addClass("prevent-scroll"); // prevent users from scrolling the content behind the modal
     $("#modals").show();
@@ -63,10 +61,10 @@ function openModal() {
 
 // Animates close the modal
 function closeModal() {
-  var speed = 400;
-  var easing = "easeOutExpo";
-  var $overlay = $("#modals .overlay");
-  var $modal = $("#modals .modal");
+  const speed = 400;
+  const easing = "easeOutExpo";
+  const $overlay = $("#modals .overlay");
+  const $modal = $("#modals .modal");
   if (!$modal.hasClass("velocity-animating")) {
     $overlay.velocity("stop").velocity(
       {
@@ -92,10 +90,10 @@ function closeModal() {
 
 // Make sure the modal centres vertically, yet is scrollable if content is taller than the window
 function checkModalCentre() {
-  var $overlay = $("#modals .overlay");
-  var $modal = $("#modals .modal");
-  var windowHeight = $(window).height();
-  var modalHeight = $modal.height() + 40;
+  const $overlay = $("#modals .overlay");
+  const $modal = $("#modals .modal");
+  const windowHeight = $(window).height();
+  const modalHeight = $modal.height() + 40;
   if (modalHeight >= windowHeight) {
     $overlay.removeClass("centre-content");
   } else {
@@ -103,15 +101,15 @@ function checkModalCentre() {
   }
 }
 
-var animatingCounters = false;
+let animatingCounters = false;
 
 // Check whether to animate the landing page counters or not
 function checkWhetherToAnimateCounters() {
   // Only bind this this on logic on the landing page, avoid collisions on other pages
-  var triggerTop = $("#landing .counter-wrapper")
+  const triggerTop = $("#landing .counter-wrapper")
     .first()
     .offset().top;
-  var windowBottom = $(window).scrollTop() + $(window).height();
+  const windowBottom = $(window).scrollTop() + $(window).height();
   if (!animatingCounters) {
     if (windowBottom > triggerTop) {
       animatingCounters = true;
@@ -125,13 +123,13 @@ function animateCounters() {
   $("#impact")
     .find(".counter-wrapper")
     .each(function() {
-      var countUpToValue = $(this)
+      const countUpToValue = $(this)
         .find("h1")
         .attr("value");
       $(this)
         .find("h1")
         .attr("id", countUpToValue);
-      var options = {
+      const options = {
         useEasing: true,
         useGrouping: true,
         separator: ",",
@@ -139,7 +137,7 @@ function animateCounters() {
         prefix: "",
         suffix: ""
       };
-      var demo = new CountUp(
+      const demo = new CountUp(
         countUpToValue,
         0,
         countUpToValue,
@@ -152,10 +150,10 @@ function animateCounters() {
 }
 
 $(document).ready(function() {
-  var bodyId = $("body").attr("id");
+  const bodyId = $("body").attr("id");
 
   // Open & close the mobile navigation
-  var mobileNavActive = false;
+  let mobileNavActive = false;
   $("header nav button").on("click", function() {
     if (mobileNavActive) {
       $("body").removeClass("mobile-nav-active");
@@ -184,8 +182,8 @@ $(document).ready(function() {
 
   // 1. Create an array populated with people filtered first by category then by name
   if (bodyId === "about-people") {
-    var people = [];
-    var categories = [
+    const people = [];
+    const categories = [
       "founder",
       "patron",
       "board-chairman",
@@ -197,42 +195,40 @@ $(document).ready(function() {
     ];
 
     // Do this for each category
-    for (var i = 0; i < categories.length; i++) {
-      var category = categories[i];
-      var peopleInCategory = [];
-      var $peopleInCategory = $("#people li." + category);
+    for (let i = 0; i < categories.length; i++) {
+      const category = categories[i];
+      const peopleInCategory = [];
+      const $peopleInCategory = $("#people li." + category);
 
       // 1. Find all people of this category, then populate a temporary array
       $peopleInCategory.each(function() {
-        peopleInCategory.push({
-          name: $(this)
-            .find("h2")
-            .text(),
-          role: $(this)
-            .find("h3")
-            .text(),
-          category: category
-        });
+        const name = $(this)
+          .find("h2")
+          .text();
+        const role = $(this)
+          .find("h3")
+          .text();
+        peopleInCategory.push({ name, role, category });
       });
 
       // 2. Sort each individual alphabetically by their name
-      // var sortedPeopleInCategory = peopleInCategory.sort(function(a, b) {
+      // const sortedPeopleInCategory = peopleInCategory.sort(function(a, b) {
       //   if (a.name < b.name) return -1;
       //   if (a.name > b.name) return 1;
       //   return 0;
       // });
 
       // 3. Add the property `order` to each person, which will be used for flexbox ordering
-      for (var ii = 0; ii < peopleInCategory.length; ii++) {
-        var person = peopleInCategory[ii];
+      for (let ii = 0; ii < peopleInCategory.length; ii++) {
+        const person = peopleInCategory[ii];
         person.order = people.length;
         people.push(person);
       }
     }
 
     // Iterate over all people in the array an apply the flexbox order to each person in the DOM
-    for (var i = 0; i < people.length; i++) {
-      var person = people[i];
+    for (let i = 0; i < people.length; i++) {
+      const person = people[i];
       $('#people li[data-name="' + person.name + '"]').css({
         order: person.order
       });
@@ -249,7 +245,7 @@ $(document).ready(function() {
       .addClass("selected")
       .siblings()
       .removeClass("selected");
-    var category = $(this).data("category");
+    const category = $(this).data("category");
     filterPeople(category);
   });
 
@@ -266,22 +262,22 @@ $(document).ready(function() {
 
   // Filter the list of people
   function filterPeople(category) {
-    var selection = $("#people li"); // If no category is given select all people to be shown
+    let selection = $("#people li"); // If no category is given select all people to be shown
 
     // If a category is given, use it to select that group of people
     // Filters can contain multiple categories divided by spaces
     if (category) {
-      var categories = category.split(" ");
-      var selectors = [];
-      for (var i = 0; i < categories.length; i++) {
+      const categories = category.split(" ");
+      const selectors = [];
+      for (let i = 0; i < categories.length; i++) {
         selectors.push("#people li." + categories[i]);
       }
       selection = $(selectors.join(", "));
     }
 
     // Sort that selection by their flexbox order
-    var count = 0;
-    var sorted = selection.sort(function(a, b) {
+    let count = 0;
+    const sorted = selection.sort(function(a, b) {
       a = parseInt($(a).css("order"), 10);
       b = parseInt($(b).css("order"), 10);
       count += 2;
@@ -301,7 +297,7 @@ $(document).ready(function() {
       })
       .show()
       .each(function(i) {
-        var delay = i * 80; // We apply a progressive delay for sequence effect
+        const delay = i * 80; // We apply a progressive delay for sequence effect
         $(this)
           .delay(delay)
           .velocity(
@@ -324,7 +320,7 @@ $(document).ready(function() {
         this.pathname.replace(/^\//, "") &&
       location.hostname == this.hostname
     ) {
-      var target = $(this.hash);
+      let target = $(this.hash);
       target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
       if (target.length) {
         $("html, body").animate(
@@ -340,14 +336,14 @@ $(document).ready(function() {
 
   // Animate the horizantal program sliders
   $(".program-slider nav img").on("click", function() {
-    var $section = $(this).parents("section"); // reusable jQuery selector
-    var $ul = $section.children("ul");
-    var amountOfSlides = $section.children("ul").children("li").length; // count the amount of slides
-    var currentSlide = $section.data("current") || 1; // if no data attribute is found on <section> then assume current slide is 1
-    var increment = $(this).hasClass("next") ? 1 : -1;
-    var newSlide = currentSlide + increment;
-    var newLeft = -100 * (newSlide - 1) + "%";
-    var isAnimating = $ul.hasClass("velocity-animating") ? true : false;
+    const $section = $(this).parents("section"); // reusable jQuery selector
+    const $ul = $section.children("ul");
+    const amountOfSlides = $section.children("ul").children("li").length; // count the amount of slides
+    const currentSlide = $section.data("current") || 1; // if no data attribute is found on <section> then assume current slide is 1
+    const increment = $(this).hasClass("next") ? 1 : -1;
+    const newSlide = currentSlide + increment;
+    // const newLeft = -100 * (newSlide - 1) + "%";
+    const isAnimating = $ul.hasClass("velocity-animating") ? true : false;
     if (newSlide < 1) {
       // if first slide, spring left and back
       if (!isAnimating) {
@@ -406,13 +402,13 @@ $(document).ready(function() {
 
   // Clicking a person opens the modal
   $(".tiles.people li").on("click", function() {
-    var $bio = $(this)
+    const $bio = $(this)
       .find(".bio")
       .clone();
-    var $img = $(this)
+    const $img = $(this)
       .find(".img")
       .clone();
-    var $modal = $("#modals .modal");
+    const $modal = $("#modals .modal");
     $("#modals .modal .content")
       .html("")
       .append($img)
@@ -428,19 +424,19 @@ $(document).ready(function() {
   // Clicking a partner opens the modal, only if screen width is below 720px
   $(".tiles.partners li").on("click", function() {
     if ($(window).width() <= 720) {
-      var $img = $(this)
+      const $img = $(this)
         .find(".front img")
         .clone();
-      var $h2 = $(this)
+      const $h2 = $(this)
         .find(".back h2")
         .clone();
-      var $p = $(this)
+      const $p = $(this)
         .find(".back p")
         .clone();
-      var $a = $(this)
+      const $a = $(this)
         .find(".back a")
         .clone();
-      var $modal = $("#modals .modal");
+      const $modal = $("#modals .modal");
       $modal
         .find(".img")
         .html("")

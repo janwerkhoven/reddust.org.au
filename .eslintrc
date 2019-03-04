@@ -1,7 +1,4 @@
 {
-  "parserOptions": {
-    "sourceType": "module"
-  },
   "extends": ["eslint:recommended", "plugin:prettier/recommended"],
   "plugins": ["prettier"],
   "env": {
@@ -9,9 +6,15 @@
     "node": true,
     "es6": true
   },
+  "globals": {
+    "$": true,
+    "ga": true,
+    "CountUp": true
+  },
   "rules": {
-    "prettier/prettier": "error",
     "no-debugger": 1,
-    "no-console": 1
+    "no-console": 1,
+    "no-unused-vars": 1,
+    "prettier/prettier": "error"
   }
 }

@@ -1,30 +1,56 @@
 # Red Dust website
 
 #### What
+
 The [website](http://www.reddust.org.au/) of a health development organisation in remote indigenous communities
 
 #### Highlights
-* Built with Grunt, Handlebars, SASS, Atom & Git
-* Mobile responsive & retina-ready
-* Served on SSD Ubuntu Nginx servers
-* Design by [Hannah Sutton](http://hannahsuttondesign.com/)
-* Code by [Jan Werkhoven](https://github.com/janwerkhoven) and [Richard Verheyen](https://github.com/richardverheyen)
 
-#### Setup
-1. Make sure you have [Grunt](http://gruntjs.com/getting-started), [NPM](https://nodejs.org/en/download/) and [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed globally
-2. `git clone https://github.com/janwerkhoven/reddust.org.au ~/janwerkhoven/reddust.org.au`
-3. `cd ~/janwerkhoven/reddust.org.au`
-4. `npm install; bower install`
-5. `grunt`
-5. Go to [http://localhost:9000/](http://localhost:9000/)
-6. Open code with whatever rocks your boxers, I use [Atom](https://atom.io/): `atom .`
-7. Happy coding!
+- Design by [Hannah Sutton](http://hannahsuttondesign.com/)
+- Code by [Jan Werkhoven](https://github.com/janwerkhoven) and [Richard Verheyen](https://github.com/richardverheyen)
+- Built with Gulp 4, Nunjucks, SASS, JS, Atom and Git
+- 100% Mobile responsive
+- SSL encryption (HTTPS)
+- Hosted on Ubuntu server with Nginx
+
+#### How to use
+
+Before you can install you will need [NVM](https://github.com/creationix/nvm), [Yarn](https://yarnpkg.com/en/) and [Git](https://git-scm.com/).
+
+Installation:
+
+```
+git clone https://github.com/janwerkhoven/reddust.org.au
+cd reddust.org.au
+nvm install
+yarn install
+```
+
+Development:
+
+```
+gulp serve
+open http://localhost:9000
+```
+
+Production build:
+
+```
+gulp build
+```
+
+Deploy to production server (requires authenticated SSH tokens):
+
+```
+./deploy.sh
+```
 
 #### Contact
-Get in touch on [LinkedIn](https://au.linkedin.com/pub/jan-werkhoven/10/64/b30), [GitHub](https://github.com/janwerkhoven) or <a href="mailto:jw@nabu.io" target="_blank">jw@nabu.io</a>.
 
---------------
+Get in touch on [LinkedIn](https://au.linkedin.com/pub/jan-werkhoven/10/64/b30), [GitHub](https://github.com/janwerkhoven) or <a href="mailto:jw@nabu.io">jw@nabu.io</a>.
+
+---
 
 **Jan Werkhoven**  
-Web Developer  
+Senior Web App Engineer  
 & UI Designer

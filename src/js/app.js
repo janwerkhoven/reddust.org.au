@@ -456,6 +456,18 @@ $(document).ready(function() {
     }
   });
 
+  // Clicking the button on test page, opens the modal and shows donation form
+  $("#test #lightbox a.button").on("click", function(event) {
+    event.preventDefault();
+    console.log("FIRE");
+    const form =
+      '<div style="padding:1px;max-width: 700px"><iframe class="gn-iframe" src="https://www.givenow.com.au/embed/Y2F1c2VpZD0zODA2JmRvbWFpbj13d3cucmVkZHVzdC5vcmcuYXUmdG9rZW49MzgwNjo2NjhhOGI4ODNjMzY1YjFk" height="870" style="width: 100%" frameborder="0"></iframe></div>';
+    $("#modals .modal .content")
+      .html("")
+      .append(form);
+    openModal();
+  });
+
   // Clicking the modal overlay or close button closes the modal
   $("#modals")
     .find(".overlay, .modal>svg")

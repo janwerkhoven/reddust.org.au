@@ -1,0 +1,38 @@
+#test {
+  #title {
+    background-color: $reddust-sunset;
+
+    div {
+      text-align: center;
+
+      h1 {
+        color: $reddust-cream;
+        font-size: 45px;
+        margin: 25px;
+        @media (max-width: 900px) {
+          font-size: 4vw;
+        }
+        @media (max-width: 600px) {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  #lightbox {
+    > div {
+      // padding: 200px 50px;
+      min-height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  #modals {
+    .content {
+      > div {
+        width: 100%;
+        margin-top: 23px;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{% extends "layouts/page.njk" %}
+
+{% block meta %}
+  <title>Test</title>
+  <meta name="description" content="">
+{% endblock %}
+
+{% block id %}test{% endblock %}
+
+{% block main %}
+
+  <section id="title">
+    <div>
+      <h1>Test 2</h1>
+    </div>
+  </section>
+
+  <section id="lightbox">
+    <div>
+      <a href="/about/mission-and-values" class="button large rust">Open lightbox</a>
+    </div>
+  </section>
+
+  <section id="modals">
+    <div>
+      <div class="overlay">
+        <div class="modal">
+          {% include 'partials/close-icon-svg.njk' %}
+          <div class="content"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

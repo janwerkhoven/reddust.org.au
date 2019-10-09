@@ -45,6 +45,12 @@
     "yarn": ">= 1.0.0"
   },
   "scripts": {
+    "start": "./node_modules/.bin/gulp serve",
+    "build": "./node_modules/.bin/gulp build",
+    "deploy": "git push; ./deploy.sh",
+    "bump-patch": "npm version patch; git push origin --tags; git push",
+    "bump-minor": "npm version minor; git push origin --tags; git push",
+    "bump-major": "npm version major; git push origin --tags; git push",
     "precommit": "lint-staged",
     "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'bower_components', 'junction') } catch (e) { }\"",
     "prettify-repo": "prettier --write \"*/**/*.{css,scss,js,json,md}\""

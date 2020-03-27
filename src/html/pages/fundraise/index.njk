@@ -1,0 +1,34 @@
+{% extends "layouts/page.njk" %}
+
+{% block meta %}
+  <title>Fundraise | Red Dust</title>
+{% endblock %}
+
+{% block id %}fundraise{% endblock %}
+
+{% block main %}
+
+  <section class="hero">
+    <div>
+      <h1>Fundraise</h1>
+    </div>
+    <picture>
+      <source media="(max-width: 800px)" srcset="/assets/img/fundraise/fundraise-reddust-hero-800px.jpg">
+      <source media="(max-width: 1200px)" srcset="/assets/img/fundraise/fundraise-reddust-hero-1200px.jpg">
+      <img src="/assets/img/fundraise/fundraise-reddust-hero-1800px.jpg" width="1800" height="800" alt="indigenous Australian aboriginal boy sitting in the sand">
+    </picture>
+  </section>
+
+  <section class="content">
+    <div>
+      <h2>Raise funds for us</h2>
+      <p>Fundraising for Red Dust is a great way to enrich lives, improve health and strengthen the future of Indigenous youth and families.</p>
+      <p>Whether you want to organise a morning tea, raffle or trivia night, every dollar makes a difference. You know your friends and family better than anyone so create a fundraising event with them in mind.</p>
+      <p>To get started, please complete our short Fundraising Application Form. Once we have reviewed and approved your fundraising activity we will send a Letter of Authority to Fundraise which means you have the support of Red Dust to conduct your fundraising activity.</p>
+      <div class="cta">
+        <a href="/contact" class="button large rust">Application Form</a>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

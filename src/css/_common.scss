@@ -85,6 +85,7 @@ button {
   flex-shrink: 0;
   &.rust {
     background-color: $reddust-rust;
+    border-color: $reddust-rust;
     @media (min-width: 600px) {
       &:hover {
         background-color: $reddust-sunset;
@@ -218,6 +219,113 @@ section#hero {
         transform: translateX(-50%);
       }
     }
+  }
+}
+
+section.hero {
+  position: relative;
+  background: $reddust-rust;
+  > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      color: white;
+      font-size: 4vw;
+    }
+  }
+  > picture {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+section.content {
+  background: $reddust-cream;
+  > div {
+    max-width: 56vw;
+    padding-top: 9vw;
+    padding-bottom: 9vw;
+  }
+  h2 {
+    color: $reddust-rust;
+    font-size: 1.5vw;
+    text-align: center;
+    line-height: 200%;
+  }
+
+  p,
+  li,
+  cite,
+  h3 {
+    margin: 0;
+    color: $reddust-yinnar;
+    font-size: 1.3vw;
+    line-height: 200%;
+  }
+  h3 {
+    font-family: $montserrat-bold;
+  }
+  h2 + p,
+  p + h2,
+  p + h3,
+  h3 + h2,
+  p + p,
+  p + ul,
+  ul + p,
+  p + .cta {
+    margin-top: 2.4vw;
+  }
+  p {
+    strong {
+      font-weight: normal;
+      font-family: $montserrat-bold;
+    }
+    a {
+      color: $reddust-rust;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  p.center {
+    text-align: center;
+  }
+  ul {
+    list-style: disc;
+    padding-left: 3vw;
+    li {
+      padding-left: 1vw;
+    }
+  }
+  blockquote {
+    margin: 4vw 0;
+    p {
+      color: $reddust-gold;
+      font-family: $from-where-you-are-regular;
+      text-align: center;
+      font-size: 1.5vw;
+    }
+    cite {
+      display: block;
+      font-family: $montserrat-bold;
+      color: $reddust-gold;
+      font-style: normal;
+      text-align: center;
+      margin-top: 1.4vw;
+    }
+  }
+  .cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

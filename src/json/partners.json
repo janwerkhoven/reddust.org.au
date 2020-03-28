@@ -6,76 +6,16 @@
     "url": "https://www.jnj.com.au/"
   },
   {
-    "name": "Wood",
-    "logo": "wood.png",
-    "intro": "Wood is a global leader in the delivery of project, engineering and technical services to energy and industrial markets. Wood partners with Red Dust each year for a charity bike ride to raise funds for Red Dust programs in remote communities.",
-    "url": "https://www.woodplc.com/"
-  },
-  {
-    "name": "Newline",
-    "logo": "newline-group.png",
-    "intro": "Since its inception, Newline Group & the Odyssey Group Foundation has proudly supported a wide range of programs focused on health, education, human services, arts and culture, the environment and the elderly. We are pleased to be working with Red Dust to enrich lives, improve health and strengthen the future of Indigenous youth and families.",
-    "url": "https://newlinegroup.com.au/"
-  },
-  {
-    "name": "Medibank",
-    "logo": "new/Medibank.png",
-    "intro": "TBC",
-    "url": "https://www.medibank.com.au/"
-  },
-  {
-    "name": "Kmart",
-    "logo": "kmart@2x.jpg",
-    "intro": "In 2015 Kmart launched a partnership with Red Dust Role Models as part of our ongoing commitment to support Indigenous communities and increase awareness about Indigenous culture within the business. Red Dust Role Models works in collaboration with remote Indigenous communities in the Northern Territory to deliver innovative health promotion programs that encourage Indigenous youth to live a healthy lifestyle.",
-    "url": "http://www.kmart.com.au/"
-  },
-  {
-    "name": "Working Dog",
-    "logo": "workingdog@2x.jpg",
-    "intro": "Founded in January 1993, Working Dog is the creative minds behind The Castle, The Dish, Frontline, Thank God You 're Here, The Panel, Russell Coight's All Aussie Adventures, The Hollowmen, Utopia and now HYBPA",
-    "url": "http://www.workingdog.com/"
-  },
-  {
-    "name": "A & A Property Developers",
-    "logo": "aa-property-developers.png",
-    "intro": "A & A Property Developers specialise in boutique residential developments in Melbourne. A & A Property Developers are proud to partner with Red Dust to deliver programs to remote communities that will strengthen the future of Indigenous youth and families.",
-    "url": "http://www.aandapropertydevelopers.com.au/"
-  },
-  {
-    "name": "Asurion",
-    "logo": "new/Asurion.jpg",
-    "intro": "Asurion helps more than 300 million people around the world unlock their technology’s untapped potential. We create innovative technology solutions that help keep consumers connected, from comprehensive protection to smart tech help that redefines expertise. We are thrilled to be partnering with Red Dust as part of our Compassion Forward program where our employees directly engage with charities in our community.",
-    "url": "https://www.asurion.com/"
-  },
-  {
-    "name": "Edgewise",
-    "logo": "edgewise@2x.jpg",
-    "intro": "Edgewise is an Australian owned and operated professional services organization, specializing in the provision of insurance broking services to businesses of all sizes across all industries.With collectively over 100 years of experience in the insurance industry, Edgewise knows what it takes to source the most appropriate protection for both individual and business assets.",
-    "url": "http://www.edgewise.com.au/"
-  },
-  {
-    "name": "Vibe Hotels",
-    "logo": "vibe-hotels.png",
-    "intro": "As a Red Dust partner, Vibe Hotels has been a strong supporter of our programs and is a major accommodation partner, providing rooms and facilities for our staff whilst in Darwin.",
-    "url": "https://vibehotels.com/"
-  },
-  {
-    "name": "Occulture",
-    "logo": "occulture.jpg",
-    "intro": "Occulture is delighted to join the team of supporters of Red Dust in raising awareness of Aboriginal art and culture through our handcrafted jewellery collections. Each piece celebrates the ancient knowledge and beauty of the dreamtime with royalties benefiting the artist and their community.",
-    "url": "http://www.occulture.design/"
-  },
-  {
-    "name": "Sand Hill Road",
-    "logo": "new/Sand-Hill-Road.jpg",
-    "intro": "Sand Hill Road is a privately owned, Melbourne-based hospitality group and proud partner of the inaugural Red Dust Christmas Comedy Gala at the iconic Hotel Esplanade, lovingly known as The Espy.",
-    "url": "https://www.sandhillroad.com.au/"
-  },
-  {
     "name": "McGrathNicol",
     "logo": "mcgrathnicol@2x.jpg",
     "intro": "McGrathNicol is an independent boutique advisory firm specialising in Corporate Advisory, Forensic, Transaction Services and Corporate Recovery.We are a market leader in Australia and in New Zealand, with more than 30 Partners and 300 people across the region.",
     "url": "http://www.mcgrathnicol.com/"
+  },
+  {
+    "name": "Wood",
+    "logo": "wood.png",
+    "intro": "Wood is a global leader in the delivery of project, engineering and technical services to energy and industrial markets. Wood partners with Red Dust each year for a charity bike ride to raise funds for Red Dust programs in remote communities.",
+    "url": "https://www.woodplc.com/"
   },
   {
     "name": "Telco Together Foundation",
@@ -84,10 +24,22 @@
     "url": "http://www.telcotogether.org/"
   },
   {
+    "name": "Newline",
+    "logo": "newline-group.png",
+    "intro": "Since its inception, Newline Group & the Odyssey Group Foundation has proudly supported a wide range of programs focused on health, education, human services, arts and culture, the environment and the elderly. We are pleased to be working with Red Dust to enrich lives, improve health and strengthen the future of Indigenous youth and families.",
+    "url": "https://newlinegroup.com.au/"
+  },
+  {
     "name": "Qantas",
     "logo": "new/Qantas.png",
     "intro": "Red Dust is a Qantas Regional Grants Program winner. This grant supports our unique ‘community-as-family’ model of health, wellbeing and capacity building programs delivered in partnership with remote Indigenous communities to create stronger futures for youth and their families through building programs.",
     "url": "https://www.qantas.com/"
+  },
+  {
+    "name": "Medibank",
+    "logo": "new/Medibank.png",
+    "intro": "TBC",
+    "url": "https://www.medibank.com.au/"
   },
   {
     "name": "AFL Players Care",
@@ -96,10 +48,22 @@
     "url": "http://www.aflplayers.com.au/players-care/"
   },
   {
+    "name": "Kmart",
+    "logo": "kmart@2x.jpg",
+    "intro": "In 2015 Kmart launched a partnership with Red Dust Role Models as part of our ongoing commitment to support Indigenous communities and increase awareness about Indigenous culture within the business. Red Dust Role Models works in collaboration with remote Indigenous communities in the Northern Territory to deliver innovative health promotion programs that encourage Indigenous youth to live a healthy lifestyle.",
+    "url": "http://www.kmart.com.au/"
+  },
+  {
     "name": "Agonis Group",
     "logo": "new/Agonis.jpg",
     "intro": "Agonis Group is partnering with Red Dust to allow its employees the opportunity to help enrich the lives of those living in Australia’s remote indigenous communities.",
     "url": "https://agonisgroup.com.au/"
+  },
+  {
+    "name": "Working Dog",
+    "logo": "workingdog@2x.jpg",
+    "intro": "Founded in January 1993, Working Dog is the creative minds behind The Castle, The Dish, Frontline, Thank God You 're Here, The Panel, Russell Coight's All Aussie Adventures, The Hollowmen, Utopia and now HYBPA",
+    "url": "http://www.workingdog.com/"
   },
   {
     "name": "Christ Church Grammar School",
@@ -108,10 +72,22 @@
     "url": "https://www.ccgs.vic.edu.au/"
   },
   {
+    "name": "A & A Property Developers",
+    "logo": "aa-property-developers.png",
+    "intro": "A & A Property Developers specialise in boutique residential developments in Melbourne. A & A Property Developers are proud to partner with Red Dust to deliver programs to remote communities that will strengthen the future of Indigenous youth and families.",
+    "url": "http://www.aandapropertydevelopers.com.au/"
+  },
+  {
     "name": "3M",
     "logo": "new/3M.png",
     "intro": "3M applies science in collaborative ways to improve lives daily.  3M are proud to support Red Dust to deliver programs to remote communities that will strengthen the future of Indigenous youth and families.",
     "url": "https://www.3m.com.au/"
+  },
+  {
+    "name": "Asurion",
+    "logo": "new/Asurion.jpg",
+    "intro": "Asurion helps more than 300 million people around the world unlock their technology’s untapped potential. We create innovative technology solutions that help keep consumers connected, from comprehensive protection to smart tech help that redefines expertise. We are thrilled to be partnering with Red Dust as part of our Compassion Forward program where our employees directly engage with charities in our community.",
+    "url": "https://www.asurion.com/"
   },
   {
     "name": "Edwards Lifesciences",
@@ -120,10 +96,22 @@
     "url": "https://www.edwards.com/"
   },
   {
+    "name": "Edgewise",
+    "logo": "edgewise@2x.jpg",
+    "intro": "Edgewise is an Australian owned and operated professional services organization, specializing in the provision of insurance broking services to businesses of all sizes across all industries.With collectively over 100 years of experience in the insurance industry, Edgewise knows what it takes to source the most appropriate protection for both individual and business assets.",
+    "url": "http://www.edgewise.com.au/"
+  },
+  {
     "name": "Mecure",
     "logo": "mercure-hotels@2x.jpg",
     "intro": "Mecure Alice Springs Resort is a longtime friend of Red Dust.We are thankful for Mecure providing us with comfortable accommodation, delicious meals and great service before and after each Red Dust program delivery in the central desert.",
     "url": "https://www.accorhotels.com/gb/hotel-B0K7-mercure-alice-springs-resort/index.shtml"
+  },
+  {
+    "name": "Vibe Hotels",
+    "logo": "vibe-hotels.png",
+    "intro": "As a Red Dust partner, Vibe Hotels has been a strong supporter of our programs and is a major accommodation partner, providing rooms and facilities for our staff whilst in Darwin.",
+    "url": "https://vibehotels.com/"
   },
   {
     "name": "Holiday Inn",
@@ -132,9 +120,21 @@
     "url": "https://www.ihg.com/hotels/us/en/reservation"
   },
   {
+    "name": "Occulture",
+    "logo": "occulture.jpg",
+    "intro": "Occulture is delighted to join the team of supporters of Red Dust in raising awareness of Aboriginal art and culture through our handcrafted jewellery collections. Each piece celebrates the ancient knowledge and beauty of the dreamtime with royalties benefiting the artist and their community.",
+    "url": "http://www.occulture.design/"
+  },
+  {
     "name": "The Australian Super Food Company",
     "logo": "the-australian-super-food-co.jpg",
     "intro": "TBC",
     "url": "https://austsuperfoods.com.au/story/"
+  },
+  {
+    "name": "Sand Hill Road",
+    "logo": "new/Sand-Hill-Road.jpg",
+    "intro": "Sand Hill Road is a privately owned, Melbourne-based hospitality group and proud partner of the inaugural Red Dust Christmas Comedy Gala at the iconic Hotel Esplanade, lovingly known as The Espy.",
+    "url": "https://www.sandhillroad.com.au/"
   }
 ]

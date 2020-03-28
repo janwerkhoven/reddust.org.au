@@ -1,0 +1,101 @@
+body#workplace-giving {
+  section#five-dollars {
+    background-color: $reddust-rust;
+    background: url("/assets/img/support/what-your-donation-does.jpg");
+    background-size: cover;
+    text-align: center;
+    > div {
+      max-width: none;
+      padding: 11vw 4vw 8vw;
+    }
+    h2 {
+      color: $reddust-sunset;
+      font-size: 3.2vw;
+      max-width: 60%;
+      margin: 0 auto;
+      line-height: 150%;
+    }
+    .columns {
+      display: flex;
+      align-items: center;
+      margin: 8vw 0;
+      h3 {
+        color: $reddust-cream;
+        flex: 1;
+        font-size: 2.8vw;
+        line-height: 150%;
+      }
+    }
+    p {
+      color: white;
+      font-size: 2vw;
+      margin: 0 auto;
+      max-width: 60%;
+      line-height: 150%;
+      font-family: $montserrat-bold;
+    }
+  }
+  section#ten-dollars {
+    background: $reddust-sunset;
+    background: $reddust-sunset-2;
+    ul {
+      padding: 10vw 10vw 10vw 2vw;
+      li {
+        display: flex;
+        align-items: center;
+        & + li {
+          margin-top: 4vw;
+        }
+        h3 {
+          color: $reddust-cream;
+          background-image: url("/assets/img/workplace-giving/red-dot.png");
+          flex-shrink: 0;
+          width: 35vw;
+          height: 14vw;
+          line-height: 14vw;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          text-align: center;
+          font-size: 3vw;
+        }
+        p {
+          color: $reddust-yinnar;
+          margin: 0;
+          line-height: 200%;
+          font-size: 1.6vw;
+        }
+      }
+    }
+  }
+  section#non-profit {
+    background: $reddust-cream;
+    .liner {
+      max-width: 70%;
+      padding: 10vw 0;
+    }
+    h3 {
+      color: $reddust-rust;
+      text-align: center;
+      font-size: 2vw;
+      line-height: 200%;
+      a {
+        color: $reddust-rust;
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    p {
+      color: $reddust-yinnar;
+      font-size: 1.3vw;
+      line-height: 150%;
+    }
+    .images {
+      display: flex;
+      justify-content: space-around;
+      margin: 4vw 0;
+    }
+  }
+}

@@ -249,24 +249,23 @@ section.hero {
 section.content {
   background: $reddust-cream;
   > div {
-    max-width: 56vw;
+    max-width: 70vw;
     padding-top: 9vw;
     padding-bottom: 9vw;
   }
   h2 {
     color: $reddust-rust;
-    font-size: 1.5vw;
+    font-size: 1.8vw;
     text-align: center;
     line-height: 200%;
   }
-
   p,
   li,
   cite,
   h3 {
     margin: 0;
     color: $reddust-yinnar;
-    font-size: 1.3vw;
+    font-size: 1.5vw;
     line-height: 200%;
   }
   h3 {
@@ -280,7 +279,7 @@ section.content {
   p + ul,
   ul + p,
   p + .cta {
-    margin-top: 2.4vw;
+    margin-top: 3vw;
   }
   p {
     strong {

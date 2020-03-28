@@ -1,0 +1,280 @@
+section#hero {
+  overflow: hidden;
+  position: relative;
+  min-height: 300px;
+  background-color: $reddust-yinnar;
+  @media (min-width: 1700px) {
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    width: 100vw;
+    height: auto;
+    max-height: 800px;
+    @media (max-width: 632px) {
+      position: absolute;
+      top: 0;
+      height: 300px;
+      width: auto;
+    }
+    @media (min-width: 1700px) {
+      height: 800px;
+      width: auto;
+    }
+  }
+  &.right {
+    img {
+      @media (max-width: 632px) {
+        right: 0;
+      }
+    }
+  }
+  &.center {
+    img {
+      @media (max-width: 632px) {
+        left: 50vw;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+section.hero {
+  position: relative;
+  background: $reddust-rust;
+  overflow: hidden;
+  > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      color: white;
+      text-align: center;
+      line-height: 180%;
+      @include widescreen {
+        font-size: px(4vw);
+      }
+      @include desktop {
+        font-size: 4vw;
+      }
+      @include tablet {
+        font-size: 6vw;
+      }
+      @include mobile {
+        font-size: 12vw;
+      }
+    }
+  }
+  > picture {
+    img {
+      width: 100%;
+      height: auto;
+      @include mobile {
+        width: 250vw;
+        margin-left: -125vw;
+      }
+    }
+  }
+  // TODO
+  // &.parallax {
+  //   height: calc(44.44vw * 0.9);
+  //   overflow: hidden;
+  //   .title {
+  //     z-index: 1;
+  //   }
+  //   picture {
+  //     display: block;
+  //     transform: translateY(-10%);
+  //     transform: translateY(0%);
+  //   }
+  // }
+}
+
+section.content {
+  background: $reddust-cream;
+  .liner {
+    @include widescreen {
+      max-width: px(70vw);
+      padding: px(9vw) 0;
+    }
+    @include desktop {
+      max-width: 70vw;
+      padding: 9vw 0;
+    }
+    @include tablet {
+      max-width: none;
+      padding: 15vw 5vw 15vw;
+    }
+    @include mobile {
+      max-width: none;
+      padding: 15vw 5vw 25vw;
+    }
+  }
+  h2 {
+    color: $reddust-rust;
+    text-align: center;
+    line-height: 200%;
+    @include widescreen {
+      font-size: px(1.8vw);
+    }
+    @include desktop {
+      font-size: 1.8vw;
+    }
+    @include tablet {
+      font-size: 4vw;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+    @include mobile {
+      font-size: 9vw;
+    }
+  }
+  p,
+  li,
+  cite,
+  h3 {
+    margin: 0;
+    color: $reddust-yinnar;
+    line-height: 200%;
+    @include widescreen {
+      font-size: px(1.5vw);
+    }
+    @include desktop {
+      font-size: 1.5vw;
+    }
+    @include tablet {
+      font-size: 3vw;
+    }
+    @include mobile {
+      font-size: 5vw;
+    }
+  }
+  h3 {
+    font-family: $montserrat-bold;
+  }
+  h2 + p,
+  p + h2,
+  p + h3,
+  h3 + h2,
+  p + p,
+  p + ul,
+  ul + p,
+  p + .cta {
+    @include widescreen {
+      margin-top: px(3vw);
+    }
+    @include desktop {
+      margin-top: 3vw;
+    }
+    @include tablet {
+      margin-top: 6vw;
+    }
+    @include mobile {
+      margin-top: 10vw;
+    }
+  }
+  p {
+    strong {
+      font-weight: normal;
+      font-family: $montserrat-bold;
+    }
+    a {
+      color: $reddust-rust;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  p.center {
+    text-align: center;
+  }
+  ul {
+    list-style: disc;
+    @include widescreen {
+      padding-left: px(3vw);
+    }
+    @include desktop {
+      padding-left: 3vw;
+    }
+    @include tablet {
+      padding-left: 3vw;
+    }
+    @include mobile {
+      padding-left: 6vw;
+    }
+    li {
+      @include widescreen {
+        padding-left: px(1vw);
+      }
+      @include desktop {
+        padding-left: 1vw;
+      }
+      @include tablet {
+        padding-left: 2vw;
+      }
+      @include mobile {
+        padding-left: 2vw;
+      }
+    }
+  }
+  blockquote {
+    text-align: center;
+    @include widescreen {
+      margin: px(4vw) 0;
+    }
+    @include desktop {
+      margin: 4vw 0;
+    }
+    @include tablet {
+      margin: 12vw 0;
+    }
+    @include mobile {
+      margin: 12vw 0;
+    }
+    p {
+      color: $reddust-gold;
+      font-family: $from-where-you-are-regular;
+      @include widescreen {
+        font-size: px(1.5vw);
+      }
+      @include desktop {
+        font-size: 1.5vw;
+      }
+      @include tablet {
+        font-size: 4vw;
+      }
+      @include mobile {
+        font-size: 6vw;
+      }
+    }
+    cite {
+      display: block;
+      font-family: $montserrat-bold;
+      color: $reddust-gold;
+      font-style: normal;
+      @include widescreen {
+        margin-top: px(1.4vw);
+      }
+      @include desktop {
+        margin-top: 1.4vw;
+      }
+      @include tablet {
+        margin-top: 4vw;
+      }
+      @include mobile {
+        margin-top: 6vw;
+      }
+    }
+  }
+  .cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

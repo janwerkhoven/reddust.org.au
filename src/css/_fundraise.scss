@@ -1,0 +1,9 @@
+body#fundraise {
+  section.hero {
+    img {
+      @include mobile {
+        margin-left: -93vw;
+      }
+    }
+  }
+}

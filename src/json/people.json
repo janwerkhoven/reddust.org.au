@@ -70,13 +70,6 @@
     "bio": "Melanie (MJ) is known as a pioneer for women's cricket in Australia and around the world. She brings a wealth of sporting experience and achievement to her role, having represented Australia in all forms of international cricket. A qualified teacher, she is currently pursuing a media career while working closely with elite female athletes in career development with Elite Sports Properties – Majestic Division."
   },
   {
-    "name": "Raymond Walters Japanangka",
-    "role": "Ambassador",
-    "category": "ambassador",
-    "image": "raymond-walters-japanangka@2x.jpg",
-    "bio": "Raymond's grandfather's country is Ngarleyekwerleng in the Western Desert near Yuendumu, and his grandmother's country is Alhalkerre Atnangkerre. Raymond brings his expertise in Sport & Recreation, Remote/Urban Aboriginal Community Development, Family & Child Welfare, Alcohol & Other Drugs Awareness and Consultancy on Aboriginal Community Engagement policies and procedures."
-  },
-  {
     "name": "Scott Stirling",
     "role": "CEO",
     "category": "staff-ceo",
@@ -112,13 +105,6 @@
     "bio": ""
   },
   {
-    "name": "Brett Wheeler",
-    "role": "Community Engagement",
-    "category": "staff-member",
-    "image": "brett-wheeler-2@2x.jpg",
-    "bio": "Brett's NBL career spanned 12 years - winning two championships and representing Australia sixteen times.  Brett is on staff at Red Dust in a Community Engagement role that sees him work closely with communities supporting the development of local role models to support Red Dust program delivery."
-  },
-  {
     "name": "Yvette Hollard",
     "role": "Healthy Living Program Coordinator",
     "category": "staff-member",
@@ -126,15 +112,8 @@
     "bio": "Yvette joined Red Dust as a role model in 2007, later becoming a program Team Leader.  She is now the Healthy Living Program Coordinator, with over 20 years of experience in business management; events and marketing.  Yvette has recently obtained her Cert III & IV in personal training and as a former chef, has a passion for nutrition and helping others.  Yvette enjoys living life to the fullest!"
   },
   {
-    "name": "Terry Thomas",
+    "name": "Roberto Pietrobon",
     "role": "Director of Philanthropy and Partnerships",
-    "category": "staff-member",
-    "image": "",
-    "bio": ""
-  },
-  {
-    "name": "Elise Cabret",
-    "role": "Grants Coordinator",
     "category": "staff-member",
     "image": "",
     "bio": ""
@@ -145,6 +124,13 @@
     "category": "staff-member",
     "image": "",
     "bio": ""
+  },
+  {
+    "name": "Brett Wheeler",
+    "role": "Role Model",
+    "category": "staff-member",
+    "image": "brett-wheeler-2@2x.jpg",
+    "bio": "Brett's NBL career spanned 12 years - winning two championships and representing Australia sixteen times.  Brett is on staff at Red Dust in a Community Engagement role that sees him work closely with communities supporting the development of local role models to support Red Dust program delivery."
   },
   {
     "name": "Darren Smith",

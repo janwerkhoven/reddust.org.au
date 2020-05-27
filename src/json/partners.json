@@ -136,5 +136,11 @@
     "logo": "new/Sand-Hill-Road.jpg",
     "intro": "Sand Hill Road is a privately owned, Melbourne-based hospitality group and proud partner of the inaugural Red Dust Christmas Comedy Gala at the iconic Hotel Esplanade, lovingly known as The Espy.",
     "url": "https://www.sandhillroad.com.au/"
+  },
+  {
+    "name": "Booktopia",
+    "logo": "booktopia@2x.jpg",
+    "intro": "Booktopia is Australia's largest online bookstore, and is proudly 100% Australian owned and operated. Booktopia is committed to supporting the literacy of Australians and proud to support Red Dust by donating 7.5% of your purchase (excluding Gift Cards and magazine subscriptions) when you purchase through this link.",
+    "url": "https://booktopia.kh4ffx.net/reddust"
   }
 ]

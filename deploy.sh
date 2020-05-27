@@ -11,8 +11,9 @@ echo "Deploying:"
 echo $branch
 echo $revision
 echo "----------"
-echo "scp install.sh deploy@server-singapore.nabu.io:/var/www/reddust.org.au"
-scp install.sh deploy@server-singapore.nabu.io:/var/www/reddust.org.au
+
+(set -x; scp install.sh deploy@server-singapore.nabu.io:/var/www/reddust.org.au)
+
 echo "----------"
-echo 'ssh deploy@server-singapore.nabu.io "/var/www/reddust.org.au/install.sh $branch $revision"'
-ssh deploy@server-singapore.nabu.io "/var/www/reddust.org.au/install.sh $branch $revision"
+
+(set -x; ssh jw@singapore.server.floatplane.dev "/var/www/reddust.org.au/install.sh $branch $revision")

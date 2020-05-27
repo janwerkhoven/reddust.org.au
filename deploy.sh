@@ -12,7 +12,7 @@ echo $branch
 echo $revision
 echo "----------"
 
-(set -x; scp install.sh deploy@server-singapore.nabu.io:/var/www/reddust.org.au)
+(set -x; scp install.sh jw@singapore.server.floatplane.dev:/var/www/reddust.org.au)
 
 echo "----------"
 

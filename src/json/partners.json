@@ -142,5 +142,11 @@
     "logo": "booktopia@2x.jpg",
     "intro": "Booktopia is Australia's largest online bookstore, and is proudly 100% Australian owned and operated. Booktopia is committed to supporting the literacy of Australians and proud to support Red Dust by donating 7.5% of your purchase (excluding Gift Cards and magazine subscriptions) when you purchase through this link.",
     "url": "https://booktopia.kh4ffx.net/reddust"
+  },
+  {
+    "name": "IOOF",
+    "logo": "IOOF-Foundation@500x500.png",
+    "intro": "IOOF has been helping Australians secure their financial independence for over 170 years, and have grown to become a leading provider of quality financial advice, products and services. The IOOF Foundation is proud to support Red Dust projects that support education and empower young Australians to reach their potential.",
+    "url": "https://www.ioof.com.au/about-us/ioof-foundation"
   }
 ]

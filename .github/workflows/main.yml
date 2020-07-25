@@ -39,4 +39,4 @@ jobs:
           echo "${{ secrets.PUBLIC_KEY }}" > ~/.ssh/id_rsa.pub
           chmod 600 ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa.pub
-          scp -v -o StrictHostKeyChecking=no install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au
+          scp -v -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au

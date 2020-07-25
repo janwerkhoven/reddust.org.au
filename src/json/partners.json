@@ -148,5 +148,23 @@
     "logo": "IOOF-Foundation@500x500.png",
     "intro": "IOOF has been helping Australians secure their financial independence for over 170 years, and have grown to become a leading provider of quality financial advice, products and services. The IOOF Foundation is proud to support Red Dust projects that support education and empower young Australians to reach their potential.",
     "url": "https://www.ioof.com.au/about-us/ioof-foundation"
+  },
+  {
+    "name": "KWM",
+    "logo": "kwm@500x500.png",
+    "intro": "King & Wood Mallesons is recognised as one of the world's most innovative law firms.  KWM provides pro bono support to Red Dust, advising on various matters.  They are committed to Indigenous causes and through this partnership are helping Red Dust to deliver our mission.",
+    "url": "https://www.kwm.com/"
+  },
+  {
+    "name": "KIT BAG FOR KIDS",
+    "logo": "kit-bag-for-kids@500x500.png",
+    "intro": "Kit Bag for Kids works to ensure no child in Australia forgoes the opportunity to play sport due to the lack of appropriate kit or footwear and proudly supports Red Dust programs through product donations.",
+    "url": "https://www.kitbagforkids.org/"
+  },
+  {
+    "name": "MALO republic",
+    "logo": "malo-republic@500x500.png",
+    "intro": "MALO republic’s Buy One Give One program provides sports clothing and activewear to children to encourage them to lead active lifestyles. Together with Kit Bag for Kids they are proud to support Red Dust programs.",
+    "url": "https://malorepublic.com.au/pages/buy-one-give-one-the-malo-mission"
   }
 ]

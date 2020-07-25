@@ -37,4 +37,4 @@ jobs:
           mkdir ~/.ssh
           echo "${{ secrets.PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          scp deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au
+          scp install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au

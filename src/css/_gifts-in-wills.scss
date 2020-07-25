@@ -1,0 +1,9 @@
+body#gifts-in-wills {
+  section.hero {
+    img {
+      @include mobile {
+        margin-left: -58vw;
+      }
+    }
+  }
+}

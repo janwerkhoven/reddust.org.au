@@ -1,0 +1,296 @@
+body#workplace-giving {
+  section.hero {
+    img {
+      @include mobile {
+        margin-left: -25vw;
+      }
+    }
+  }
+  section#five-dollars {
+    background-color: $reddust-rust;
+    background: url("/assets/img/support/what-your-donation-does.jpg");
+    background-size: cover;
+    text-align: center;
+    @include tablet {
+      background-position: 27% 0%;
+    }
+    @include mobile {
+      background-position: 35% 0%;
+    }
+    > div {
+      max-width: none;
+      @include widescreen {
+        padding: px(11vw) px(4vw) px(8vw);
+      }
+      @include desktop {
+        padding: 11vw 4vw 8vw;
+      }
+      @include tablet {
+        padding: 30vw 4vw 12vw;
+      }
+      @include mobile {
+        padding: 10vw 4vw 10vw;
+      }
+    }
+    h2 {
+      color: $reddust-sunset;
+      margin: 0 auto;
+      line-height: 150%;
+      @include widescreen {
+        font-size: px(3.2vw);
+        max-width: calc(1200px * 0.6);
+      }
+      @include desktop {
+        font-size: 3.2vw;
+        max-width: 60%;
+      }
+      @include tablet {
+        font-size: 5vw;
+      }
+      @include mobile {
+        font-size: 8vw;
+        margin-bottom: 32vw;
+      }
+    }
+    .columns {
+      @include widescreen {
+        margin: px(8vw) 0;
+        display: flex;
+        align-items: center;
+      }
+      @include desktop {
+        margin: 8vw 0;
+        display: flex;
+        align-items: center;
+      }
+      @include tablet {
+        margin: 11vw 0;
+      }
+      @include mobile {
+        margin: 10vw 0;
+      }
+      h3 {
+        color: $reddust-cream;
+        flex: 1;
+        line-height: 150%;
+        @include widescreen {
+          font-size: px(2.8vw);
+        }
+        @include desktop {
+          font-size: 2.8vw;
+        }
+        @include tablet {
+          font-size: 4vw;
+          margin-bottom: 4vw;
+        }
+        @include mobile {
+          font-size: 8vw;
+          margin-bottom: 10vw;
+        }
+      }
+    }
+    p {
+      color: white;
+      margin: 0 auto;
+      line-height: 160%;
+      font-family: $montserrat-bold;
+      @include widescreen {
+        font-size: px(2vw);
+        max-width: 60%;
+      }
+      @include desktop {
+        font-size: 2vw;
+        max-width: 60%;
+      }
+      @include tablet {
+        font-size: 3vw;
+      }
+      @include mobile {
+        font-size: 7vw;
+      }
+    }
+  }
+  section#ten-dollars {
+    background: $reddust-sunset;
+    background: $reddust-sunset-2;
+    ul {
+      @include widescreen {
+        padding: px(10vw) px(10vw) px(10vw) px(2vw);
+      }
+      @include desktop {
+        padding: 10vw 10vw 10vw 2vw;
+      }
+      @include tablet {
+        padding: 16vw 4vw;
+      }
+      @include mobile {
+        padding: 20vw 4vw;
+      }
+      li {
+        @include widescreen {
+          display: flex;
+          align-items: center;
+        }
+        @include desktop {
+          display: flex;
+          align-items: center;
+        }
+        & + li {
+          @include widescreen {
+            margin-top: px(4vw);
+          }
+          @include desktop {
+            margin-top: 4vw;
+          }
+          @include tablet {
+            margin-top: 9vw;
+          }
+          @include mobile {
+            margin-top: 20vw;
+          }
+        }
+        h3 {
+          color: $reddust-cream;
+          background-image: url("/assets/img/workplace-giving/red-dot.png");
+          flex-shrink: 0;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          text-align: center;
+          @include widescreen {
+            font-size: px(3vw);
+            line-height: px(14vw);
+            width: px(35vw);
+          }
+          @include desktop {
+            font-size: 3vw;
+            line-height: 14vw;
+            width: 35vw;
+          }
+          @include tablet {
+            font-size: 6vw;
+            line-height: 29vw;
+            width: 100%;
+            margin-bottom: 3vw;
+          }
+          @include mobile {
+            font-size: 9vw;
+            line-height: 40vw;
+            width: 100%;
+            margin-bottom: 6vw;
+          }
+        }
+        p {
+          color: $reddust-yinnar;
+          margin: 0;
+          line-height: 200%;
+          @include widescreen {
+            font-size: px(1.6vw);
+          }
+          @include desktop {
+            font-size: 1.6vw;
+          }
+          @include tablet {
+            text-align: center;
+            font-size: 3vw;
+          }
+          @include mobile {
+            text-align: center;
+            font-size: 5vw;
+          }
+        }
+      }
+    }
+  }
+  section#non-profit {
+    background: $reddust-cream;
+    .liner {
+      @include widescreen {
+        max-width: 70%;
+        padding: px(10vw) 0;
+      }
+      @include desktop {
+        max-width: 70%;
+        padding: 10vw 0;
+      }
+      @include tablet {
+        padding: 10vw;
+      }
+      @include mobile {
+        padding: 26vw 6vw;
+      }
+    }
+    h3 {
+      color: $reddust-rust;
+      text-align: center;
+      line-height: 200%;
+      @include widescreen {
+        font-size: px(2vw);
+      }
+      @include desktop {
+        font-size: 2vw;
+      }
+      @include tablet {
+        font-size: 3.6vw;
+      }
+      @include mobile {
+        font-size: 6vw;
+      }
+      a {
+        color: $reddust-rust;
+        text-decoration: underline;
+        white-space: nowrap;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    p {
+      color: $reddust-yinnar;
+      line-height: 150%;
+      @include widescreen {
+        font-size: px(1.3vw);
+      }
+      @include desktop {
+        font-size: 1.3vw;
+      }
+      @include tablet {
+        font-size: 2.3vw;
+      }
+      @include mobile {
+        font-size: 4.2vw;
+      }
+    }
+    .images {
+      @include widescreen {
+        margin: px(4vw) 0;
+        display: flex;
+        justify-content: space-around;
+      }
+      @include desktop {
+        margin: 4vw 0;
+        display: flex;
+        justify-content: space-around;
+      }
+      @include tablet {
+        margin: 6vw 0;
+      }
+      @include mobile {
+        margin: 12vw 0;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        & + img {
+          @include tablet {
+            margin-top: 4vw;
+          }
+          @include mobile {
+            margin-top: 9vw;
+          }
+        }
+      }
+    }
+  }
+}

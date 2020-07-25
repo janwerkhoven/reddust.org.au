@@ -36,6 +36,8 @@ jobs:
         run: |
           mkdir ~/.ssh
           echo "${{ secrets.PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.PUBLIC_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa.pub
           ssh-keyscan -v -t rsa singapore.server.floatplane.dev
           scp -v install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au

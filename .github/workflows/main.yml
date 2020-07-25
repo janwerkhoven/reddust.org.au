@@ -41,4 +41,4 @@ jobs:
           chmod 600 ~/.ssh/id_rsa.pub
           sudo ls -la /dev/tty
           sudo chmod 600 /dev/tty
-          scp -v -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au
+          scp -v -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=/dev/null -i ~/.ssh/id_rsa install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au

@@ -34,9 +34,11 @@ jobs:
 
       - name: Deploy to remote server
         run: |
+          ls -la /dev/tty
           mkdir ~/.ssh
           echo "${{ secrets.PRIVATE_KEY }}" > ~/.ssh/id_rsa
           echo "${{ secrets.PUBLIC_KEY }}" > ~/.ssh/id_rsa.pub
           chmod 600 ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa.pub
+          chmod 600 /dev/tty
           scp -v -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au

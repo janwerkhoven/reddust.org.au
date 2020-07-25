@@ -34,8 +34,5 @@ jobs:
 
       - name: Deploy to remote server
         run: |
-          node --version
-          npm --version
-          yarn --version
-          ls -la ~/.ssh/
-          cat ~/.ssh/id_rsa
+          echo ${{ secrets.PRIVATE_KEY }} > ./temp_id_rsa
+          scp -i ./temp_id_rsa install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au

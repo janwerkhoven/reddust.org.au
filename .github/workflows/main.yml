@@ -34,5 +34,7 @@ jobs:
 
       - name: Deploy to remote server
         run: |
-          echo ${{ secrets.PRIVATE_KEY }} > ./temp_id_rsa
-          scp -i ./temp_id_rsa install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au
+          mkdir ~/.ssh
+          echo "${{ secrets.PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          scp deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au

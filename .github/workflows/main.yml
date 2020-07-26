@@ -49,4 +49,4 @@ jobs:
           echo "---------"
           sudo cat /etc/ssh/ssh_config
           echo "---------"
-          scp -v -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au
+          scp -v -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -F ~/.ssh/config install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au

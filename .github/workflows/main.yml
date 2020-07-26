@@ -22,41 +22,40 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - run: yarn deploy
       # Runs a single command using the runners shell
       # - name: Run a one-line script
       #   run: echo Hello, world!
-
       # Runs a set of commands using the runners shell
       # - name: Run a multi-line script
       #   run: |
       #     echo Add other actions to build,
       #     echo test, and deploy your project.
-
-      - name: Set up SSH
-        shell: bash
-        env:
-          PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
-          PUBLIC_KEY: ${{secrets.PUBLIC_KEY}}
-          SSH_CONFIG: ${{secrets.SSH_CONFIG}}
-        run: |
-          mkdir ~/.ssh
-          chmod -R 0700 ~/.ssh
-          ssh-keyscan -H singapore.server.floatplane.dev > ~/.ssh/known_hosts
-          'echo "$PRIVATE_KEY" > ~/.ssh/id_rsa'
-          'echo "$PUBLIC_KEY" > ~/.ssh/id_rsa.pub'
-          'echo "$SSH_CONFIG" > ~/.ssh/config'
-          chmod 600 ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa.pub
-          chmod 600 ~/.ssh/config
-          echo "----------"
-          ls -la ~/.ssh
-          echo "----------"
-          branch=$(git rev-parse --abbrev-ref HEAD)
-          revision=$(git rev-parse --short HEAD)
-          echo "----------"
-          echo $branch
-          echo $revision
-          echo "----------"
-          ssh -Gkv deploy@singapore.server.floatplane.dev "/var/www/reddust.org.au/install.sh $branch $revision"
-          echo "----------"
-          ssh -kv deploy@singapore.server.floatplane.dev "/var/www/reddust.org.au/install.sh $branch $revision"
+      # - name: Set up SSH
+      #   shell: bash
+      #   env:
+      #     PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
+      #     PUBLIC_KEY: ${{secrets.PUBLIC_KEY}}
+      #     SSH_CONFIG: ${{secrets.SSH_CONFIG}}
+      #   run: |
+      #     mkdir ~/.ssh
+      #     chmod -R 0700 ~/.ssh
+      #     ssh-keyscan -H singapore.server.floatplane.dev > ~/.ssh/known_hosts
+      #     'echo "$PRIVATE_KEY" > ~/.ssh/id_rsa'
+      #     'echo "$PUBLIC_KEY" > ~/.ssh/id_rsa.pub'
+      #     'echo "$SSH_CONFIG" > ~/.ssh/config'
+      #     chmod 600 ~/.ssh/id_rsa
+      #     chmod 600 ~/.ssh/id_rsa.pub
+      #     chmod 600 ~/.ssh/config
+      #     echo "----------"
+      #     ls -la ~/.ssh
+      #     echo "----------"
+      #     branch=$(git rev-parse --abbrev-ref HEAD)
+      #     revision=$(git rev-parse --short HEAD)
+      #     echo "----------"
+      #     echo $branch
+      #     echo $revision
+      #     echo "----------"
+      #     ssh -Gkv deploy@singapore.server.floatplane.dev "/var/www/reddust.org.au/install.sh $branch $revision"
+      #     echo "----------"
+      #     ssh -kv deploy@singapore.server.floatplane.dev "/var/www/reddust.org.au/install.sh $branch $revision"

@@ -41,6 +41,8 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa.pub
           chmod 600 ~/.ssh/config
+          ssh-keygen -R singapore.server.floatplane.dev
+          cat ~/ssh/known_hosts
 
       - name: SSH install
         run: |

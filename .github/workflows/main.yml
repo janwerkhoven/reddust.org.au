@@ -34,19 +34,19 @@ jobs:
 
       - name: Deploy to remote server
         run: |
+          sudo cat /etc/ssh/ssh_config
           mkdir ~/.ssh
-          chmod -R 600 ~/.ssh/
           echo "${{ secrets.PRIVATE_KEY }}" > ~/.ssh/id_rsa
           echo "${{ secrets.PUBLIC_KEY }}" > ~/.ssh/id_rsa.pub
           echo "${{ secrets.SSH_CONFIG }}" > ~/.shh/config
-
+          chmod 600 ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa.pub
+          chmod 600 ~/.shh/config
+          echo "---------"
           ls -la ~/.shh/
           echo "---------"
           cat ~/.shh/config
           echo "---------"
           sudo cat /etc/ssh/ssh_config
           echo "---------"
-
-          sudo ls -la /dev/tty
-          sudo chmod 600 /dev/tty
-          scp -vvv -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au
+          scp -v -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au

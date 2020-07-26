@@ -30,9 +30,8 @@ jobs:
       - run: chmod -R 0755 ~/.ssh
       - run: chmod 600 ~/.ssh/id_rsa
       - run: chmod 644 ~/.ssh/known_hosts
-      - run: cat ~/.ssh/id_rsa
-      - run: scp -vvv install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au
-      - run: ssh -vvv deploy@singapore.server.floatplane.dev "/var/www/reddust.org.au/install.sh production"
+      # - run: scp -vvv install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au
+      - run: ssh -Tvvv deploy@singapore.server.floatplane.dev "/var/www/reddust.org.au/install.sh production"
       # - run: yarn deploy
       # Runs a single command using the runners shell
       # - name: Run a one-line script

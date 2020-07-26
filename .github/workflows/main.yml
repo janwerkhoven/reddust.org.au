@@ -32,7 +32,9 @@ jobs:
       - run: chmod 600 ~/.ssh/id_rsa
       - run: chmod 644 ~/.ssh/known_hosts
       - run: ls -la ~/.ssh/
+      - run: cat ~/.ssh/id_rsa
       - run: sed -i -e "s#\\\\n#\n#g" ~/.ssh/id_rsa
+      - run: cat ~/.ssh/id_rsa
       # - run: 'echo "$PUBLIC_KEY" > ~/.ssh/id_rsa'
       #   shell: bash
       #   env:

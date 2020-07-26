@@ -22,6 +22,17 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - run: ./remote/ssh.sh
+
+      - run: 'echo "$PRIVATE_KEY" > ~/.ssh/id_rsa'
+        shell: bash
+        env:
+          SSH_KEY: ${{secrets.PRIVATE_KEY}}
+
+      # - run: 'echo "$PUBLIC_KEY" > ~/.ssh/id_rsa'
+      #   shell: bash
+      #   env:
+      #     SSH_KEY: ${{secrets.PUBLIC_KEY}}
+
       - run: yarn deploy
       # Runs a single command using the runners shell
       # - name: Run a one-line script

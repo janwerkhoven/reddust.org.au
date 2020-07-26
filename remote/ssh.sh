@@ -5,8 +5,9 @@ set -o pipefail
 
 echo "----------"
 echo "Preparing SSH:"
-echo "Preparing SSH:"
-
+echo "PRIVATE_KEY: $PRIVATE_KEY"
+echo "PUBLIC_KEY: $PUBLIC_KEY"
+echo "SSH_CONFIG: $SSH_CONFIG"
 echo "----------"
 (set -x; mkdir ~/.ssh)
 echo "----------"
@@ -22,8 +23,4 @@ echo "----------"
 # chmod 600 ~/.ssh/id_rsa.pub
 # chmod 600 ~/.ssh/config
 
-# (set -x; scp install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au)
-
 # echo "----------"
-
-# (set -x; ssh deploy@singapore.server.floatplane.dev "/var/www/reddust.org.au/install.sh $branch $revision")

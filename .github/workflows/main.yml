@@ -52,6 +52,6 @@ jobs:
           echo $branch
           echo $revision
           echo "----------"
-          ssh deploy@singapore.server.floatplane.dev "/var/www/reddust.org.au/install.sh $branch $revision"
+          ssh -Gkv deploy@singapore.server.floatplane.dev "/var/www/reddust.org.au/install.sh $branch $revision"
         # run: scp -v -o StrictHostKeyChecking=no install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au
       # - name: SCP to remote

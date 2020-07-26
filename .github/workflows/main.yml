@@ -28,6 +28,10 @@ jobs:
         env:
           SSH_KEY: ${{secrets.PRIVATE_KEY}}
 
+      - run: ls la ~/.ssh/
+      - run: chmod 600 ~/.ssh/id_rsa
+      - run: chmod 644 ~/.ssh/known_hosts
+      - run: ls la ~/.ssh/
       # - run: 'echo "$PUBLIC_KEY" > ~/.ssh/id_rsa'
       #   shell: bash
       #   env:

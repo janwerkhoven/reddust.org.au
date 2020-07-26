@@ -42,5 +42,14 @@ jobs:
           chmod 600 ~/.ssh/id_rsa.pub
           chmod 600 ~/.ssh/config
 
-      - name: SCP to remote
-        run: scp -v -o StrictHostKeyChecking=no install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au
+      - name: SSH install
+        run: |
+          branch=$(git rev-parse --abbrev-ref HEAD)
+          revision=$(git rev-parse --short HEAD)
+          echo "----------"
+          echo $branch
+          echo $revision
+          echo "----------"
+          ssh deploy@singapore.server.floatplane.dev "/var/www/reddust.org.au/install.sh $branch $revision"
+        # run: scp -v -o StrictHostKeyChecking=no install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au
+      # - name: SCP to remote

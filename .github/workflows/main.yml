@@ -32,7 +32,7 @@ jobs:
       - run: chmod 644 ~/.ssh/known_hosts
       - run: cat /etc/ssh/ssh_config
       # - run: scp -vvv install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au
-      - run: ssh -i ~/.ssh/id_rsa deploy@singapore.server.floatplane.dev "/var/www/reddust.org.au/install.sh production"
+      - run: ssh -fnT deploy@singapore.server.floatplane.dev "/var/www/reddust.org.au/install.sh production"
       # - run: yarn deploy
       # Runs a single command using the runners shell
       # - name: Run a one-line script

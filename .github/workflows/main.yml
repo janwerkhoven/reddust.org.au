@@ -43,9 +43,7 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa.pub
           chmod 600 ~/.ssh/config
-
-      - name: SSH install
-        run: |
+          echo "----------"
           branch=$(git rev-parse --abbrev-ref HEAD)
           revision=$(git rev-parse --short HEAD)
           echo "----------"

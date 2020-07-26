@@ -17,21 +17,22 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
+    env:
+      PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - run: mkdir ~/.ssh
       - run: 'echo "$PRIVATE_KEY" > ~/.ssh/id_rsa'
-        env:
-          PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
       - run: ssh-keyscan -H singapore.server.floatplane.dev > ~/.ssh/known_hosts
       - run: chmod -R 0755 ~/.ssh
       - run: chmod 600 ~/.ssh/id_rsa
       - run: chmod 644 ~/.ssh/known_hosts
       - run: cat ~/.ssh/id_rsa
-      - run: scp install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au
-      - run: ssh deploy@singapore.server.floatplane.dev "/var/www/reddust.org.au/install.sh production"
+      - run: scp -vvv install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au
+      - run: ssh -vvv deploy@singapore.server.floatplane.dev "/var/www/reddust.org.au/install.sh production"
       # - run: yarn deploy
       # Runs a single command using the runners shell
       # - name: Run a one-line script

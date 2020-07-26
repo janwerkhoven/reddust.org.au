@@ -33,7 +33,7 @@ jobs:
       - run: cat /etc/ssh/ssh_config
       - run: ssh -T deploy@singapore.server.floatplane.dev
       # - run: scp -vvv install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au
-      - run: ssh -kfnT deploy@singapore.server.floatplane.dev "/var/www/reddust.org.au/install.sh production"
+      - run: ssh -fnT -L port:server:port deploy@singapore.server.floatplane.dev "/var/www/reddust.org.au/install.sh production"
       # - run: yarn deploy
       # Runs a single command using the runners shell
       # - name: Run a one-line script

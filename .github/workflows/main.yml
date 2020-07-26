@@ -17,23 +17,33 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    env:
-      PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
+    # env:
+    #   PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - run: mkdir ~/.ssh
-      - run: 'echo "$PRIVATE_KEY" > ~/.ssh/id_rsa'
-      - run: ssh-keyscan -H singapore.server.floatplane.dev > ~/.ssh/known_hosts
-      - run: chmod -R 0755 ~/.ssh
-      - run: chmod 600 ~/.ssh/id_rsa
-      - run: chmod 644 ~/.ssh/known_hosts
-      - run: cat /etc/ssh/ssh_config
-      - run: ssh -T deploy@singapore.server.floatplane.dev
+
+      - name: ls -a via ssh
+        uses: fifsky/ssh-action@master
+        with:
+          command: |
+            cd /var/www/reddust.org.au/
+            ls -la
+          host: singapore.server.floatplane.dev
+          user: deploy
+          key: ${{ secrets.PRIVATE_KEY}}
+      # - run: mkdir ~/.ssh
+      # - run: 'echo "$PRIVATE_KEY" > ~/.ssh/id_rsa'
+      # - run: ssh-keyscan -H singapore.server.floatplane.dev > ~/.ssh/known_hosts
+      # - run: chmod -R 0755 ~/.ssh
+      # - run: chmod 600 ~/.ssh/id_rsa
+      # - run: chmod 644 ~/.ssh/known_hosts
+      # - run: cat /etc/ssh/ssh_config
+      # - run: ssh -T deploy@singapore.server.floatplane.dev
       # - run: scp -vvv install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au
-      - run: ssh -fnT -L port:server:port deploy@singapore.server.floatplane.dev "/var/www/reddust.org.au/install.sh production"
+      # - run: ssh -fnT -L port:server:port deploy@singapore.server.floatplane.dev "/var/www/reddust.org.au/install.sh production"
       # - run: yarn deploy
       # Runs a single command using the runners shell
       # - name: Run a one-line script

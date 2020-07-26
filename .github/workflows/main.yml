@@ -35,6 +35,7 @@ jobs:
       - name: Set up SSH
         run: |
           mkdir ~/.ssh
+          chmod -R 0700 ~/.ssh
           echo "${{ secrets.PRIVATE_KEY }}" > ~/.ssh/id_rsa
           echo "${{ secrets.PUBLIC_KEY }}" > ~/.ssh/id_rsa.pub
           echo "${{ secrets.SSH_CONFIG }}" > ~/.ssh/config
@@ -42,7 +43,6 @@ jobs:
           chmod 600 ~/.ssh/id_rsa.pub
           chmod 600 ~/.ssh/config
           ssh-keygen -R singapore.server.floatplane.dev
-          cat ~/ssh/known_hosts
 
       - name: SSH install
         run: |

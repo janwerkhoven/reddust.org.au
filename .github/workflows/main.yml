@@ -19,8 +19,8 @@ jobs:
 
     env:
       PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
-      PUBLIC_KEY: ${{secrets.PUBLIC_KEY}}
-      SSH_CONFIG: ${{secrets.SSH_CONFIG}}
+      # PUBLIC_KEY: ${{secrets.PUBLIC_KEY}}
+      # SSH_CONFIG: ${{secrets.SSH_CONFIG}}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -51,7 +51,9 @@ jobs:
       # - run: cat /etc/ssh/ssh_config
       # - run: ssh -T deploy@singapore.server.floatplane.dev
       # - run: scp -vvv install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au
-      - run: ssh jw@sydney.floatplane.dev "/var/www/reddust.org.au/install.sh production"
+      - run: pwd
+      - run: ls -la
+      - run: remote/deploy.sh
       # - run: yarn deploy
       # Runs a single command using the runners shell
       # - name: Run a one-line script

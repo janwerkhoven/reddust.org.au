@@ -51,8 +51,9 @@ jobs:
       # - run: cat /etc/ssh/ssh_config
       # - run: ssh -T deploy@singapore.server.floatplane.dev
       # - run: scp -vvv install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au
-      - run: SSH_AUTH_SOCK=/tmp/ssh-agVZL13989/agent.13989; export SSH_AUTH_SOCK; SSH_AGENT_PID=13990; export SSH_AGENT_PID; echo Agent pid 13990;
-      - run: eval "$(ssh-agent -s)"
+      # - run: SSH_AUTH_SOCK=/tmp/ssh-agVZL13989/agent.13989; export SSH_AUTH_SOCK; SSH_AGENT_PID=13990; export SSH_AGENT_PID; echo Agent pid 13990;
+      - run: eval "$(ssh-agent)"
+      # - run: eval "ssh-agent -s" > SSH_AUTH_SOCK=/tmp/ssh-qSWfVCBEZQcc/agent.4858; export SSH_AUTH_SOCK; SSH_AGENT_PID=4859; export SSH_AGENT_PID; echo Agent pid 4859;
       # - run: ssh-add -l -E md5
       - run: ssh-add ~/.ssh/id_rsa
       - run: pwd

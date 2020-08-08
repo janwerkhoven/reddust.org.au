@@ -51,7 +51,7 @@ jobs:
       # - run: cat /etc/ssh/ssh_config
       # - run: ssh -T deploy@singapore.server.floatplane.dev
       # - run: scp -vvv install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au
-      - run: eval "$(ssh-agent -s)"
+      - run: eval "$(ssh-agent -c)"
       # - run: ssh-add -l -E md5
       - run: ssh-add ~/.ssh/id_rsa
       - run: pwd

@@ -38,20 +38,20 @@ jobs:
       #     key: ${{ secrets.PRIVATE_KEY}}
       - run: mkdir ~/.ssh
       - run: 'echo "$PRIVATE_KEY" > ~/.ssh/id_rsa'
-      - run: 'echo "$PUBLIC_KEY" > ~/.ssh/id_rsa.pub'
-      - run: 'echo "$SSH_CONFIG" > ~/.ssh/config'
+      # - run: 'echo "$PUBLIC_KEY" > ~/.ssh/id_rsa.pub'
+      # - run: 'echo "$SSH_CONFIG" > ~/.ssh/config'
 
-      - run: ssh-keyscan -H singapore.server.floatplane.dev > ~/.ssh/known_hosts
+      - run: ssh-keyscan -H sydney.floatplane.dev > ~/.ssh/known_hosts
       - run: chmod 0755 ~/.ssh/
       - run: chmod 600 ~/.ssh/id_rsa
-      - run: chmod 600 ~/.ssh/id_rsa.pub
-      - run: chmod 600 ~/.ssh/config
+      # - run: chmod 600 ~/.ssh/id_rsa.pub
+      # - run: chmod 600 ~/.ssh/config
       - run: chmod 644 ~/.ssh/known_hosts
-      - run: ls -la ~/.ssh/
-      - run: cat /etc/ssh/ssh_config
+      # - run: ls -la ~/.ssh/
+      # - run: cat /etc/ssh/ssh_config
       # - run: ssh -T deploy@singapore.server.floatplane.dev
       # - run: scp -vvv install.sh deploy@singapore.server.floatplane.dev:/var/www/reddust.org.au
-      - run: ssh deploy@singapore.server.floatplane.dev "/var/www/reddust.org.au/install.sh production"
+      - run: ssh jw@sydney.floatplane.dev "/var/www/reddust.org.au/install.sh production"
       # - run: yarn deploy
       # Runs a single command using the runners shell
       # - name: Run a one-line script

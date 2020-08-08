@@ -45,10 +45,7 @@
   "scripts": {
     "serve": "gulp serve",
     "build": "gulp build",
-    "deploy": "git push; ./deploy.sh",
     "setup": "remote/setup.sh",
-    "precommit": "lint-staged",
-    "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'bower_components', 'junction') } catch (e) { }\"",
-    "prettify-repo": "prettier --write \"*/**/*.{css,scss,js,json,md}\""
+    "deploy": "remote/deploy.sh"
   }
 }

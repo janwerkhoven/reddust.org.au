@@ -19,7 +19,7 @@ jobs:
 
     env:
       PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
-      # PUBLIC_KEY: ${{secrets.PUBLIC_KEY}}
+      PUBLIC_KEY: ${{secrets.PUBLIC_KEY}}
       # SSH_CONFIG: ${{secrets.SSH_CONFIG}}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -38,13 +38,13 @@ jobs:
       #     key: ${{ secrets.PRIVATE_KEY}}
       - run: mkdir ~/.ssh
       - run: 'echo "$PRIVATE_KEY" > ~/.ssh/id_rsa'
-      # - run: 'echo "$PUBLIC_KEY" > ~/.ssh/id_rsa.pub'
+      - run: 'echo "$PUBLIC_KEY" > ~/.ssh/id_rsa.pub'
       # - run: 'echo "$SSH_CONFIG" > ~/.ssh/config'
 
       - run: ssh-keyscan -H sydney.floatplane.dev > ~/.ssh/known_hosts
       - run: chmod 0755 ~/.ssh/
       - run: chmod 600 ~/.ssh/id_rsa
-      # - run: chmod 600 ~/.ssh/id_rsa.pub
+      - run: chmod 600 ~/.ssh/id_rsa.pub
       # - run: chmod 600 ~/.ssh/config
       - run: chmod 644 ~/.ssh/known_hosts
       # - run: ls -la ~/.ssh/

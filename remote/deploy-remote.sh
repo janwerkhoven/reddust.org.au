@@ -3,8 +3,8 @@
 set -e
 set -o pipefail
 
-host=(cat /etc/hostname)
-user=(whoami)
+host=$(cat /etc/hostname)
+user=$(whoami)
 domain=$1
 
 echo "----------"

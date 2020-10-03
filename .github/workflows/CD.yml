@@ -1,0 +1,21 @@
+name: Continuous Deployment
+
+on:
+  push:
+    branches: production
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    env:
+      PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
+    steps:
+      - uses: actions/checkout@v2
+      - run: mkdir ~/.ssh
+      - run: 'echo "$PRIVATE_KEY" > ~/.ssh/bot@sydney.floatplane.dev'
+      - run: ssh-keyscan -H sydney.floatplane.dev > ~/.ssh/known_hosts
+      - run: chmod 0755 ~/.ssh/
+      - run: chmod 600 ~/.ssh/bot@sydney.floatplane.dev
+      - run: chmod 644 ~/.ssh/known_hosts
+      - run: remote/deploy.sh

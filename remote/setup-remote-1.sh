@@ -3,10 +3,10 @@
 set -e
 set -o pipefail
 
-host=$1
+domain=$1
 repo=$2
 
-if [ -z "$host" ]
+if [ -z "$domain" ]
 then
   echo "Aborting, please provide a host."
   exit 0;
@@ -21,27 +21,27 @@ fi
 echo "----------"
 echo "Creating project"
 echo "----------"
-echo "Project: $host"
+echo "Domain: $domain"
 echo "----------"
 echo "Resetting..."
 (
   set -x
-  rm -rf ~/.ssh/bot@$host
-  rm -rf /var/www/$host
+  rm -rf ~/.ssh/bot@$domain
+  rm -rf /var/www/$domain
 )
 
 echo "----------"
 echo "Generating SSH key..."
 (
   set -x
-  ssh-keygen -t rsa -b 4096 -C "bot@$host" -f ~/.ssh/bot@$host -P ""
-  cat ~/.ssh/bot@$host.pub
+  ssh-keygen -t rsa -b 4096 -C "bot@$domain" -f ~/.ssh/bot@$domain -P ""
+  cat ~/.ssh/bot@$domain.pub
 )
 
 echo "----------"
 echo "ACTION REQUIRED:"
 echo "1. Please copy the public key above."
-echo "2. Open Github and go to the repository of $host."
+echo "2. Open Github and go to the repository of $domain."
 echo "3. Add public key as read-only deploy key."
 echo "4. Done? y/n"
 
@@ -64,20 +64,24 @@ echo "----------"
 echo "Cloning repo..."
 (
   set -x
-  GIT_SSH_COMMAND="ssh -i ~/.ssh/bot@$host" git clone $repo /var/www/$host
-  cd /var/www/$host
+  GIT_SSH_COMMAND="ssh -i ~/.ssh/bot@$domain" git clone $repo /var/www/$domain
+  cd /var/www/$domain
 )
 
 # Funnily enough we can't run this within these closed loops
-cd /var/www/$host
+cd /var/www/$domain
 
 echo "----------"
 echo "Configuring Git SSH..."
-( set -x; git config core.sshCommand "ssh -i ~/.ssh/bot@$host -F /dev/null" )
+( set -x; git config core.sshCommand "ssh -i ~/.ssh/bot@$domain -F /dev/null" )
 
 echo "----------"
 echo "Testing if SSH works..."
-( set -x; git pull )
+(
+  set -x
+  git checkout production
+  git pull
+)
 
 echo "----------"
 echo "Installing Node..."
@@ -98,38 +102,8 @@ echo "----------"
 echo "Building dist..."
 ( set -x; yarn build )
 
-echo "----------"
-echo "Configuring Nginx for HTTP..."
-( set -x; ln -nsf /var/www/$host/remote/nginx-http.conf /etc/nginx/sites-enabled/$host.conf )
-
-echo "----------"
-echo "Testing Nginx configs..."
-( set -x; sudo nginx -t )
-
-echo "----------"
-echo "Restarting Nginx..."
-( set -x; sudo systemctl restart nginx )
-
-echo "----------"
-echo "Creating SSL certificates..."
-(
-  set -x
-  sudo certbot certonly --nginx -d $host
-  sudo certbot certonly --nginx -d www.$host
-)
-
-echo "----------"
-echo "Configuring Nginx for HTTPS..."
-( set -x; ln -nsf /var/www/$host/remote/nginx-https.conf /etc/nginx/sites-enabled/$host.conf )
-
-echo "----------"
-echo "Testing Nginx configs... (again)"
-( set -x; sudo nginx -t )
-
-echo "----------"
-echo "Restarting Nginx... (again)"
-( set -x; sudo systemctl restart nginx )
-
-echo "----------"
-echo "Done! Open $host in your browser :)"
-echo "----------"
+if [ -f "fastboot.js" ]; then
+  echo "----------"
+  echo "Spinning up Fastboot"
+  ( set -x; pm2 start fastboot.js )
+fi

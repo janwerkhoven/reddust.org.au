@@ -3,18 +3,18 @@
 set -e
 set -o pipefail
 
-user=jw
-host=sydney.floatplane.dev
+user=bot
+server=sydney.floatplane.dev
 domain=reddust.org.au
 
 echo "----------"
 echo "Deploying:"
 echo $domain
-echo $user@$host
+echo $user@$server
 echo "----------"
 
 (
   set -x
-  scp remote/deploy-remote.sh $user@$host:~/
-  ssh -t $user@$host "~/deploy-remote.sh $domain; rm -f ~/deploy-remote.sh"
+  scp -i ~/.ssh/$user@$server remote/deploy-remote.sh $user@$server:~/
+  ssh -i ~/.ssh/$user@$server $user@$server "~/deploy-remote.sh $domain; rm -f ~/deploy-remote.sh"
 )

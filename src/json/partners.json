@@ -1,5 +1,4 @@
-[
-  {
+[{
     "name": "Johnson & Johnson",
     "logo": "johnsonjohnson@2x.jpg",
     "intro": "In early 2015, Johnson & Johnson signed on to partner with Red Dust to support our Healthy Living initiatives in the Kintore community.Johnson & Johnson supports community - based programs that improve health and well - being.",
@@ -166,5 +165,41 @@
     "logo": "malo-republic@500x500.png",
     "intro": "MALO republic’s Buy One Give One program provides sports clothing and activewear to children to encourage them to lead active lifestyles. Together with Kit Bag for Kids they are proud to support Red Dust programs.",
     "url": "https://malorepublic.com.au/pages/buy-one-give-one-the-malo-mission"
+  },
+  {
+    "name": "Future2",
+    "logo": "future2@500x500.png",
+    "intro": "Future2 is the foundation of the Financial Planning Association.  We make a lasting difference in the lives of our young Australians who need it most. Through its annual grant program, Future2 supports young Australians aged 12 to 25 years experiencing social, financial, or physical hardship. Red Dust is a proud grant recipient for 2020.",
+    "url": "https://www.future2foundation.org.au"
+  },
+  {
+    "name": "Care To Compare",
+    "logo": "care-to-compare@500x500.png",
+    "intro": "Care To Compare is Australia's only socially responsible health insurance comparison service giving 100% of its profits to charities. Red Dust is a proud charity partner of Care To Compare.",
+    "url": "https://caretocompare.com.au/"
+  },
+  {
+    "name": "Big Little Brush",
+    "logo": "big-little-brush@500x500.png",
+    "intro": "Big Little Brush is a social enterprise that takes little things, like toothbrushes, and uses them to do great big things, like funding primary health programs in remote Indigenous communities in Australia.",
+    "url": "https://biglittlebrush.org/"
+  },
+  {
+    "name": "Epoch Capital",
+    "logo": "epoch-capital@500x500.png",
+    "intro": "Epoch is an Australian headquartered trading firm with a difference. Part of our aim as an organisation is to have a positive impact on the world around us, specifically supporting charities our employees are passionate about... and that is how we were introduced to the fantastic work done by Red Dust!",
+    "url": "https://epoch.capital/"
+  },
+  {
+    "name": "The Besen Family Foundation",
+    "logo": "the-besen-family-foundation@500x500.png",
+    "intro": "The Besen Family Foundation proudly supports Red Dust in working together to strengthen the future of remote Indigenous youth and their families through innovative and transformative projects that encourage social inclusion and community connection.",
+    "url": "https://www.besenfoundation.org.au/"
+  },
+  {
+    "name": "Lululemon",
+    "logo": "lululemon-here-to-be@500x500.png",
+    "intro": "Here to Be is lululemon's social impact program. Together with our partners, we disrupt inequity in wellbeing through movement, mindfulness, and advocacy.",
+    "url": "https://info.lululemon.com/heretobe"
   }
 ]

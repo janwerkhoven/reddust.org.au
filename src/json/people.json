@@ -1,5 +1,4 @@
-[
-  {
+[{
     "name": "John Van Groningen",
     "role": "Founder",
     "category": "founder",
@@ -119,18 +118,18 @@
     "bio": ""
   },
   {
-    "name": "Yvette Hollard",
-    "role": "Healthy Living Program Coordinator",
+    "name": "Shannon McMahon ",
+    "role": "Community Planning and Development",
     "category": "staff-member",
-    "image": "yvette-hollard@800x800.jpg",
-    "bio": "Yvette joined Red Dust as a role model in 2007, later becoming a program Team Leader.  She is now the Healthy Living Program Coordinator, with over 20 years of experience in business management; events and marketing.  Yvette has recently obtained her Cert III & IV in personal training and as a former chef, has a passion for nutrition and helping others.  Yvette enjoys living life to the fullest!"
+    "image": "shannon-mcmahon@800x800.jpg",
+    "bio": "Shannon joined Red Dust in 2020 bringing a passion for community planning and development from her experience implementing and evaluating programs in remote communities including Lajamanu and Yuendumu. With a Masters in Community Planning and Development and strong cultural awareness, Shannon shares our philosophy of walking alongside and listening to community voices to create lasting outcomes of our programs."
   },
   {
     "name": "Roberto Pietrobon",
     "role": "Director of Philanthropy and Partnerships",
     "category": "staff-member",
     "image": "roberto-pietrobon@400x400.jpg",
-    "bio": ""
+    "bio": "Roberto grew up on Turrbal lands in South East Queensland and is a proud Italian-Australian. He found his passion working in health as a founding member of a dental startup. Roberto joined Red Dust in 2019 bringing 20 years experience building relationships and partnerships with a range of stakeholders for organisations like Westpac, GE, Maven Dental, Heart Foundation and Stroke Foundation."
   },
   {
     "name": "Daniel Ormiston",
@@ -142,7 +141,7 @@
   {
     "name": "Brett Wheeler",
     "role": "Role Model",
-    "category": "staff-member",
+    "category": "role-model",
     "image": "brett-wheeler-2@2x.jpg",
     "bio": "Brett's NBL career spanned 12 years - winning two championships and representing Australia sixteen times.  Brett is on staff at Red Dust in a Community Engagement role that sees him work closely with communities supporting the development of local role models to support Red Dust program delivery."
   },
@@ -152,6 +151,13 @@
     "category": "role-model",
     "image": "darren-smith@2x.jpg",
     "bio": "Darren's professional basketball career spanned ten years and has been involved with Red Dust for over twelve years. Darren continues to lead teams delivering Red Dust programs in remote communities."
+  },
+  {
+    "name": "Yvette Hollard",
+    "role": "Role Model",
+    "category": "staff-member",
+    "image": "yvette-hollard@800x800.jpg",
+    "bio": "Yvette joined Red Dust as a role model in 2007, later becoming a program Team Leader.  She is now the Healthy Living Program Coordinator, with over 20 years of experience in business management; events and marketing.  Yvette has recently obtained her Cert III & IV in personal training and as a former chef, has a passion for nutrition and helping others.  Yvette enjoys living life to the fullest!"
   },
   {
     "name": "Mitch Tambo",

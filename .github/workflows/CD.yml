@@ -13,9 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: mkdir ~/.ssh
-      - run: 'echo "$PRIVATE_KEY" > ~/.ssh/bot@sydney.floatplane.dev'
-      - run: ssh-keyscan -H sydney.floatplane.dev > ~/.ssh/known_hosts
+      - run: 'echo "$PRIVATE_KEY" > ~/.ssh/bot@singapore.floatplane.dev'
+      - run: ssh-keyscan -H singapore.floatplane.dev > ~/.ssh/known_hosts
       - run: chmod 0755 ~/.ssh/
-      - run: chmod 600 ~/.ssh/bot@sydney.floatplane.dev
+      - run: chmod 600 ~/.ssh/bot@singapore.floatplane.dev
       - run: chmod 644 ~/.ssh/known_hosts
       - run: remote/deploy.sh

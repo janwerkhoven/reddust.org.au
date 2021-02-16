@@ -5,7 +5,7 @@ set -o pipefail
 
 user1=bot
 user2=jw
-server=sydney.floatplane.dev
+server=singapore.floatplane.dev
 domain=reddust.org.au
 redirect_www=true
 repo=git@github.com:janwerkhoven/reddust.org.au.git

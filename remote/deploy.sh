@@ -4,7 +4,7 @@ set -e
 set -o pipefail
 
 user=bot
-server=sydney.floatplane.dev
+server=singapore.floatplane.dev
 domain=reddust.org.au
 
 echo "----------"
